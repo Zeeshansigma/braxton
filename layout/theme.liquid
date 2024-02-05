@@ -278,6 +278,11 @@
     <!-- KWD -->
     {{ 'kwd-custom.css' | asset_url | stylesheet_tag }}
     <!-- KWD -->
+    {% comment %} for slider  {% endcomment %}
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    {% comment %} end slider css cdn  {% endcomment %}
+
   </head>
 
   <body class="template-{{ template.name }} gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -535,7 +540,31 @@ h2.cart__empty-text {
   margin-bottom: 40px !important;
 }
 </style>
-
-
+{% comment %} for slider js cdn {% endcomment %}
+<script src="jquery.min.js"></script>
+<script src="owlcarousel/owl.carousel.min.js"></script>
+{% comment %} slider js cdn end {% endcomment %}
+<script>
+  $('.my-cart-carousal').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:2,
+            nav:true,
+            loop:false
+        }
+    }
+})
+</script>
 </body>
 </html>
