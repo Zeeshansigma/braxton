@@ -1,0 +1,373 @@
+<style>
+  .sizeGuideHeaderTitles{margin-bottom:50px;}
+  h4.sgPrTitle {
+    text-align: center;
+    color: #000;
+    text-align: center;
+    font-family: TstarP;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: normal;
+    margin-bottom: 5px;
+}
+  h5.sgPrSgTitle {
+    margin: 0;
+    color: #000;
+    text-align: center;
+    font-family: TstarP;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+}
+  </style>
+<section class="drawerc" id="drawer-name" data-drawer-target>
+  <div class="drawer__overlayc" data-drawer-close tabindex="-1"></div>
+  <div class="drawer__wrapperc">
+    <div class="drawer__headerc">
+      <div class="drawer__titlec">
+      </div>
+      <button class="drawer__closec" data-drawer-close aria-label="Close Drawer"></button>
+    </div>
+    <div class="drawer__contentc">
+      <div class="sizeGuideHeaderTitles">
+        <h4 class="sgPrTitle">{{ product.title }}</h4>
+        <h5 class="sgPrSgTitle">SIZE GUIDE</h5>
+      </div>
+      <div class="size-img">
+        {% if product.metafields.custom.size_chart != blank %}
+          <img src="{{ product.metafields.custom.size_chart | img_url: 'master' }}" />
+        {% endif %}
+      </div>
+
+      <div class="sizesinfo">
+
+        {% assign titles = product.metafields.custom.size_guide_titles | split: ',' %}
+          {% assign sizes_xss = product.metafields.custom.sizes_in_inches_for_xs | split: ',' %}
+          {% assign sizes_ss = product.metafields.custom.sizes_in_inches_for_s | split: ',' %}
+          {% assign sizes_ms = product.metafields.custom.sizes_in_inches_for_m | split: ',' %}
+          {% assign sizes_ls = product.metafields.custom.sizes_in_inches_for_l | split: ',' %}
+          {% assign sizes_xls = product.metafields.custom.sizes_in_inches_for_xl | split: ',' %}
+          {% assign sizes_xxls = product.metafields.custom.sizes_in_inches_for_xxl | split: ',' %}
+
+          {% assign sizes_xscs = product.metafields.custom.sizes_in_cm_for_xs | split: ',' %}
+          {% assign sizes_scs = product.metafields.custom.sizes_in_cm_for_s | split: ',' %}
+          {% assign sizes_mcs = product.metafields.custom.sizes_in_cm_for_m | split: ',' %}
+          {% assign sizes_lcs = product.metafields.custom.sizes_in_cm_for_l | split: ',' %}
+          {% assign sizes_xlcs = product.metafields.custom.sizes_in_cm_for_xl | split: ',' %}
+          {% assign sizes_xxlcs = product.metafields.custom.sizes_in_cm_for_xxl | split: ',' %}
+
+        <div class="size-selector">
+          <span onclick="showhidesizes('ss-in');"  class="ss-in inches activess">IN</span>
+          <span onclick="showhidesizes('ss-cm');"  class="ss-in cm">CM</span>
+        </div>
+
+        <div class="sizesmain activesize">
+
+          <div class="hidesizes" id="ss-in" style="display:block;">
+            <div class="sizescm">
+              <span onclick="showhide('sizesxs');" class="sizes xs activess">XS</span>
+              <span onclick="showhide('sizesss');" class="sizes ss">S</span>
+              <span onclick="showhide('sizessm');" class="sizes sm">M</span>
+              <span onclick="showhide('sizessl');" class="sizes sl">L</span>
+              <span onclick="showhide('sizessxl');" class="sizes sxl">XL</span>
+              <span onclick="showhide('sizessxxl');" class="sizes sxxl">XXL</span>
+            </div>
+  
+            <div class="hide" id="sizesxs" style="display:block;"><div class="sizewrap"><div class="sizes">WAIST</div><div class="sizes">FRONT RIZE</div><div class="sizes">INSEAM</div><div class="sizes">LEG OPENING</div> {% for sizes_xs in sizes_xss %}<span class="result">{{ sizes_xs }}</span>{% endfor %}</div></div>
+            <div class="hide" id="sizesss"><div class="sizewrap"><div class="sizes">WAIST</div><div class="sizes">FRONT RIZE</div><div class="sizes">INSEAM</div><div class="sizes">LEG OPENING</div> {% for sizes_s in sizes_ss %}<span class="result">{{ sizes_s }}</span>{% endfor %}</div></div>
+            <div class="hide" id="sizessm"><div class="sizewrap"><div class="sizes">WAIST</div><div class="sizes">FRONT RIZE</div><div class="sizes">INSEAM</div><div class="sizes">LEG OPENING</div> {% for sizes_m in sizes_ms %}<span class="result">{{ sizes_m }}</span>{% endfor %}</div></div>
+            <div class="hide" id="sizessl"><div class="sizewrap"><div class="sizes">WAIST</div><div class="sizes">FRONT RIZE</div><div class="sizes">INSEAM</div><div class="sizes">LEG OPENING</div> {% for sizes_l in sizes_ls %}<span class="result">{{ sizes_l }}</span>{% endfor %}</div></div>
+            <div class="hide" id="sizessxl"><div class="sizewrap"><div class="sizes">WAIST</div><div class="sizes">FRONT RIZE</div><div class="sizes">INSEAM</div><div class="sizes">LEG OPENING</div> {% for sizes_xl in sizes_xls %}<span class="result">{{ sizes_xl }}</span>{% endfor %}</div></div>
+            <div class="hide" id="sizessxxl"><div class="sizewrap"><div class="sizes">WAIST</div><div class="sizes">FRONT RIZE</div><div class="sizes">INSEAM</div><div class="sizes">LEG OPENING</div> {% for sizes_xxl in sizes_xxls %}<span class="result">{{ sizes_xxl }}</span>{% endfor %}</div></div>
+          </div>
+
+          <div class="hidesizes" id="ss-cm">
+            <div class="sizescm">
+              <span onclick="showhidecm('sizesxscm');" class="sizes xs activess">XS</span>
+              <span onclick="showhidecm('sizessscm');" class="sizes ss">S</span>
+              <span onclick="showhidecm('sizessmcm');" class="sizes sm">M</span>
+              <span onclick="showhidecm('sizesslcm');" class="sizes sl">L</span>
+              <span onclick="showhidecm('sizessxlcm');" class="sizes sxl">XL</span>
+              <span onclick="showhidecm('sizessxxlcm');" class="sizes sxxl">XXL</span>
+            </div>
+  
+            <div class="hidecm" id="sizesxscm" style="display:block;"><div class="sizewrap"><div class="sizes">WAIST</div><div class="sizes">FRONT RIZE</div><div class="sizes">INSEAM</div><div class="sizes">LEG OPENING</div> {% for sizes_xsc in sizes_xscs %}<span class="result">{{ sizes_xsc }}</span>{% endfor %}</div></div>
+            <div class="hidecm" id="sizessscm"><div class="sizewrap"><div class="sizes">WAIST</div><div class="sizes">FRONT RIZE</div><div class="sizes">INSEAM</div><div class="sizes">LEG OPENING</div> {% for sizes_sc in sizes_scs %}<span class="result">{{ sizes_sc }}</span>{% endfor %}</div></div>
+            <div class="hidecm" id="sizessmcm"><div class="sizewrap"><div class="sizes">WAIST</div><div class="sizes">FRONT RIZE</div><div class="sizes">INSEAM</div><div class="sizes">LEG OPENING</div> {% for sizes_mc in sizes_mcs %}<span class="result">{{ sizes_mc }}</span>{% endfor %}</div></div>
+            <div class="hidecm" id="sizesslcm"><div class="sizewrap"><div class="sizes">WAIST</div><div class="sizes">FRONT RIZE</div><div class="sizes">INSEAM</div><div class="sizes">LEG OPENING</div> {% for sizes_lc in sizes_lcs %}<span class="result">{{ sizes_lc }}</span>{% endfor %}</div></div>
+            <div class="hidecm" id="sizessxlcm"><div class="sizewrap"><div class="sizes">WAIST</div><div class="sizes">FRONT RIZE</div><div class="sizes">INSEAM</div><div class="sizes">LEG OPENING</div> {% for sizes_xlc in sizes_xlcs %}<span class="result">{{ sizes_xlc }}</span>{% endfor %}</div></div>
+            <div class="hidecm" id="sizessxxlcm"><div class="sizewrap"><div class="sizes">WAIST</div><div class="sizes">FRONT RIZE</div><div class="sizes">INSEAM</div><div class="sizes">LEG OPENING</div> {% for sizes_xxlc in sizes_xxlcs %}<span class="result">{{ sizes_xxlc }}</span>{% endfor %}</div></div>
+          </div>
+
+          <style>
+            .sizewrap {
+              width: 429px;
+              margin-left: auto;
+              margin-right: auto;
+            }
+            .sizes {
+              width: 25%;
+              text-align: center;
+              float: left;
+            }
+            span.result {
+              width: 25%;
+              display: inline-block;
+              text-align: center;
+            }
+            .hide {
+                display:none;
+            }
+            .hidesizes {
+              display: none;
+            }
+            .hidecm {
+              display: none;
+            }
+          </style>
+          
+          <script>
+            function showhide(id){
+              if (document.getElementById) {
+                var divid = document.getElementById(id);
+                var divs = document.getElementsByClassName("hide");
+                  for(var i=0;i<divs.length;i++) {
+                    divs[i].style.display = "none";
+                  }
+                divid.style.display = "block";
+              } 
+              return false;
+            }
+          </script>
+
+          <script>
+            function showhidesizes(id){
+              if (document.getElementById) {
+                var divid2 = document.getElementById(id);
+                var divs2 = document.getElementsByClassName("hidesizes");
+                  for(var i=0;i<divs2.length;i++) {
+                    divs2[i].style.display = "none";
+                  }
+                divid2.style.display = "block";
+              } 
+              return false;
+            }
+          </script>
+
+          <script>
+            function showhidecm(id){
+              if (document.getElementById) {
+                var divid3 = document.getElementById(id);
+                var divs3 = document.getElementsByClassName("hidecm");
+                  for(var i=0;i<divs3.length;i++) {
+                    divs3[i].style.display = "none";
+                  }
+                divid3.style.display = "block";
+              } 
+              return false;
+            }
+          </script>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .size-img img {
+    max-width: 100%;
+}
+
+.size-img {
+    margin-top: 20px;
+    max-width: 290px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+  .drawerc {
+    display: none;
+  }
+  .drawer__headerc {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.drawer__closec {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%0A%3Csvg width='15px' height='16px' viewBox='0 0 15 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='2.-Menu' transform='translate(-15.000000, -13.000000)' stroke='%23000000'%3E%3Cg id='Group' transform='translate(15.000000, 13.521000)'%3E%3Cpath d='M0,0.479000129 L15,14.2971819' id='Path-3'%3E%3C/path%3E%3Cpath d='M0,14.7761821 L15,-1.24344979e-14' id='Path-3'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  width: 15px;
+  height: 15px;
+}
+.drawer__wrapperc {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 500px;
+  z-index: 9999;
+  overflow: auto;
+  transition: transform 0.3s;
+  will-change: transform;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  -webkit-transform: translateX(103%);
+  transform: translateX(103%); /* extra 3% because of box-shadow */
+  -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
+  box-shadow: 0 2px 6px #777;
+}
+.drawer__contentc {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+  flex-grow: 1;
+  padding: 1.5rem;
+}
+.drawerc.is-activec {
+  display: block;
+}
+.drawerc.is-visiblec .drawer__wrapperc {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.drawerc.is-visiblec .drawer__overlayc {
+  opacity: 0.5;
+}
+  .drawer__overlayc {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+  opacity: 0;
+  transition: opacity 0.3s;
+  will-change: opacity;
+  background-color: #000;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+    display: block !important;
+}
+  .size-img {
+    
+    text-align: center;
+}
+  .activess {
+    border: 1.5px solid rgba(0,0,0,1)!important;
+    color: #000!important;
+}
+  .size-selector {
+    margin: 70px auto 45px auto !important;
+}
+</style>
+
+<script>
+  var drawer = function () {
+    if (!Element.prototype.closest) {
+        if (!Element.prototype.matches) {
+            Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
+        }
+        Element.prototype.closest = function (s) {
+            var el = this;
+            var ancestor = this;
+            if (!document.documentElement.contains(el)) return null;
+            do {
+                if (ancestor.matches(s)) return ancestor;
+                ancestor = ancestor.parentElement;
+            } while (ancestor !== null);
+            return null;
+        };
+    }
+
+    var settings = {
+        speedOpen: 50,
+        speedClose: 350,
+        activeClass: 'is-activec',
+        visibleClass: 'is-visiblec',
+        selectorTarget: '[data-drawer-target]',
+        selectorTrigger: '[data-drawer-trigger]',
+        selectorClose: '[data-drawer-close]',
+    };
+
+    var toggleccessibility = function (event) {
+        if (event.getAttribute('aria-expanded') === 'true') {
+            event.setAttribute('aria-expanded', false);
+        } else {
+            event.setAttribute('aria-expanded', true);
+        }
+    };
+
+    var openDrawer = function (trigger) {
+        var target = document.getElementById(trigger.getAttribute('aria-controls'));
+        target.classList.add(settings.activeClass);
+        document.documentElement.style.overflow = 'hidden';
+        toggleccessibility(trigger);
+        setTimeout(function () {
+            target.classList.add(settings.visibleClass);
+        }, settings.speedOpen);
+    };
+
+    var closeDrawer = function (event) {
+        var closestParent = event.closest(settings.selectorTarget),
+            childrenTrigger = document.querySelector('[aria-controls="' + closestParent.id + '"]');
+        closestParent.classList.remove(settings.visibleClass);
+        document.documentElement.style.overflow = '';
+        toggleccessibility(childrenTrigger);
+        setTimeout(function () {
+            closestParent.classList.remove(settings.activeClass);
+        }, settings.speedClose);
+    };
+
+    var clickHandler = function (event) {
+        var toggle = event.target,
+            open = toggle.closest(settings.selectorTrigger),
+            close = toggle.closest(settings.selectorClose);
+        if (open) {
+            openDrawer(open);
+        }
+        if (close) {
+            closeDrawer(close);
+        }
+        if (open || close) {
+            event.preventDefault();
+        }
+    };
+
+    var keydownHandler = function (event) {
+        if (event.key === 'Escape' || event.keyCode === 27) {
+            var drawers = document.querySelectorAll(settings.selectorTarget),
+                i;
+            for (i = 0; i < drawers.length; ++i) {
+                if (drawers[i].classList.contains(settings.activeClass)) {
+                    closeDrawer(drawers[i]);
+                }
+            }
+        }
+    };
+
+    document.addEventListener('click', clickHandler, false);
+    document.addEventListener('keydown', keydownHandler, false);
+};
+drawer();
+
+</script>

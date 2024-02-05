@@ -1,0 +1,98 @@
+<style>
+  .arAccordionText {
+    border-bottom: 1px solid #ccc;
+}
+  button.arAccordBtn.arAccordOne {
+    border-top: 1px solid #ccc;
+}
+
+button.arAccordBtn {
+    width: 100%;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ccc;cursor:pointer;
+}
+  span.arAccordTxt {
+    font-size: 14px;color:#000;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+}
+  button.arAccordBtn span.arAccordIcon {
+    transform: rotate(180deg);transition:all 0.5s ease-in-out;
+}
+button.arAccordBtn.arAccordActive span.arAccordIcon {
+    transform: rotate(0);
+}
+  .arAccordionText p, .arAccordionText li, .arAccordionText, .arAccordionText span  {
+    color: #4D4F4E;
+    text-align: left;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: normal;
+}
+  button.arAccordBtn span.arAccordIcon {
+    display: flex;
+}
+</style>
+<div class="arAccordions">
+  <div class="arAccordionInner">
+    <div class="arAccordion arAccordion1">
+      <button type="button" class="arAccordBtn arAccordActive arAccordOne arHeading" data-target="arAccordionText_one">
+        <span class="arAccordTxt">{{ block.settings.title }}</span>
+        <span class="arAccordIcon">{% render 'iconUpDown' %}</span>
+      </button>
+      <div class="arAccordionText arAccordionText_one">
+        <div>
+          {{ product.description }}
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <div class="arAccordion arAccordion2">
+      <button type="button" class="arAccordBtn arAccordTwo arHeading" data-target="arAccordionText_two">
+        <span class="arAccordTxt">{{ block.settings.title2 }}</span>
+        <span class="arAccordIcon">{% render 'iconUpDown' %}</span>
+      </button>
+      <div class="arAccordionText arAccordionText_two" style="display:none">
+        <div>
+          {{ block.settings.text }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $('.arAccordBtn').on('click', function(){
+    var target = $(this).attr('data-target');
+    
+    // Close all .arAccordionText elements except the target
+    $('.arAccordionText').not('.' + target).css('display','none');
+    
+    // Toggle the target element
+    $('.' + target).toggle();
+    
+    // Remove active class from all buttons and add it to the clicked button
+    $('.arAccordBtn').removeClass('arAccordActive');
+    var targetElement = $('.' + target);
+    setTimeout(function() {
+    if ($(targetElement).is(':visible')) {
+        $(this).addClass('arAccordActive');
+    } else {
+        $(this).removeClass('arAccordActive');
+    }
+}.bind(this), 0); // Delayed by 500 milliseconds (adjust the delay as needed)
+
+    
+})
+</script>

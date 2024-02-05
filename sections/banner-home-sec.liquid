@@ -1,0 +1,54 @@
+<div class=" home-banner-d">
+  <div class="container-d">
+    <div class="col-d scroll-trigger animate--slide-in">
+      <a href="{{ section.settings.btnlink }}">{{ section.settings.text1 }}</a>
+    </div>
+    <div class="col-d d-flex">
+      <div class="img-col scroll-trigger animate--slide-in">
+        <img src="{{ section.settings.img1 | img_url: "master" }}" alt="#" />
+      </div>
+      <div class="img-col scroll-trigger animate--slide-in">
+        <img src="{{ section.settings.img2 | img_url: "master" }}" alt="#" />
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Home Banner Sec",
+    "settings": [
+      {
+        "type":"text",
+        "id":"text1",
+        "label":"Shop Text"
+      },
+      {
+        "type":"url",
+        "id":"btnlink",
+        "label":"Shop Link"
+      },
+      {
+        "type":"image_picker",
+        "id":"img1",
+        "label":"Banner Image 1"
+      },
+      {
+        "type":"image_picker",
+        "id":"img2",
+        "label":"Banner Image 2"
+      }
+    ],
+    "presets": [
+      {
+        "name":"Home Banner Sec"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

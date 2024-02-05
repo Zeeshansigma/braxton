@@ -1,0 +1,753 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+.customer.account {
+    max-width: 1290px !important;
+    margin: 0 auto;
+}
+  .account-menu .tab {
+    max-width: 630px !important;
+    margin: 0 auto !important;width:100%
+}
+  .upfields {
+    max-width: 715px !important;
+    margin: 0 auto;
+}
+  a.na_view {
+    margin-left: auto;
+    margin-right: auto;
+}
+th#ColumnOrder {
+    font-family: 'TstarP';
+}
+td#RowOrder a {
+    font-family: 'TstarW';
+}
+.customer tbody td time {
+    font-family: 'TstarW';
+}  
+  @media screen and (min-width: 750px) {
+   thead tr {
+      margin: 0!important;
+    }
+   tbody tr:nth-of-type(1) {
+     margin-top: 40px!important;
+   } 
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+     .for-desktop{
+      display:block;
+    }
+     .for-mobile{
+      display: none;
+    }
+    .customer tbody td:last-of-type{
+      padding-left: 30px;
+    }
+    th.na_order{
+      padding-bottom: 6px!important;      
+      font-size: 14px!important;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+      text-transform: uppercase;
+      color: #000;      
+    }
+    a.na_view{
+    height: 38px!important;  
+    min-width: 100%;  
+    max-width: 185px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+    transition: 0.5s;  
+    }
+    .customer tbody td:last-of-type{
+      padding-top: 14px;
+      
+    }
+    a.na_view:hover{
+      background: #fff;
+      border: 1px solid #000;
+      color: #000;
+    }
+    .tabcontent.arOrdersTab tr {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    /* flex-basis: 50%; */
+    margin: 20px 0;
+}
+    .tabcontent.arOrdersTab tr td, .tabcontent.arOrdersTab tr th {
+    width: 15%;
+}
+    .customer tbody td:last-of-type {
+    padding-left: 0;
+}
+  }
+  @media screen and (max-width: 749px) {
+    .for-desktop{
+      display:none;
+    }
+    .customer tr{
+      flex-direction:row;
+      justify-content:space-between;
+    }
+    .customer td{
+      flex-direction:column; 
+      justify-content: center;
+      align-items: center !important; 
+    }
+    
+    .customer td::before{
+      padding-right:0;
+      align-items: center !important; 
+    }
+     .customer td:first-of-type{
+      flex-direction:column;
+    }
+    .account table td:first-of-type a{
+      padding:0;
+    }
+  .customer tbody td:first-of-type{
+    padding-top:1rem;
+  }
+    .customer tbody td:last-of-type{
+       padding-bottom:1rem;
+    }
+   td#RowOrder:before {
+    color: #000;
+}
+.customer td::before{
+  color: #000;
+  text-transform: capitalize;
+}  
+.account table td:first-of-type a {
+    color: #4D4F4E!important;    
+  }
+ .customer tbody td time{
+   color: rgba(33, 37, 41, 0.40)!important;
+ }   
+ .account-menu .tab {
+    border-bottom: 1px solid #000!important;
+ }
+ a.na_view {
+    color: #fff;
+    padding: 8px 22px 9px 21px;
+    text-decoration: none;
+    font-size: 14px;
+    background: #000;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+}
+  a.na_view:hover{
+      background: #fff;
+      border: 1px solid #000;
+      color: #000;
+    }    
+.account-menu .tabcontent{
+  padding: 16px 12px!important;
+}
+.customer tbody tr {
+    padding-bottom: 6px;
+    border-bottom: 1px solid;
+}
+.customer table{
+  border-bottom: none!important;
+}    
+  }    
+
+.customer .field label, a.recoverylink{
+  font-size: 14px !important;
+}  
+.account-menu .tab{
+    max-width: 800px !important;  
+}  
+  .coupling .field {
+    max-width: 350px;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.coupling {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+  .coupling .field input {
+    padding-top: 30px !important;
+    padding-bottom: 15px !important;
+    font-size: 13px;
+    font-family: 'TstarW';
+}
+  .arMainActBtns button {
+    max-width: 115px !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    color: #000 !important;
+    height: 38px !important;
+    max-height: 100% !important;
+    padding: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arMainActBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+  .arMainActBtns button:before, .arMainActBtns button:after {
+    content: none;
+}
+  a.arAddBtn_cba {
+    display: flex;
+    justify-content: center;
+    max-width: 315px;
+    margin: 0 auto;
+    height: 40px;
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+    align-items: center;
+    line-height: 1;
+    font-family: 'TstarP';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+  @media only screen and (max-width:500px){
+    .coupling{
+    flex-wrap:wrap;gap:10px;margin-bottom:10px !important
+  }
+  .coupling .field{margin-bottom:0 !important}
+  .arMainActBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    overflow: hidden;justify-content:space-between;
+}
+    a.arAddBtn_cba{max-width:351px;height:36px;}
+  
+  .arMainActBtns button{min-width:72px !important;max-width:72px !important;background:#000 !important; color:#fff !important;}
+    .tab.naTab-- {
+    justify-content: space-between !important;
+    padding: 0 12px !important;max-width:351px !important;
+}
+    .account-menu .tab button{min-width:max-content;max-width:max-content;}
+  }
+{%- endstyle -%}
+
+<div class="customer account section-{{ section.id }}-padding na_account--{{ section.id }}">
+  <div class="toplinkk">
+    <h1 class="customer__title">{{ 'customer.account.title' | t }}</h1>
+     <a class="logouttext" href="{{ routes.account_logout_url }}">
+          {{ 'customer.log_out' | t }}
+        </a>
+  </div>
+  <div class="account-menu">
+    <div class="tab naTab--{{ forloop.index }}">
+      <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">My Profile</button>
+      <button class="tablinks" onclick="openCity(event, 'Paris')">My Orders</button>
+      <button class="tablinks" onclick="openCity(event, 'Tokyo')">Make a Return</button>
+      {% comment %}<button class="tablinks"><a class="logouttext" href="{{ routes.account_logout_url }}">
+          {{ 'customer.log_out' | t }}
+        </a></button>{% endcomment %}
+    </div>
+    <div id="London" class="tabcontent">
+        <div>
+
+       {% comment %}   
+
+      {{ customer.default_address | format_address }}
+
+      <a href="{{ routes.account_addresses_url }}" class="button acc-btn">
+        {{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
+      </a>
+      {% endcomment %}
+
+      <div class="updateform"> 
+           {%- for address in customer.addresses -%}
+              {%- if address == customer.default_address -%}
+        <div class="arMainAddress" data-address>
+         
+          <div id="EditAddress_{{ address.id }}">
+            {%- form 'customer_address', address -%}
+              <div class="arMainaccAddFields">
+              <div class="coupling">
+              <div class="field">
+                <input
+                  type="text"
+                  id="AddressFirstName_{{ form.id }}"
+                  name="address[first_name]"
+                  value="{{ form.first_name }}"
+                  autocomplete="given-name"
+                  placeholder="{{ 'customer.addresses.first_name' | t }}"
+                >
+                <label for="AddressFirstName_{{ form.id }}">{{ 'customer.addresses.first_name' | t }}</label>
+              </div>
+              <div class="field">
+                <input
+                  type="text"
+                  id="AddressLastName_{{ form.id }}"
+                  name="address[last_name]"
+                  value="{{ form.last_name }}"
+                  autocomplete="family-name"
+                  placeholder="{{ 'customer.addresses.last_name' | t }}"
+                >
+                <label for="AddressLastName_{{ form.id }}">{{ 'customer.addresses.last_name' | t }}</label>
+              </div>
+              </div>
+                <div class="coupling">
+              <div class="field">
+                <input
+                  type="text"
+                  id="AddressCompany_{{ form.id }}"
+                  name="address[company]"
+                  value="{{ form.company }}"
+                  autocomplete="organization"
+                  placeholder="{{ 'customer.addresses.company' | t }}"
+                >
+                <label for="AddressCompany_{{ form.id }}">{{ 'customer.addresses.company' | t }}</label>
+              </div>
+              <div class="field">
+                <input
+                  type="text"
+                  id="AddressAddress1_{{ form.id }}"
+                  name="address[address1]"
+                  value="{{ form.address1 }}"
+                  autocomplete="address-line1"
+                  placeholder="{{ 'customer.addresses.address1' | t }}"
+                >
+                <label for="AddressAddress1_{{ form.id }}">{{ 'customer.addresses.address1' | t }}</label>
+              </div>
+                </div>
+                <div class="coupling">
+              <div class="field">
+                <input
+                  type="text"
+                  id="AddressAddress2_{{ form.id }}"
+                  name="address[address2]"
+                  value="{{ form.address2 }}"
+                  autocomplete="address-line2"
+                  placeholder="{{ 'customer.addresses.address2' | t }}"
+                >
+                <label for="AddressAddress2_{{ form.id }}">{{ 'customer.addresses.address2' | t }}</label>
+              </div>
+              <div class="field">
+                <input
+                  type="text"
+                  id="AddressCity_{{ form.id }}"
+                  name="address[city]"
+                  value="{{ form.city }}"
+                  autocomplete="address-level2"
+                  placeholder="{{ 'customer.addresses.city' | t }}"
+                >
+                <label for="AddressCity_{{ form.id }}">{{ 'customer.addresses.city' | t }}</label>
+              </div>
+                </div>
+                <div class="coupling" style="display:none;">
+              <div class="field">
+                <label for="AddressCountry_{{ form.id }}">
+                  {{ 'customer.addresses.country' | t }}
+                </label>
+                <div class="select">
+                  <select
+                    id="AddressCountry_{{ form.id }}"
+                    name="address[country]"
+                    data-address-country-select
+                    data-default="{{ form.country }}"
+                    data-form-id="{{ form.id }}"
+                    autocomplete="country"
+                  >
+                    {{ all_country_option_tags }}
+                  </select>
+                  {% render 'iconcaret' %}
+                </div>
+              </div>
+                
+              <div id="AddressProvinceContainer_{{ form.id }}" style="display:none;">
+                <label for="AddressProvince_{{ form.id }}">
+                  {{ 'customer.addresses.province' | t }}
+                </label>
+                <div class="select">
+                  <select
+                    id="AddressProvince_{{ form.id }}"
+                    name="address[province]"
+                    data-default="{{ form.province }}"
+                    autocomplete="address-level1"
+                  ></select>
+                 {% render 'iconcaret' %}
+                </div>
+              </div>
+                </div>
+                <div class="coupling">
+              <div class="field">
+                <input
+                  type="text"
+                  id="AddressZip_{{ form.id }}"
+                  name="address[zip]"
+                  value="{{ form.zip }}"
+                  autocapitalize="characters"
+                  autocomplete="postal-code"
+                  placeholder="{{ 'customer.addresses.zip' | t }}"
+                >
+                <label for="AddressZip_{{ form.id }}">{{ 'customer.addresses.zip' | t }}</label>
+              </div>
+                  
+              <div class="field">
+                <input
+                  type="tel"
+                  id="AddressPhone_{{ form.id }}"
+                  name="address[phone]"
+                  value="{{ form.phone }}"
+                  autocomplete="tel"
+                  placeholder="{{ 'customer.addresses.phone' | t }}"
+                >
+                <label for="AddressPhone_{{ form.id }}">{{ 'customer.addresses.phone' | t }}</label>
+              </div>
+                </div>
+              </div>
+              <!-- <div class="arMainActBtns">
+                <button>UPDATE</button>
+                <button type="reset">{{ 'customer.addresses.cancel' | t }}</button>
+                 <button
+                  type="button"
+                  aria-label="{{ 'customer.addresses.delete' | t }}"
+                  data-target="{{ address.url }}"
+                  data-confirm-message="{{ 'customer.addresses.delete_confirm' | t }}"
+                >
+                  {{ 'customer.addresses.delete' | t }}
+                </button>
+              </div> -->
+            {%- endform -%}
+          </div>
+                     
+                    </div>
+                       {% endif %}
+      {%- endfor -%}
+      <br>
+      <br>
+      <a href="/account/addresses" class="arAddBtn_cba">Edit Address</a>
+      </div>
+          
+    </div>
+      </div>
+      
+      <div id="Paris" class="tabcontent arOrdersTab">
+        <div>
+      {%- if customer.orders.size > 0 -%}
+      <h2>{{ 'customer.orders.title' | t }}</h2>
+      {% endif %}
+
+      {% paginate customer.orders by 20 %}
+        {%- if customer.orders.size > 0 -%}
+          <div class="for-desktop">
+          <table role="table" class="order-history">
+            <caption class="visually-hidden">
+              {{ 'customer.orders.title' | t }}
+            </caption>
+            <thead role="rowgroup">
+              <tr role="row">
+                <th id="ColumnOrder" scope="col" role="columnheader">Order Number</th>
+                <th id="ColumnDate" scope="col" role="columnheader">Order Date</th>
+                <th id="ColumnPayment" scope="col" role="columnheader">{{ 'customer.orders.payment_status' | t }}</th>
+                <th id="ColumnFulfillment" scope="col" role="columnheader">
+                  Order Status
+                </th>
+                <th id="ColumnTotal" scope="col" role="columnheader">{{ 'customer.orders.total' | t }}</th>
+                <th class="na_order">Order Details</th>
+              </tr>
+            </thead>
+            <tbody role="rowgroup">
+              {%- for order in customer.orders -%}
+                <tr role="row">
+                  <td
+                    id="RowOrder"
+                    role="cell"
+                    headers="ColumnOrder"
+                    data-label="{{ 'customer.orders.order_number' | t }}"
+                  >
+                    <a
+                      href="{{ order.customer_url }}"
+                      aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}"
+                    >
+                      {{ order.name }}
+                    </a>
+                  </td>
+                  <td headers="RowOrder ColumnDate" role="cell" data-label="{{ 'customer.orders.date' | t }}">
+                    {{ order.created_at | time_tag: format: 'date' }}
+                  </td>
+                  <td
+                    headers="RowOrder ColumnPayment"
+                    role="cell"
+                    data-label="{{ 'customer.orders.payment_status' | t }}"
+                  >
+                    {{ order.financial_status_label }}
+                  </td>
+                  <td
+                    headers="RowOrder ColumnFulfillment"
+                    role="cell"
+                    data-label="{{ 'customer.orders.fulfillment_status' | t }}"
+                  >
+                    {{ order.fulfillment_status_label }}
+                  </td>
+                  <td headers="RowOrder ColumnTotal" role="cell" data-label="{{ 'customer.orders.total' | t }}">
+                    {{ order.total_net_amount | money_with_currency }}
+                  </td>
+                   <td><a class="na_view" href="{{ order.customer_url }}" style="letter-spacing: normal">VIEW</a></td>
+                </tr>
+              {%- endfor -%}
+            </tbody>
+
+            
+          <!-- for Mobile  -->
+            
+          </table>
+</div>
+
+
+        <div class="for-mobile"> 
+          <table role="table" class="order-history order-history-mob">
+             <tbody role="rowgroup">
+              {%- for order in customer.orders -%}
+                <tr role="row">
+                  <td
+                    id="RowOrder"
+                    role="cell"
+                    headers="ColumnOrder"
+                    data-label="{{ 'customer.orders.order_number' | t }}"
+                  >
+                    <a
+                      href="{{ order.customer_url }}"
+                      aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}"
+                    >
+                      {{ order.name }}
+                    </a>
+                  </td>
+                  <td headers="RowOrder ColumnDate" role="cell" data-label="{{ 'customer.orders.date' | t }}">
+                    {{ order.created_at | time_tag: format: 'date' }}
+                  </td>
+                  <td role="cell"><a class="na_view" href="">VIEW</a></td>
+                  <!-- <td headers="RowOrder ColumnTotal" role="cell" data-label="{{ 'customer.orders.total' | t }}">
+                    {{ order.total_net_amount | money_with_currency }}
+                  </td> -->
+                </tr>
+              {%- endfor -%}
+            </tbody>
+          </table> 
+        </div>
+        
+        {%- else -%}
+          <div class="noorder">
+          <p>{{ 'customer.orders.none' | t }}</p>
+          <a href="/collections/all" class="button acc-btn">SHOP</a>
+          </div>
+          <style>
+          .order-history-p { display: none !important; }
+          </style>
+        {%- endif -%}
+
+        {%- if paginate.pages > 1 -%}
+          {%- if paginate.parts.size > 0 -%}
+            <nav class="pagination" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
+              <ul role="list">
+                {%- if paginate.previous -%}
+                  <li>
+                    <a href="{{ paginate.previous.url }}" aria-label="{{ 'general.pagination.previous' | t }}">
+                      <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+                      </svg>
+                    </a>
+                  </li>
+                {%- endif -%}
+
+                {%- for part in paginate.parts -%}
+                  <li>
+                    {%- if part.is_link -%}
+                      <a href="{{ part.url }}" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">
+                        {{- part.title -}}
+                      </a>
+                    {%- else -%}
+                      {%- if part.title == paginate.current_page -%}
+                        <span aria-current="page" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">
+                          {{- part.title -}}
+                        </span>
+                      {%- else -%}
+                        <span>{{ part.title }}</span>
+                      {%- endif -%}
+                    {%- endif -%}
+                  </li>
+                {%- endfor -%}
+
+                {%- if paginate.next -%}
+                  <li>
+                    <a href="{{ paginate.next.url }}" aria-label="{{ 'general.pagination.next' | t }}">
+                      <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+                      </svg>
+                    </a>
+                  </li>
+                {%- endif -%}
+              </ul>
+            </nav>
+          {%- endif -%}
+        {%- endif -%}
+      {% endpaginate %}
+    </div> 
+
+      
+      <p class="order-history-p">*Order amounts are shown in equivalent $USD, however your card was charged in your chosen currency.</p>
+      </div>
+      
+      <div id="Tokyo" class="tabcontent">
+
+        <span>{{ section.settings.text }}</span>
+        
+      </div>
+  </div>
+  <div>
+    
+
+    
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-account.name",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Return text"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ]
+}
+{% endschema %}
+<style>
+.account-menu {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+.acc-btn {
+    background: #000!important;
+    color: #fff!important;
+    text-decoration: none!important;
+    line-height: 47px;
+    border: none!important;
+}
+.acc-btn:hover {
+  border: none!important;
+}  
+.account-menu .tab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 0!important;
+    margin: 0;
+    max-width: 100%;
+    border: none;
+  overflow: hidden;
+}
+.account-menu .tab button {
+  background-color: transparent;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #21232266;
+    padding: 0;
+    max-width: auto;font-family:TstarP;font-weight:900;
+    width: auto;
+}
+.account-menu .tab button a{
+    text-decoration: none;
+}  
+.account-menu .tab button:before, .account-menu .tab button:after {
+  display: none;
+}
+.account-menu .tab button.active {
+  text-decoration: underline;
+  color: #000;
+}
+.account-menu .tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+  text-align: center;
+}
+.account-menu .tabcontent h2{
+    font-size: 12px;
+    text-transform: uppercase;  
+}
+</style>
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>

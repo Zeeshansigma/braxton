@@ -1,0 +1,287 @@
+<style>
+  #ContactForm input {
+    border-bottom: 1px solid #000 !important;
+}
+#ContactForm .field__label {
+    color: #4D4F4E !important;
+} 
+.field-selct select#request-type {  
+    font-family: TstarW!important;
+    font-size: 14px!important;
+    font-weight: 900!important;  
+}  
+#ContactForm button.button {
+    text-transform: uppercase;
+    font-size: 16px!important;
+    font-weight: 900;
+    letter-spacing: normal!important;
+    box-shadow: none!important;
+}  
+#ContactForm .field__label {
+    font-size: 14px;
+}
+.na_contact-form {
+    margin-top: 69px;
+}
+@media(max-width: 768px){
+  .naContact h2.title.title-wrapper--no-top-margin.inline-richtext.h1.scroll-trigger.animate--slide-in{
+    font-size: 16px !important;
+  }
+}  
+</style>
+
+{{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient" style="background-color: #fcfbfa!important;">
+  <div class="naContact contact page-width--narrow section-{{ section.id }}-padding">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="title title-wrapper--no-top-margin inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %}{% endif %}">
+        {{ section.settings.heading }}
+      </h2>
+    {%- else -%}
+      <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
+    {%- endif -%}
+    {%- liquid
+      assign contact_form_class = 'isolate'
+      if settings.animations_reveal_on_scroll
+        assign contact_form_class = 'isolate '
+      endif
+    -%}
+<div class="na_contact-form custom-page">
+      <div class="na_link--list--contact na_links--about">
+        <div class="na_links--abouts">
+          <div class="na_links--inner">
+            <ul class="na_list--about">
+              {% for link in linklists[section.settings.menu].links %}
+                <li>
+                  <a href="{{ link.url }}" style="color: {{ section.settings.clr }};{% if link.active %}background:#F2F1F0;color:#000;{% endif %}">{{ link.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+  <div class="na_contact--form na_content--d">
+    {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
+      <div class="contact__fields">
+        <div class="field">
+          <input type="text" class="field__input" name="contact[first_name]" placeholder="First name" id="first-name" />
+          <label class="field__label" for="first-name">First name</label>
+        </div>
+        <div class="field">
+          <input type="text" class="field__input" name="contact[last_name]" placeholder="Last name" id="last-name" />
+          <label class="field__label" for="last-name">Last name</label>
+        </div>
+        <div class="field field--with-error">
+          <input
+            autocomplete="email"
+            type="email"
+            id="ContactForm-email"
+            class="field__input"
+            name="contact[email]"
+            spellcheck="false"
+            autocapitalize="off"
+            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+            aria-required="true"
+            {% if form.errors contains 'email' %}
+              aria-invalid="true"
+              aria-describedby="ContactForm-email-error"
+            {% endif %}
+            placeholder="e-mail*"
+          >
+          <label class="field__label" for="ContactForm-email">
+            E-mail
+            <span aria-hidden="true">*</span></label
+          >
+          {%- if form.errors contains 'email' -%}
+            <small class="contact__field-error" id="ContactForm-email-error">
+              <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+              <span class="form__message">
+                {%- render 'icon-error' -%}
+                {{- form.errors.translated_fields.email | capitalize }}
+                {{ form.errors.messages.email -}}
+              </span>
+            </small>
+          {%- endif -%}
+        </div>
+      </div>
+      <div class="field">
+        <input
+          type="tel"
+          id="ContactForm-phone"
+          class="field__input"
+          autocomplete="tel"
+          name="contact[{{ 'templates.contact.form.phone' | t }}]"
+          pattern="[0-9\-]*"
+          value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+          placeholder="{{ 'templates.contact.form.phone' | t }}"
+        >
+        <label class="field__label" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
+      </div>
+      <div class="field">
+          <input type="text" class="field__input" placeholder="order number" name="contact[order_number]" id="order-number" />
+          <label class="field__label" for="order-number">order number</label>
+        </div>
+      <div class="field">
+        <textarea
+          rows="10"
+          id="ContactForm-body"
+          class="text-area field__input"
+          name="contact[{{ 'templates.contact.form.comment' | t }}]"
+          placeholder="Type here (If your enquiry is about an order, do not forget to include your order number)."
+        >
+          {{- form.body -}}
+        </textarea>
+        <!-- <label class="form__label field__label" for="ContactForm-body">
+          {{- 'templates.contact.form.comment' | t -}}
+        </label> -->
+      </div>
+      <div class="contact__button">
+        <button type="submit" class="button na_submit" id="na_submit">
+          {{ 'templates.contact.form.send' | t }}
+        </button>
+      </div>
+     {%- if form.posted_successfully? -%}
+        <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
+           Our customer service works from Monday - Friday (9:00am - 5.30pm GMT).<br>
+           Note that if your contact was submitted on Friday after 11:00am, you will most likely receive a return from us in the next working day. 
+        </h2>
+      {%- elsif form.errors -%}
+        <div class="form__message">
+          <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
+            {% render 'icon-error' %}
+             Sorry Fill the form Correctly
+          </h2>
+        </div>
+        <ul class="form-status-list caption-large" role="list">
+          <li>
+            <a href="#ContactForm-email" class="link">
+              {{ form.errors.translated_fields.email | capitalize }}
+              {{ form.errors.messages.email }}
+            </a>
+          </li>
+        </ul>
+      {%- endif -%}
+    {%- endform -%}
+  </div>
+</div>    
+  </div>
+</div>
+{% comment %}
+<script>
+    const form = document.getElementById("ContactForm");
+    const submitButton = form.querySelector(".na_submit");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the form from actually submitting (for this example).
+      
+      // Change the button color to green after form submission.
+      submitButton.style.backgroundColor = "#4FCC6D";
+      submitButton.textContent = "Thanks for contacting us!";
+      submitButton.style.color = "#FFF";
+      submitButton.style.border = "1px solid #4FCC6D";
+      submitButton.style.outline = "#4FCC6D";
+      submitButton.style.boxShadow = "none";
+      submitButton.style.textTransform = "uppercase";
+    });
+  </script>
+{% endcomment %}
+
+{% schema %}
+{
+  "name": "Na Contact",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color",
+      "label": "Color",
+      "id": "clr",
+      "default": "#000"
+    },
+    {
+      "type": "link_list",
+      "label": "Menu",
+      "id": "menu"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Contact form",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Na Contact"
+    }
+  ]
+}
+{% endschema %}

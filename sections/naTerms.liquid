@@ -1,0 +1,228 @@
+<style>
+  .na_privacy--{{ section.id }}{
+    max-width: 1340px;
+    margin: 0 auto;
+    padding-top: 65px;
+  }
+  .na_Inner--content h2{
+    letter-spacing: normal;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+  }   
+  .na_Inner--content p {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+}
+.na_privacy--content--links {
+    padding-top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 44px;
+}
+.na_content--privacy {
+    max-width: 900px;
+    width: 67%;
+}
+.na_Inner--content ul {
+    padding: 0;
+    padding-left: 21px;
+}  
+.na_Inner--content.contents--2 {
+    margin-top: 35px;
+} 
+.na_Inner--content.contents--3 {
+    margin-top: 35px;
+} 
+.na_Inner--content.contents--4 {
+    margin-top: 35px;
+}
+.na_Inner--content.contents--5 {
+    margin-top: 35px;
+}
+.na_Inner--content.contents--6 {
+    margin-top: 35px;
+}
+.na_Inner--content.contents--7 {
+    margin-top: 35px;
+}
+.na_Inner--content.contents--8 {
+    margin-top: 35px;
+}
+.na_Inner--content.contents--9 {
+    margin-top: 35px;
+}
+.na_Inner--content.contents--10 {
+    margin-top: 35px;
+}
+.na_Inner--content.contents--11 {
+    margin-top: 35px;
+}
+.na_Inner--content.contents--12 {
+    margin-top: 35px;
+}
+.na_Inner--content.contents--13 {
+    margin-top: 35px;
+}
+.na_Inner--content.contents--14 {
+    margin-top: 35px;
+}
+.na_Inner--content.contents--15 {
+    margin-top: 35px;
+}
+.na_Inner--content.contents--16 {
+    margin-top: 35px;
+}
+.na_Inner--content.contents--17 {
+    margin-top: 35px;
+}
+.na_Inner--content.contents--18 {
+    margin-top: 35px;
+}
+.na_Inner--content.contents--19 {
+    margin-top: 35px;
+}
+.na_Inner--content.contents--20 {
+    margin-top: 35px;
+}
+.na_Inner--content.contents--21 {
+    margin-top: 35px;
+}
+.na_Inner--content.contents--22 {
+    margin-top: 35px;
+}
+.na_Inner--content.contents--23 {
+    margin-top: 35px;
+}
+.na_Inner--content p {
+    letter-spacing: normal;
+} 
+@media(max-width: 768px){
+  .na_privacy--title h1{
+    font-size: 16px;
+  }
+  .na_Inner--content h2{
+     font-size: 14px;
+  }
+  .na_Inner--content p{
+    font-size: 13px;
+  }
+}  
+</style>
+
+<section class="na_privacy--{{ section.id }} custom-page" style="background: {{ section.settings.bgclr }}">
+  <div class="na_privacy--title na_title">
+    <h1 style="color: {{ section.settings.titleClr }}">{{ page.title }}</h1>
+  </div>
+  <div class="na_privacy--content--links">
+    <div class="na_links--about">
+      <div class="na_links--inner">
+        <ul class="na_list--about">
+          {% for link in linklists[section.settings.menu].links %}
+            <li>
+              <a href="{{ link.url }}" style="color: {{ section.settings.titleClr }};{% if link.active %}background:#F2F1F0;color:#000;{% endif %}">{{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="na_content--privacy na_content--d">
+      {% for block in section.blocks %}
+        <div class="na_Inner--content contents--{{ forloop.index }}">
+         {% if block.settings.title1 != blank %}
+           <h2 style="color: {{ section.settings.titleClr }}">{{ block.settings.title1 }}</h2>
+         {% endif %}  
+         {% if block.settings.title2 != blank %}
+           <h2 style="color: {{ section.settings.titleClr }}">{{ block.settings.title2 }}</h2>
+         {% endif %} 
+        {% if block.settings.title3 != blank %}
+           <h2 style="color: {{ section.settings.titleClr }}">{{ block.settings.title3 }}</h2>
+        {% endif %}  
+           <div style="color: {{ section.settings.clr }}">{{ block.settings.desc }}</div>
+        </div>
+      {% endfor %}  
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Na Terms",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Color Controls"
+    },
+    {
+      "type": "color",
+      "label": "Background Color",
+      "id": "bgclr",
+      "default": "#F3F3F3"
+    },
+    {
+      "type": "color",
+      "label": "Title Color",
+      "id": "titleClr",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "label":"Color",
+      "id": "clr",
+      "default": "#000"
+    },
+    {
+      "type": "link_list",
+      "label": "List",
+      "id": "menu"
+    }
+  ],
+  "blocks":[
+    {
+      "type": "content",
+      "name": "Privacy Content",
+      "settings":[
+              {
+      "type": "text",
+      "label": "Title 1",
+      "id": "title1",
+      "default": "LAST UPDATED: 10th March 2023"
+    },
+    {
+      "type": "text",
+      "label": "Title 2",
+      "id": "title2",
+      "default": "LAST UPDATED: 10th March 2023"
+    },
+    {
+      "type": "text",
+      "label": "Title 3",
+      "id": "title3",
+      "default": "LAST UPDATED: 10th March 2023"
+    },
+    {
+      "type": "richtext",
+      "label": "Description",
+      "id": "desc"
+    }
+      ]
+
+    }
+  ],
+  "presets":[
+    {
+      "name": "Na Terms"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

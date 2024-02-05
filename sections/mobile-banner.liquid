@@ -1,0 +1,47 @@
+<div class="mobile-banner">
+   {% if section.settings.image != blank %}
+     <a href="{{ section.settings.link }}"><img src="{{ section.settings.image | img_url: 'master' }}" /></a>
+   {% endif %}
+</div>
+{% schema %}
+  {
+    "name": "Mobile Top Section",
+    "settings": [
+       {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+       },
+       {
+         "type": "url",
+         "id": "link",
+         "label": "Link"
+       }
+    ],
+  "presets": [
+    {
+      "name": "Mobile Top Section",
+      "category": "Custom"
+    }
+  ]
+  }
+{% endschema %}
+
+<style>
+.mobile-banner {
+  display: none;
+}
+
+@media screen and (max-width: 767px){  
+.mobile-banner {
+  display: block;
+} 
+section#shopify-section-template--20143086862628__e4d95f04-6df1-4a82-8ec6-1e01d74c6d31 {
+    display: none;
+}
+.mobile-banner img {
+    max-width: 100%;
+    width: 100%;
+}  
+} 
+</style>

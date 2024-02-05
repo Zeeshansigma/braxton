@@ -1,0 +1,39 @@
+<div class="banner-full">
+
+  <div class="bannerfullin">
+
+    <img src="{{ section.settings.img1 | img_url: 'master' }}" class="deskimg" />
+    <img src="{{ section.settings.img2 | img_url: 'master' }}" class="mobimg" />
+
+    <a href="{{ section.settings.link }}">Shop now</a>
+  </div>
+  
+</div>
+
+{% schema %}
+  {
+    "name": "Banner Full",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "img1",
+        "label": "Image Desktop"
+      },
+      {
+        "type": "image_picker",
+        "id": "img2",
+        "label": "Image Mobile"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Button Link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Banner Full"
+      }
+    ]
+  }
+{% endschema %}

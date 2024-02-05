@@ -1,0 +1,70 @@
+<style>
+  #shopify-section-sections--21499026899236__a28742ab-e757-4d12-bae5-1dd17ae5d2fa {
+    box-shadow: 1px 4px 8px #00000020 !important;
+  }
+  marquee {
+    padding:0;
+    font-size: 12px;
+    font-weight: 900;
+    font-family: 'TstarW' !important;
+    line-height: unset !important;
+  }
+  marquee p {
+    padding:0;
+    margin: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+</style>
+
+<marquee behavior="scroll" direction="left" style="background-color: {{ section.settings.bg }}">
+  {% for block in section.blocks %}
+    <p style="color: {{ section.settings.clr }}">{{ block.settings.text }}</p>
+  {% endfor %}
+</marquee>
+{% schema %}
+{
+  "name": "ar Announcment",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Announcment Bar Bg",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "clr",
+      "label": "Announcment Bar Text color",
+      "default": "#ffffff"
+    }
+  ],
+  "max_blocks": 1,
+  "blocks": [
+    {
+      "name":"Bar",
+      "type":"slide",
+      "settings": [
+            {
+          "type": "text",
+          "id": "text",
+          "label": "Announcment Bar Text",
+          "default": "FREE SHIPPING TO THE US WHEN YOU ORDER OVER $30"
+        }
+      ]
+    }
+  ],
+  "presets":[
+    {
+      "name": "Ar Announcment",
+      "category": "Announcment"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

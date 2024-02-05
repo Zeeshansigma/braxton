@@ -1,0 +1,98 @@
+{% if end_date != blank %}
+<div class="timer">
+  {% if title != blank %}
+  <h4 class="timer__title">{{ title }}</h4>
+  {% endif %}
+  <div class="timer-display">
+    <div class="timer-block">
+      <span class="timer-block__num js-timer-days">00</span>
+      <span class="timer-block__unit">D</span>
+    </div>
+    <div class="timer-block">
+      <span class="timer-block__num js-timer-hours">00</span>
+      <span class="timer-block__unit">H</span>
+    </div>
+    <div class="timer-block">
+      <span class="timer-block__num js-timer-minutes">00</span>
+      <span class="timer-block__unit">M</span>
+    </div>
+    <div class="timer-block">
+      <span class="timer-block__num js-timer-seconds">00</span>
+      <span class="timer-block__unit">S</span>
+    </div>
+  </div>
+</div>
+<style>
+/* styles for timer */
+  .timer {
+    /*background: #f6fafd;*/
+    padding: 10px;
+    margin: 10px 0;
+  }
+ 
+  .timer--expired {
+    display: none;
+  }
+ 
+  .timer__title {
+    @extend .paragraph;
+    text-align: center;
+  }
+ 
+  .timer-display {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 5px;
+    margin-top: 5px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+ 
+  .timer-block {
+    position: relative;
+    width: 25%;
+    padding: 0 5px;
+ 
+    &:not(:last-child):after {
+      content: ':';
+      position: absolute;
+      right: 0;
+      top: 3px;
+    }
+  }
+ .timer-block:after {
+    top: -1px !important;
+}
+  .timer-block__num,
+  .timer-block__unit {
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+  }
+</style>
+ 
+<script type="text/javascript">
+  var second = 1000,
+      minute = second * 60,
+      hour = minute * 60,
+      day = hour * 24;
+ 
+  var countDown = new Date('{{- end_date -}}').getTime(),
+      x = setInterval(function() {
+      var now = new Date().getTime(),
+          distance = countDown - now;
+    document.querySelector('.js-timer-days').innerText = Math.floor(distance / (day)),
+      document.querySelector('.js-timer-hours').innerText = Math.floor((distance % (day)) / (hour)),
+    document.querySelector('.js-timer-minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+    document.querySelector('.js-timer-seconds').innerText = Math.floor((distance % (minute)) / second);
+    }, second)
+</script>
+{% endif %}

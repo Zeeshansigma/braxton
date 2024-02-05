@@ -1,0 +1,708 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+.customer.account {
+    max-width: 1290px !important;
+    margin: 0 auto;
+}
+  .account-menu .tab {
+    max-width: 630px !important;
+    margin: 0 auto !important;width:100%
+}
+  .upfields {
+    max-width: 715px !important;
+    margin: 0 auto;
+}
+  a.na_view {
+    margin-left: auto;
+    margin-right: auto;
+}
+th#ColumnOrder {
+    font-family: 'TstarP';
+}
+td#RowOrder a {
+    font-family: 'TstarW';
+}
+.customer tbody td time {
+    font-family: 'TstarW';
+}  
+  @media screen and (min-width: 750px) {
+   thead tr {
+      margin: 0!important;
+    }
+   tbody tr:nth-of-type(1) {
+     margin-top: 40px!important;
+   } 
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+     .for-desktop{
+      display:block;
+    }
+     .for-mobile{
+      display: none;
+    }
+    .customer tbody td:last-of-type{
+      padding-left: 30px;
+    }
+    th.na_order{
+      padding-bottom: 6px!important;      
+      font-size: 14px!important;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+      text-transform: uppercase;
+      color: #000;      
+    }
+    a.na_view{
+    height: 38px!important;  
+    min-width: 100%;  
+    max-width: 185px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+    transition: 0.5s;  
+    }
+    .customer tbody td:last-of-type{
+      padding-top: 14px;
+      
+    }
+    a.na_view:hover{
+      background: #fff;
+      border: 1px solid #000;
+      color: #000;
+    }
+    .tabcontent.arOrdersTab tr {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    /* flex-basis: 50%; */
+    margin: 20px 0;
+}
+    .tabcontent.arOrdersTab tr td, .tabcontent.arOrdersTab tr th {
+    width: 20%;
+}
+    .customer tbody td:last-of-type {
+    padding-left: 0;
+}
+  }
+  @media screen and (max-width: 749px) {
+    .for-desktop{
+      display:none;
+    }
+    .customer tr{
+      flex-direction:row;
+      justify-content:space-between;
+    }
+    .customer td{
+      flex-direction:column; 
+      justify-content: center;
+      align-items: center !important; 
+    }
+    
+    .customer td::before{
+      padding-right:0;
+      align-items: center !important; 
+    }
+     .customer td:first-of-type{
+      flex-direction:column;
+    }
+    .account table td:first-of-type a{
+      padding:0;
+    }
+  .customer tbody td:first-of-type{
+    padding-top:1rem;
+  }
+    .customer tbody td:last-of-type{
+       padding-bottom:1rem;
+    }
+   td#RowOrder:before {
+    color: #000;
+}
+.customer td::before{
+  color: #000;
+  text-transform: capitalize;
+}  
+.account table td:first-of-type a {
+    color: #4D4F4E!important;    
+  }
+ .customer tbody td time{
+   color: rgba(33, 37, 41, 0.40)!important;
+ }   
+ .account-menu .tab {
+    border-bottom: 1px solid #000!important;
+ }
+ a.na_view {
+    color: #fff;
+    padding: 8px 22px 9px 21px;
+    text-decoration: none;
+    font-size: 14px;
+    background: #000;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+}
+  a.na_view:hover{
+      background: #fff;
+      border: 1px solid #000;
+      color: #000;
+    }    
+.account-menu .tabcontent{
+  padding: 16px 12px!important;
+}
+.customer tbody tr {
+    padding-bottom: 6px;
+    border-bottom: 1px solid;
+}
+.customer table{
+  border-bottom: none!important;
+}    
+  }    
+
+.customer .field label, a.recoverylink{
+  font-size: 14px !important;
+}  
+.account-menu .tab{
+    max-width: 800px !important;  
+}  
+  .coupling .field {
+    max-width: 350px;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.coupling {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+  .coupling .field input {
+    padding-top: 30px !important;
+    padding-bottom: 15px !important;
+    font-size: 13px;
+    font-family: 'TstarW';
+}
+  .arMainActBtns button {
+    max-width: 115px !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    color: #000 !important;
+    height: 38px !important;
+    max-height: 100% !important;
+    padding: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arMainActBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+  .arMainActBtns button:before, .arMainActBtns button:after {
+    content: none;
+}
+  a.arAddBtn_cba {
+    display: flex;
+    justify-content: center;
+    max-width: 315px;
+    margin: 0 auto;
+    height: 40px;
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+    align-items: center;
+    line-height: 1;
+    font-family: 'TstarP';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+  @media only screen and (max-width:500px){
+    .coupling{
+    flex-wrap:wrap;gap:10px;margin-bottom:10px !important
+  }
+  .coupling .field{margin-bottom:0 !important}
+  .arMainActBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    overflow: hidden;justify-content:space-between;
+}
+    a.arAddBtn_cba{max-width:351px;height:36px;}
+  
+  .arMainActBtns button{min-width:72px !important;max-width:72px !important;background:#000 !important; color:#fff !important;}
+    .tab.naTab-- {
+    justify-content: space-between !important;
+    padding: 0 12px !important;max-width:351px !important;
+}
+    .account-menu .tab button{min-width:max-content;max-width:max-content;}
+  }
+{%- endstyle -%}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<style>
+  .csOrdercontainer {
+    display: block !important;
+}
+  .customer.order {
+    max-width: 1290px !important;
+}
+  .csOrdB_col.CsOrderBCCol {
+    color: #000;
+    text-align: center;
+    font-family: TstarW;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;letter-spacing:normal;
+    line-height: 18px;
+}
+  .csOrderBlock {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+  .csOrderBlock.csOrderHeaderBlock {
+    border-bottom: 1px solid #666;
+    padding-bottom: 5px;
+    margin-bottom: 45px;margin-top:60px;
+}
+  .csOrdB_col.CsOrderBHCol {
+    color: #000;
+    font-family: TstarP;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;letter-spacing:normal;
+}
+.csOrdB_col {
+    width: 20%;
+}
+.orderAddresss {
+    width: 50%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    text-align: center;
+}
+  .orderAddresss h2 {
+    color: #000;
+    text-align: center;
+    font-family: TstarP;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 10px;letter-spacing:normal;
+}
+  .orderAddresss p {
+    color: #000;
+    text-align: center;
+    font-family: TstarW;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;letter-spacing:normal;
+}
+  .orderAddresses {
+    margin-top: 80px;
+    max-width: 565px;
+    margin: 80px auto 0;
+    display: flex;
+    gap: 71px;
+}
+  .csOrderBlocks {
+    padding-right: 0 !important;
+    padding: 0 15px !important;
+}
+  .arTabNav button:before, .arTabNav button:after {
+    content: none;
+}
+.arTabNav button {
+    padding: 0;
+    width: max-content;
+    height: max-content;
+    display: flex;
+    background: transparent;
+    border: 0 !important;letter-spacing:normal;
+    box-shadow: unset !important;color:#000;
+}
+  .arTabNav a, .arTabNav button {
+    color: #878787;
+    text-align: center;letter-spacing:normal;
+    font-family: TstarP;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;text-decoration:none;
+}
+  button.arTabBtns.arActive {
+    color: #000;
+    text-decoration-line: underline;
+    text-decoration-color: #879797;
+}
+  .arTabNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 0!important;
+    margin: 0;
+    max-width: 100%;
+    border: none;
+    overflow: hidden;
+    max-width: 630px;
+    margin: 0 auto;
+    padding: 0 10px !important;
+}
+ 
+
+div#returnTTab p {
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    color: #000;
+    text-align: center;
+    font-family: TstarW;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: normal;
+}
+   div#returnTTab p a {
+    font-weight: 900;
+    text-decoration-line: underline;
+}
+  @media only screen and (max-width:500px){
+    .csOrderBlocks{padding:0  !important;}
+    .csOrdB_col.CsOrderBCCol, .csOrdB_col.CsOrderBHCol{font-size:12px;}
+    .csOrdB_col {
+    width: max-content;
+}
+    .arDate{
+color: rgba(33, 37, 41, 0.40) !important;}
+    .arTotal{display:none;}
+    .csOrderBlock.csOrderHeaderBlock {
+    border-top: 1px solid #666;
+    padding-top: 15px;
+    margin-top: 15px;
+    border-bottom: 0;
+    margin-bottom: 0;padding-bottom:0 !important;
+}
+    .csOrderBlock.csOrderContentBlock {
+    padding-bottom: 14px;
+    border-bottom: 1px solid #666;
+}
+    .orderAddresss {
+    width: 50%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 8px;
+    text-align: center;
+}
+    .orderAddresses{gap:40px;margin-top:0}
+    .arMobOnly{display:block !important;text-align:center;}
+    .totalMob{
+      margin-top:8px !important;
+      color: #000;
+text-align: center;
+
+/* TEXTO GRANDE */
+font-family: TstarW;
+font-size: 13px;
+font-style: normal;
+font-weight: 700;
+line-height: 18px; /* 138.462% */
+      margin-bottom:35px !important;
+    }
+    p.pricingMob{
+      color: #000;
+text-align: center;
+
+/* TEXTO GRANDE */
+font-family: TstarW;
+font-size: 13px;
+font-style: normal;
+font-weight: 700;
+line-height: 18px; /* 138.462% */ 
+      marign-bottom:36px !important;
+    }
+  }
+
+.tabcontent.arOrdersTab tr th {
+  width: 236px;
+}
+#Paris.arOrdersTab td {
+  text-align: center !important;
+}
+#Paris.arOrdersTab td a {
+  color: #000 !important;
+}
+#Paris.arOrdersTab td a.na_view {
+  color: #FFF !important;
+}
+.customer th:first-of-type {
+  padding-left: 0px !important;
+}
+  #Paris.arOrdersTab {
+    margin-top: 10px !important;
+  }
+</style>
+<div class="customer order section-{{ section.id }}-padding">
+  
+  <div>
+    <div class="toplinkk">
+      <h1 class="customer__title">{{ 'customer.account.title' | t }}</h1>
+      <a class="logouttext" href="{{ routes.account_logout_url }}">{{ 'customer.log_out' | t }}</a>
+    </div>
+    
+    <div class="arTabNav">
+          <button class="tablinks"  onclick="location.href='/account';" id="defaultOpen">My Profile</button>
+          <button type="button" onclick="myOrder();" class="arTabBtns arActive">MY ORDERS</button>
+          <button type="button" onclick="myReturns();" class="arTabBtns">MAKE A RETURN</button>
+    </div>
+  </div>
+        
+<script>
+
+    function myBackOrder() {
+      document.getElementById("orderrTab").style.display = "none";
+      document.getElementById("returnTTab").style.display = "none";
+      document.getElementById("Paris").style.display = "block";
+    }
+    function myOrder() {
+        document.getElementById("orderrTab").style.display = "block";
+        document.getElementById("returnTTab").style.display = "none";
+        document.getElementById("Paris").style.display = "none";
+        
+        // Remove 'arActive' class from all buttons
+        var buttons = document.getElementsByClassName("arTabBtns");
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].classList.remove("arActive");
+        }
+
+        // Add 'arActive' class to the clicked button
+        document.querySelector('button[onclick="myOrder();"]').classList.add("arActive");
+    }
+
+    function myReturns() {
+        document.getElementById("orderrTab").style.display = "none";
+        document.getElementById("returnTTab").style.display = "block";
+        document.getElementById("Paris").style.display = "none";
+        
+        // Remove 'arActive' class from all buttons
+        var buttons = document.getElementsByClassName("arTabBtns");
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].classList.remove("arActive");
+        }
+
+        // Add 'arActive' class to the clicked button
+        document.querySelector('button[onclick="myReturns();"]').classList.add("arActive");
+    }
+</script>
+  
+<div id="Paris" class="tabcontent arOrdersTab" style="display: none;">
+  <div>
+
+  {% paginate customer.orders by 20 %}
+  {%- if customer.orders.size > 0 -%}
+    <div class="for-desktop">
+      <table role="table" class="order-history">
+        <caption class="visually-hidden">
+        {{ 'customer.orders.title' | t }}
+        </caption>
+            
+        <thead role="rowgroup">
+          <tr role="row">
+            <th id="ColumnOrder" class="csOrdB_col CsOrderBHCol" scope="col" role="columnheader">Order Number</th>
+            <th id="ColumnDate" class="csOrdB_col CsOrderBHCol" scope="col" role="columnheader">Order Date</th>
+            <th id="ColumnPayment" class="csOrdB_col CsOrderBHCol" scope="col" role="columnheader">{{ 'customer.orders.payment_status' | t }}</th>
+            <th id="ColumnFulfillment" class="csOrdB_col CsOrderBHCol" scope="col" role="columnheader">Order Status</th>
+            <th id="ColumnTotal" class="csOrdB_col CsOrderBHCol" scope="col" role="columnheader">{{ 'customer.orders.total' | t }}</th>
+            <th class="na_order" class="csOrdB_col CsOrderBHCol">Order Details</th>
+          </tr>
+        </thead>
+            
+        <tbody role="rowgroup">
+          {%- for order in customer.orders -%}
+          <tr role="row">
+            <td id="RowOrder" role="cell" headers="ColumnOrder" data-label="{{ 'customer.orders.order_number' | t }}">
+              <a href="{{ order.customer_url }}" aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}" >{{ order.name }}</a>
+            </td>
+                    
+            <td headers="RowOrder ColumnDate" role="cell" data-label="{{ 'customer.orders.date' | t }}">
+              {{ order.created_at | time_tag: format: 'date' }}
+            </td>
+                
+            <td headers="RowOrder ColumnPayment" role="cell" data-label="{{ 'customer.orders.payment_status' | t }}" >
+              {{ order.financial_status_label }}
+            </td>
+                
+            <td headers="RowOrder ColumnFulfillment" role="cell" data-label="{{ 'customer.orders.fulfillment_status' | t }}" >
+              {{ order.fulfillment_status_label }}
+            </td>
+                
+            <td headers="RowOrder ColumnTotal" role="cell" data-label="{{ 'customer.orders.total' | t }}">
+              {{ order.total_net_amount | money_with_currency }}
+            </td>
+                     
+            <td><a class="na_view" href="{{ order.customer_url }}" style="letter-spacing: normal">VIEW</a></td>
+          </tr>
+          {%- endfor -%}
+        </tbody>
+      </table>
+    </div>
+  {%- endif -%}
+  {% endpaginate %}
+  </div>
+</div>
+  
+  <div class="csORderTable orderrTab" id="orderrTab" style="display:block !important;">
+    <div class="csOrderBlocks">
+      <div class="csOrderBlock csOrderHeaderBlock">
+        <div class="csOrdB_col CsOrderBHCol">
+          Order Number
+        </div>
+        <div class="csOrdB_col CsOrderBHCol">
+          Order Date
+        </div>
+        <div class="csOrdB_col CsOrderBHCol">
+          Order Status
+        </div>
+        <div class="csOrdB_col CsOrderBHCol">
+          Payment Method
+        </div>
+        <div class="csOrdB_col CsOrderBHCol arTotal">
+         Total
+        </div>
+      </div>
+      <div class="csOrderBlock csOrderContentBlock">
+        <div class="csOrdB_col CsOrderBCCol">
+         {{ order.name }}
+        </div>
+        <div class="csOrdB_col CsOrderBCCol arDate">
+          {{  order.created_at | time_tag: format: 'date_at_time'}}
+        </div>
+        <div class="csOrdB_col CsOrderBCCol">
+          {{ order.fulfillment_status }}
+        </div>
+        <div class="csOrdB_col CsOrderBCCol">
+          {% for transaction in order.transactions %}
+            {{ transaction.payment_details.credit_card_company }} {{ transaction.payment_details.credit_card_number }}
+          {% endfor %}
+        </div>
+        <div class="csOrdB_col CsOrderBCCol arTotal">
+         {{ order.total_price | money }}
+        </div>
+      </div>
+      
+    </div>
+        
+    <p class="arMobOnly totalMob" style="display:none">Total: {{ order.total_price | money_with_currency }}</p>
+    
+    <div class="orderAddresses">
+      <div class="orderAddresss orderBillingAdd">
+        <h2>{{ 'customer.order.billing_address' | t }}</h2>
+        <!-- <p>
+          <strong>{{ 'customer.order.payment_status' | t }}:</strong>
+          {{ order.financial_status_label }}
+        </p> -->
+        {{ order.billing_address | format_address }}
+      </div>
+      <div class="orderAddresss orderShippingAdd">
+        <h2>{{ 'customer.order.shipping_address' | t }}</h2>
+        <!-- <p>
+          <strong>{{ 'customer.order.fulfillment_status' | t }}:</strong>
+          {{ order.fulfillment_status_label }}
+        </p> -->
+        {{ order.shipping_address | format_address }}
+      </div>
+    </div>
+    <p class="arMobOnly pricingMob" style="">*Order amounts are shown in equivalent $USD, however your card was charged in your chosen currency.</p>
+
+      
+    <div class="toplinkk">
+      <a class="back-btn-d" onclick="myBackOrder();">Back</a>
+    </div>
+  </div>
+
+
+  <div class="returnTab" style="display:none;" id="returnTTab">
+    <p>
+      To initiate return contact <a href="mailto:customersupport@aranbraxton.com">customersupport@aranbraxton.com</a>
+    </p>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-order.name",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ]
+}
+{% endschema %}
+

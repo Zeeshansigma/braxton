@@ -1,0 +1,97 @@
+.product-form__input.product-form__inputARRR {
+    margin-top: 50px;
+    margin-bottom: -8px;width:100%;max-width:100%;
+}
+.product-form__input.product-form__inputARRR .select::before, .product-form__input.product-form__inputARRR .select::after {
+    content: none;
+}
+.product-form__input.product-form__inputARRR .select {
+    width: 100%;
+    max-width: 100%;
+    height: 48px;
+    padding: 0;
+    border: 0.5px solid #CCC;
+}
+.product-form__input.product-form__inputARRR .select {
+    width: 100%;
+    max-width: 100%;
+}
+.product .product__title h1, .product .price__regular .price-item--regular{margin:0;}
+.product__title {
+    margin-bottom: 50px;
+}
+.sizepopup {
+    margin: 0 !important;
+}
+button svg.icon.icon-cart {
+    display: none;
+}
+button.product-form__submit.button.button--full-width.button--primary {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+    height: 48px;
+}
+.sp-text a {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    gap: 7px;
+}
+.sp-text  {
+    top:25px;
+}
+span.size-text {
+    color: #4D4F4E;
+    text-align: right;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+}
+.piimg img {
+    max-width: 282.856px;
+    height: 22.085px;
+    object-fit: contain;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.product__info-container {
+    max-width: 500px;
+}
+.piimg {
+    width: 100%;
+    margin: 30px auto!important;
+    margin-bottom: 70px !important;
+    display: flex;
+}
+@media only screen and (min-width: 750px){
+.product__column-sticky {
+    top: 125px;
+}
+}
+@media only screen and (min-width:990px){
+  .product--large:not(.product--no-media) .product__info-wrapper{padding-top:95px !important;}
+}
+@media only screen and (max-width:500px){
+.product__info-wrapper{padding:0 25px !important; }
+  .product__title {
+    padding-top: 30px;
+    margin-bottom: 25px;
+}
+  .product-form__input.product-form__inputARRR{margin-top:30px}
+  product-recommendations.related-products{padding-top:00px !important;padding-bottom:40px !important;padding-left:0 !important;padding-right:0 !important;}
+  h2.related-products__heading.inline-richtext.h2 {
+    background: #fff;
+    padding-bottom: 30px;
+    padding-top: 60px;marign-bottom:30px;
+}
+  product-recommendations.related-products ul {
+    padding: 30px 12px;
+}
+  .related-products ul.grid.product-grid li.grid__item, .related-products ul.grid.product-grid li.grid__item .card__inner.color-background-2.gradient.ratio{background:transparent !important;}
+  
+}

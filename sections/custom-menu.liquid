@@ -1,0 +1,71 @@
+<div class="menu-navm">
+  <div class="navm">
+
+    {% for link in section.settings.menu.links %}
+
+    <a class="mnlnk" href="{{ link.url }}">{{ link.title }}</a>
+    
+    {% endfor %}
+    
+  </div>
+</div>
+
+<style>
+  a.mnlnk {
+    color: #000;
+    text-decoration: none;
+    padding: 5px 10px;
+    background: #f3f3f3;
+    border-radius: 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #000;
+    font-family: 'TSTARW';
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 10px 11px;
+    justify-content: center;
+    border-radius: 0;
+}
+  .menu-navm {
+    background: #fff;
+}
+
+.navm {
+    display: inline-block;
+    overflow-x: scroll;
+    white-space: nowrap;
+    padding: 10px 5px;
+}
+
+.menu-navm {
+    overflow-x: scroll;
+}
+  @media (min-width: 750px){
+    .menu-navm{
+          display: none !important;
+    }
+
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Mobile Navigation",
+    "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menu"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Mobile Navigation"
+    }
+  ]
+  }
+{% endschema %}

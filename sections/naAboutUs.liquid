@@ -1,0 +1,130 @@
+<style>
+  .na_aboutus--{{ section.id }}{
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+.content--inner p {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: normal;
+}
+
+@media(min-width: 769px){
+  .na_title h1 {
+    font-family: 'TstarP';
+    margin-bottom: 75px;
+  }
+  .content--inner {
+    max-width: 788px!important;
+}
+}  
+@media(max-width: 768px){
+.na_privacy--content--links {
+  justify-content: center;
+}
+.na_content--about {
+    padding: 0 12px;
+    width: 100%;
+}
+.na_content--image {
+    padding-top: 71px;
+}  
+.na_about--inner .na_title {
+  margin-bottom: 60px !important;
+}
+ .na_aboutus--{{ section.id }}{
+   padding-bottom: 0 !important;
+}  
+}  
+</style>
+<section class="na_aboutus--{{ section.id }} custom-page" style="background: #fff">
+  <div class="na_about--inner">
+     <div class="na_title">
+        <h1 style="color: {{ section.settings.titleClr }}">{{ page.title }}</h1>
+     </div>
+    <div class="na_about--outer">
+      <div class="na_links--about">
+       <div class="na_links--inner">
+          <ul class="na_list--about">
+            {% for link in linklists[section.settings.menu].links %}
+              {% assign pageT = page.title | downcase %}
+            {% assign linkT = link.title | downcase %}
+            <li><a href="{{ link.url }}" style="color: {{ section.settings.titleClr }};{% if link.active %}background:#F2F1F0;color:#000;{% endif %}">{{ link.title }}</a></li>
+            {% endfor %}
+          </ul>
+       </div>
+    </div>
+    <div class="na_content--about na_content--d">
+       <div class="content--inner">
+          <div style="color: {{ section.settings.clr }}">{{ section.settings.desc }}</div>
+         <div class="na_content--image">
+           {% if section.settings.image != blank %}
+            <img src="{{ section.settings.image | img_url: '4000x' }}"/>
+           {% endif %}  
+         </div>
+       </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Na About Us",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Colors Controls"
+      },
+      {
+        "type": "color",
+        "label": "Background Color",
+        "id": "bgclr",
+        "default": "#F3F3F3"
+      },
+      {
+        "type": "color",
+        "label": "Title Color",
+        "id": "titleClr",
+        "default": "#000"
+      },
+      {
+        "type": "color",
+        "label": "Color",
+        "id": "clr",
+        "default": "#000"
+      },
+      {
+        "type": "link_list",
+        "label": "Links",
+        "id": "menu"
+      },
+      {
+        "type": "richtext",
+        "label": "Description",
+        "id": "desc"
+      },
+      {
+        "type": "image_picker",
+        "label": "Image",
+        "id": "image"
+      }
+    ],
+    "presets":[
+      {
+        "name": "Na About"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
