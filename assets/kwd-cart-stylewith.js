@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
     var slider = $(".a1p_grid-wrapper").lightSlider({
         controls: true,
