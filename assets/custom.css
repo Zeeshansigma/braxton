@@ -55,7 +55,7 @@ margin-right: -1rem
 font-size: 2rem;
 height: initial !important;
 padding: 1.2rem ;
-border-radius: .4rem;
+border-radius: 4px;
 }
 .footer-block__newsletter h2.footer-block__heading,
 footer .newsletter-form__field-wrapper .field__input{
@@ -104,8 +104,8 @@ a.recoverylink{
 z-index:0;
 }
 .customer .field input{
-border: 1px solid #D9D9D8;
-border-radius: .4rem !important;
+  border: 0.4px solid #D9D9D8;
+border-radius: 4px !important;
 padding: 1.1rem 1.6rem  !important;
 height: initial !important;
 font-size: 1.6rem;
@@ -117,7 +117,7 @@ padding-top: 1.3rem !important;
 margin-left: 1.6rem;
 top: 1.8rem;
 text-transform: uppercase;
-font-weight: 900;
+font-weight: 900 !important;
     font-family: 'TstarP' !important;
 }
 .login .field + a{
@@ -134,7 +134,7 @@ margin-top: 10px !important;
 .customer button{
 font-size: 2rem !important;
 min-height: 5.2rem!important;
-border-radius: .4rem;
+border-radius: 4px;
 }
 .na_register {
     width: 60rem!important;
@@ -630,11 +630,11 @@ font-size: 1.7rem;
 display: none !important;
 }
 .mobile-facets .mobile-facets__details summary span:first-child{
-font-weight: 600 !important;
+font-weight: 700 !important;
 font-family: 'TstarP', Helvetica, sans-serif;
 }
 .mobile-facets .mobile-facets__details summary{
-padding: 0.5rem 2rem;
+padding: 0.5rem 3rem;
 color: #000;
 }
 .mobile-facets .mobile-facets__details summary .mobile-facets__arrow svg{
@@ -789,7 +789,7 @@ height: initial !important;
   outline: none;
 }
 .mobile-facets__open{
-  color: #000 !important;
+  color: #4D4F4E !important;
 }
 .mobile-facets__main, .mobile-facets__header, .mobile-facets__footer{
 background-color: #fcfbfa!important
@@ -818,7 +818,7 @@ background-color: #fcfbfa!important
 }
 button.cart__checkout-button.button{
 background-color: #000;
-border-radius: .4rem;
+border-radius: 4px;
 }
 button.cart__checkout-button.button:after,
 button.cart__checkout-button.button:before{
@@ -938,7 +938,7 @@ span.badge{
 border-radius: .35rem !important;
 }
 .mobile-facets__footer button{
-  border-radius: .4rem !important;
+  border-radius: 4px !important;
   overflow: hidden !important
 }
 .mobile-facets__footer button:before, .mobile-facets__footer button:after,
@@ -1197,21 +1197,22 @@ height: 5.2rem !important;
 footer .newsletter-form__field-wrapper .field__input, footer .newsletter-form__field-wrapper .field__input::placeholder{
 padding-bottom: .3rem !important;
 font-size: 1.6rem !important;
-font-weight: 600;
-font-family: 'TstarP' !important;
+font-weight: 700;
+font-family: 'TstarW' !important;
 }
 .footer-block__newsletter h2.footer-block__heading{
 font-size: 1.7rem !important;
-font-weight: 600 !important;
-font-family: 'TstarP' !important;
-margin-bottom: 1.6rem !important
+font-weight: 900 !important;
+font-family: TstarW !important;
+margin-bottom: 1.6rem !important;
+line-height: normal !important;
 }
 .footer-block__image-wrapper img{
 width: 289px !important;
 max-width: 100%;
 }
 .footer-block__image-wrapper{
-margin-bottom: 2.1rem !important;
+margin-bottom: 2.1rem ;
 }
 footer.footer{
 padding-top: 7rem
@@ -1327,7 +1328,8 @@ top:.5rem;
 top:0rem !important;
 }
 .mobile-facets__inner{
-max-width: 550px !important;
+max-width: 660px !important;
+margin-top: 103px;
 }
 .mobile-facets .mobile-facets__heading {
     font-size: 2.6rem;
@@ -1347,8 +1349,11 @@ width: 1.6rem;
 }
 .mobile-facets__footer button{
 font-size: 2rem;
-height: 5.5rem;
-width: 16rem;
+height: 52px;
+width: 165.25px;
+font-weight: 900;
+font-family: TstarP;
+text-transform: uppercase;
 }
 .mobile-facets__label{
   align-items: center
@@ -1772,7 +1777,7 @@ button.product-form__submit.button.button--full-width.button--primary{
 /*  */
 
 .customer .field input{
-  padding: 2rem 1rem 1rem 1rem!important; 
+  padding: 16px !important; 
 }
 
 .customer .field label{

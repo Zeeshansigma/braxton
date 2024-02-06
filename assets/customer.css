@@ -21,7 +21,7 @@
 }
 
 .customer form {
-  margin-top: 4rem;
+  /* margin-top: 4rem; */
 }
 
 .customer button {
@@ -806,9 +806,9 @@ span.linklog {
 .customer .updateform button {
     max-width: 45.6%;
 }
-a.logouttext {
+/* a.logouttext {
     font-size: 16px;
-}
+} */
 div#Tokyo span {
     font-size: 12px;
     color: #000;
@@ -857,7 +857,7 @@ span.login-cp {
     color: #000;
 }
 .toplinkk h1.customer__title {
-    border-right: 1px solid #21232266;
+    border-right: 2px solid #21232266;
     padding-right: 5px;
     margin-right: 1px;
 }
@@ -940,7 +940,7 @@ h1#login, h1#recover {
     line-height: 1;
 }
 .customer button {
-    margin: 30px 0!important;
+    margin: 30px 0 20px !important;
     max-width: 100%;
     width: 100%;
     font-size: 12px;
@@ -956,7 +956,7 @@ h1#login, h1#recover {
     line-height: normal;
     text-transform: uppercase;
     letter-spacing: normal;
-
+}
 a.create-account-link span.login-cp {
     font-weight: 900;
     color: #000;
@@ -970,7 +970,7 @@ a.create-account-link {
     font-style: normal;
     font-weight: 700;
     line-height: 18px;
-
+}
 .customer {
     max-width: 501px !important;
     margin: 0 auto;

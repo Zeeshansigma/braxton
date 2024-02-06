@@ -12,7 +12,7 @@ $(document).ready(function() {
                 settings: {
                     item:2,
                     slideMove:1,
-                    slideMargin:6,
+                    slideMargin:20,
                   }
             },
             {
@@ -20,7 +20,7 @@ $(document).ready(function() {
                 settings: {
                     item:3,
                     slideMove:1,
-                    slideMargin:6,
+                    slideMargin:30,
                   }
             },
             {

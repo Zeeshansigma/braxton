@@ -10,7 +10,7 @@ h3.form__message {
 }
 
 .template-reset_password .customer form {
-  margin-top: 0 !important;
+  /* margin-top: 0 !important; */
 }
 .template-reset_password .reset-pass-p {
   margin-top: 70px !important;
@@ -29,7 +29,7 @@ ul.error-msg-ul-d {
   margin-bottom: 30px !important;
 }
 .customer a {
-  font-size: 1.6rem !important;
+  /* font-size: 1.6rem !important; */
 }
 .template-reset_password #password-error {
   display: none !important;
@@ -185,7 +185,7 @@ button.disclosure__button.localization-form__select.localization-selector.link.l
   color: #000 !important;
 }
 input#Search-In-Modal-1 {
-  border-bottom: 1px solid #000 !important;
+  border-bottom: 0.5px solid #E0E0DF!important;
 }
 .search-modal__form .field__label {
   color: #000 !important;
@@ -500,6 +500,7 @@ button.drawer__close.arDrawFillclose {
   margin-bottom: 15px;
   display: block;
   width: 100%;
+  padding-right: 20px;
 }
 #CartDrawer .drawer__header div p {
   color: #000 !important;
@@ -567,6 +568,7 @@ section .collapsible-content__wrapper {
 }
 .na_contact--form form#ContactForm .field input, .customer .field input {
   height: 52px !important;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.08) !important;
 }
 .na_contact--form #ContactForm button.button {
   height: 52px !important;
@@ -649,7 +651,7 @@ section .collapsible-content__wrapper {
   width: 282.85px !important;
 }
 .newsletter-form__field-wrapper button {
-  box-shadow: 1px 4px 8px #00000020 !important;
+  /* box-shadow: 1px 4px 8px #00000020 !important; */
 }
 button.product-form__submit.button.button--full-width.button--primary,
 a.arAddBtn_cba,
@@ -773,7 +775,8 @@ button.arTabBtns.arActive {
   font-family: 'TSTARP' !important;
 } 
 .customer button {
-  box-shadow: 1px 4px 8px #00000020!important;
+  fill: #000;
+  filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.08)) drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.08));
 }
 .customer a.back-btn-d {
   width: 315px;
@@ -803,8 +806,9 @@ button.arTabBtns.arActive {
 }
 span.create-account-link {
   font-size: 16px !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
   color: #000 !important;
+  font-family: TstarW;
 }
 .addresses form {
   width: 715px;
@@ -821,7 +825,7 @@ span.create-account-link {
   margin-top: 4px !important;
 }
 .toplinkk h1.customer__title {
-  border-right: 1px solid #000 !important;
+  border-right: 2px solid #000 !important;
 }
 div#returnTTab p {
   padding-top: 22px !important;
@@ -856,7 +860,8 @@ a.button.arContinueShopBtnCart {
     font-style: normal;
     font-weight: 900;
     text-transform: uppercase;
-    border-radius: 0.8rem !important;
+    border-radius: 4px !important;
+
 }
 .customer.order .arTabNav button {
   width: 200px !important;

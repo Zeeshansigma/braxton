@@ -1642,7 +1642,7 @@ details[open] > .share-button__fallback {
   width: 100%;
   box-sizing: border-box;
   transition: box-shadow var(--duration-short) ease;
-  border-radius: var(--inputs-radius);
+  border-radius: 4px;
   height: 4.5rem;
   min-height: calc(var(--inputs-border-width) * 2);
   min-width: calc(7rem + (var(--inputs-border-width) * 2));
@@ -3644,7 +3644,7 @@ display: flex;
 }
 .newsletter-form__field-wrapper .field__input {
     outline: none!important;
-    border-bottom: 1px solid #00000094;
+    border-bottom: 0.5px solid #00000094;
     margin-bottom: 8px;
     border-radius: 0;
 }
@@ -3868,7 +3868,7 @@ main#MainContent {
     border-bottom: 0.5px solid rgba(0, 0, 0, 1);
 }
 .login .field+a {
-    font-size: 12px;
+    font-size: 12px !important;
     text-decoration: none;
 }
 .customer button {
@@ -4040,7 +4040,7 @@ a#cookie-btn {
 .sizesin, .sizescm {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 23px;
 }
 .size-titless {
     font-size: 10px;
@@ -4055,8 +4055,20 @@ a#cookie-btn {
     line-height: 1.2;
     width: 70px;
     height: 70px;
-    border: 0.5px solid rgba(0, 0, 0, 0.40);
+    border: 0.5px solid #A9A9A9;
+    border-left: 0;
         cursor: pointer;
+        color: #A9A9A9;
+}
+.sizesin span, .sizescm span:nth-child(1){
+  border-left: 0.5px solid #A9A9A9;
+}
+.sizes,
+span.result{
+  font-family: TstarP;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: normal;
 }
 span.ss-in.activess {
     border: .5px solid rgba(0,0,0,1);
@@ -4544,12 +4556,13 @@ button.password-button {
 }
 
 a.logouttext {
-    font-size: 16px;
+    font-size: 24px;
     color: #000;
     text-transform: uppercase;
     font-weight: 700;
     line-height: 1.2;
     margin-left: 5px;
+    font-family: TstarW;
 }
 .fgroup .field {
     margin-top: 2rem;
@@ -4820,18 +4833,19 @@ select#request-type:focus {
 }
 
 /* Account Pages */
-.customer .toplinkk .customer__title {
+.customer .toplinkk .customer__title,
+a.logouttext {
     font-family: 'TstarP';
-    font-size: 20px !important;
+    font-size: 24px !important;
     letter-spacing: normal !important;
     color: #000 !important;
     font-weight: 900 !important;
 }
-a.logouttext {
+/* a.logouttext {
     font-weight: 900 !important;
     font-size: 20px !important;
     letter-spacing: normal !important;
-}
+} */
 .customer form {
     margin-top: 1rem !important;
 }
@@ -4858,7 +4872,7 @@ div#Tokyo span {
   max-width: 290px !important;
 }
 .customer h1 {
-  font-size: 22px; !important;
+  font-size: 24px;
   margin-bottom: 0px !important;
 }
 .addresses h2 {
@@ -5134,6 +5148,8 @@ button.cart__checkout-button.button {
     line-height: normal;
     text-transform: uppercase;
     letter-spacing: normal;
+    fill: #000;
+filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.08)) drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.08));
 }
 small.tax-note.caption-large.rte {
     color: #4D4F4E;
@@ -5172,6 +5188,7 @@ small.tax-note.caption-large.rte {
 
 p.cart__login-paragraph.arRte a {
     color: #000 !important;
+    font-size: 16px
 }
 ul.pages-menu2 a {
     font-family: 'TstarW';
@@ -5183,7 +5200,7 @@ span.create-account-link {
     letter-spacing: normal;
 }
 h1#recover {
-  margin-bottom: 70px !important;
+  margin-bottom: 0px !important;
 }
 span.colorname{
   margin-top: 9px !important;
@@ -5213,7 +5230,7 @@ select#ar_varSelector {
   border: 1px solid #212322CC !important;
 }
 .size-selector{
-  margin: 75px auto 49px auto !important;
+  margin: 75px auto 55px auto !important;
 }
 .size-titless span {
     color: #000 !important;
@@ -5337,4 +5354,52 @@ a.cart-item__name.h4.break{
 /* facet // style end  */
 .item img{
   width: 100%;
+}
+
+search__input .field__input header_f_search::-webkit-input-placeholder {
+  font-weight: 700 !important;
+  font-family: TstarW !important;
+}
+.svg-icon-d{
+  fill: #0000008A !important;
+}
+.facet-filters__label,
+.mobile-facets__open{
+  color: #4D4F4E !important;
+}
+facet-remove.mobile-facets__clear-wrapper a.mobile-facets__clear.underlined-link {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'TstarW';
+}
+body.template-product .shopify-section .a1p_grid-box h3{
+  font-weight: 900 !important;
+}
+#CartDrawer .drawer__header div p{
+  font-family: TstarP !important;
+}
+.recoverylink{
+  font-size: 12px !important;
+}
+.recovery_message{
+  color: #000;
+text-align: center;
+font-family: TstarW;
+font-size: 15px;
+font-style: normal;
+font-weight: 900;
+margin-bottom: 40px;
+margin-top: 0;
+}
+h1.register_title{
+  font-size: 24px !important;
+  font-family: TstarP;
+  font-weight: 900;
+}
+h1.register_title {
+  margin-bottom: 70px !important;
+}
+.tab.naTab-- button {
+  fill: none;
+  filter: none;
 }

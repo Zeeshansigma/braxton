@@ -108,7 +108,7 @@
   line-height: calc(1 + 0.5 / var(--font-body-scale));
   margin: 0;
   padding-left: 0;
-  padding-right: 1.75rem;
+  padding-right: 11px;
 }
 
 .facet-filters__sort + .icon-caret {
@@ -859,7 +859,8 @@ input.mobile-facets__checkbox {
 }
 
 .mobile-facets__footer {
-  border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  border-top: 0.5px solid rgba(0, 0, 0, 0.30);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.30);
   padding: 2rem;
   bottom: 0;
   position: sticky;
