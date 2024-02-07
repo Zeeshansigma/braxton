@@ -4713,7 +4713,8 @@ ul.na_list--about a {
     text-align: center;
 }
   .na_content--image {
-    padding-top: 16px;
+    padding-top: 31px;
+    margin-bottom: 133px;
 }
 section#shopify-section-template--20360064532772__b45eef37-118a-4e72-859f-80406f2e18aa {
     display: none;
@@ -5416,4 +5417,44 @@ h1.register_title {
 }
 .na_contact-form.custom-page {
   padding-bottom: 56px !important;
+}
+.custom_error{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-family: TstarW;
+  font-weight: 900;
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+.custom_error svg{
+  width: 15px;
+  height: 15px;
+}
+.email_message{
+  margin-left: 65px;
+  font-size: 12px;
+  font-family: TstarW;
+  font-weight: 900;
+  line-height: 18px;
+  color: rgba(0,0,0,0.50);
+}
+.mb_form{
+  margin-bottom: 40px;
+}
+.erro_contact_main {
+  margin-top: -52px;
+}
+.form-status.form-status-list.form__message{
+  font-size: 16px;
+  font-family: TstarW;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+.button_na_submit{
+  background-color: #4FCC6D !important;
+  fill: #4FCC6D;
+  filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.08)) drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.08));
 }
