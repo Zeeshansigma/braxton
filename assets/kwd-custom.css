@@ -596,11 +596,14 @@ section .collapsible-content__wrapper {
 .na_Inner--content h2 {
   font-size: 16px !important;
   line-height: 20.48px !important;
+  margin-top: 15px;
 }
 .na_Inner--content p {
   font-size: 16px !important;
-  font-weight: 500 !important;
+  font-weight: 700 !important;
   line-height: 18px !important;
+  font-family: TstarW;
+  color: rgba(0,0,0, 0.60) !important;
 }
 .collapsible-content .accordion {
   border-top: none !important;
@@ -1001,4 +1004,23 @@ small.copyright__content {
 }
 #Paris p{
   padding-top: 20px !important;
+}
+.na_Inner--content.contents--2 h2:nth-child(2) {
+  margin-top: 9px;
+}
+.na_Inner--content.contents--2 h2:nth-child(1) {
+  margin-bottom: 0px !important;
+}
+
+.na_Inner--content.contents--2 p {
+  margin-top: 15px;
+}
+.na_Inner--content.contents--3 p {
+  margin-top: 15px !important;
+}
+.na_Inner--content.contents--4 h2:nth-child(3) {
+  margin-bottom: 15px;
+}
+.na_Inner--content.contents--5 h2 {
+  margin-bottom: 15px;
 }

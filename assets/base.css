@@ -5458,3 +5458,6 @@ h1.register_title {
   fill: #4FCC6D;
   filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.08)) drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.08));
 }
+.button_na_submit::after{
+  box-shadow: none !important;
+}
