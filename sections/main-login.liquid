@@ -47,6 +47,9 @@ small#RecoverEmail-email-error {
 form.recovery_form {
     margin-top: 40px !important;
 }
+.mb-form{
+  margin-bottom:47px;
+}
 {%- endstyle -%}
 
 <style>
@@ -114,12 +117,12 @@ form.recovery_form {
   </h1>
   <div class="login-d">
     {%- if recover_success == true -%}
-      <h3 class="form__message" tabindex="-1" autofocus>
-        
+      <h3 class="form__message nem_img"  tabindex="-1" autofocus>
+        {% render 'form-send-img' %}
         {{ 'We have sent you an email with instructions to reset your password.' }}
       </h3>
     {%- endif -%}
-    {%- form 'customer_login', novalidate: 'novalidate' -%}
+    {%- form 'customer_login', novalidate: 'novalidate'  -%}
       {%- if form.errors -%}
         {% comment %} <h2 class="form__message" tabindex="-1" autofocus>
           <span class="visually-hidden">{{ 'accessibility.error' | t }} </span>

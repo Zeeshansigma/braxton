@@ -3870,6 +3870,8 @@ main#MainContent {
 .login .field+a {
     font-size: 12px !important;
     text-decoration: none;
+    font-family: TstarP;
+    font-weight: 900;
 }
 .customer button {
     margin: 30px 0 30px !important;
@@ -5403,5 +5405,15 @@ h1.register_title {
   fill: none;
   filter: none;
 }
-
+.nem_img {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 /* today */
+.na_contact--form form#ContactForm .field input{
+  border-radius: 4px;
+}
+.na_contact-form.custom-page {
+  padding-bottom: 56px !important;
+}

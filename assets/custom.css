@@ -207,7 +207,7 @@ padding-right:0;
 margin-bottom: 7rem;
 }
 #Tokyo a{
-font-weight: 800;
+font-weight: 900;
 text-decoration: underline;
 font-size: 1.7rem;
 }
@@ -418,10 +418,10 @@ justify-content: start;
 ul.na_list--about{
 padding-left: 0;
 margin-left: 0rem;
-box-shadow: 0px 3px 1.2rem 2px rgba(0, 0, 0, 0.12);
-border-radius: .7rem;
-overflow: hidden;
+border-radius: 4px;
 background: #FCFBFA;
+box-shadow: 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+overflow: hidden;
 max-width: 100%;
 width: 20rem;
 }
@@ -446,7 +446,7 @@ padding-top: 2rem !important
 max-width: 100% !important;
 padding-left: 32rem !important;
   padding-right: 32rem !important;
-padding-bottom: 14rem !important;
+padding-bottom: 56px !important;
 }
 ul.na_list--about li a:hover{
 color: #000 !important;
@@ -524,6 +524,7 @@ font-family: TstarP!important;
 font-weight: 600;
 color: #000;
 text-transform: uppercase;
+border-radius: 4px !important;
 }
 .na_contact--form form#ContactForm .field input::placeholder{
 opacity:1;
@@ -531,7 +532,6 @@ text-transform: uppercase;
 font-weight: 600;
 color: #000;
 font-family: TstarP!important;
-font-size: 
 }
 .naCollapse.collapsible-content{
     background-color: #fcfbfa!important;
