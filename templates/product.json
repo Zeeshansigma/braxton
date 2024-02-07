@@ -1,1 +1,165 @@
-{"sections":{"main":{"type":"main-product","blocks":{"title":{"type":"title","settings":{}},"price":{"type":"price","settings":{}},"08471065-0d79-4ec1-a752-383e4e701706":{"type":"sizepop","settings":{"title":"Size Guide"}},"variant_picker":{"type":"variant_picker","settings":{"picker_type":"button"}},"quantity_selector":{"type":"quantity_selector","disabled":true,"settings":{}},"buy_buttons":{"type":"buy_buttons","settings":{"show_dynamic_checkout":false,"show_gift_card_recipient":true}},"description":{"type":"description","disabled":true,"settings":{}},"5e303b25-0710-40c7-a920-8ca0762c703e":{"type":"collapsible_tab","disabled":true,"settings":{"heading":"PRODUCT DESCRIPTION","icon":"none","content":"<p>{{ product.metafields.custom.description | metafield_tag }}<\/p>","page":""}},"d6e13d10-beff-4f0a-bd8f-bd618ce75f8f":{"type":"collapsible_tab","disabled":true,"settings":{"heading":"SHIPPING & RETURNS","icon":"none","content":"<p>{{ product.metafields.custom.shipping | metafield_tag }}<\/p>","page":"shipping-returns"}},"8671d855-0fe2-4ea9-92d2-648c1a69ac71":{"type":"accordion","settings":{"title":"Product Description","title2":"Shipping & Returns","text":"<p>Short Sleeve T-Shirt in Cream with a slightly oversized fit, crafted from medium weight cotton. The T-Shirt features a ribbed crewneck collar, and our Decade of Speed graphic logo to the chest and motif to the back.<\/p><ul><li>Graphic T-Shirt<\/li><li>Screen Printed<\/li><li>Round Neck<\/li><li>Short Sleeves<\/li><li>Oversized fit<\/li><\/ul><p>Composition: 100% Cotton220gsmModel is 186cm and 74kg wearing size MediumProduct Style Code: M05233-94<\/p>"}},"ae2b1c94-8d4e-412c-8ebb-0eab59307864":{"type":"fcollection","disabled":true,"settings":{"collection":"frontpage"}}},"block_order":["title","price","08471065-0d79-4ec1-a752-383e4e701706","variant_picker","quantity_selector","buy_buttons","description","5e303b25-0710-40c7-a920-8ca0762c703e","d6e13d10-beff-4f0a-bd8f-bd618ce75f8f","8671d855-0fe2-4ea9-92d2-648c1a69ac71","ae2b1c94-8d4e-412c-8ebb-0eab59307864"],"settings":{"enable_sticky_info":true,"media_size":"large","constrain_to_viewport":true,"media_fit":"contain","gallery_layout":"stacked","media_position":"left","image_zoom":"lightbox","mobile_thumbnails":"hide","hide_variants":true,"enable_video_looping":false,"padding_top":0,"padding_bottom":0}},"related-products":{"type":"related-products","disabled":true,"settings":{"heading":"STYLED WITH","heading_size":"h2","products_to_show":3,"columns_desktop":4,"color_scheme":"background-2","image_ratio":"square","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"columns_mobile":"2","padding_top":36,"padding_bottom":28}},"6da4da50-b3d6-4a3e-a98b-bc46bad08166":{"type":"naRelated-products","disabled":true,"settings":{"heading":"STYLED WITH","heading_size":"h1","products_to_show":3,"columns_desktop":1,"color_scheme":"background-1","image_ratio":"adapt","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"columns_mobile":"2","padding_top":36,"padding_bottom":36}},"f1320c37-41ea-4775-9e2c-a1db73deb51f":{"type":"custom-liquid","settings":{"custom_liquid":"<div a1p=\"product\" product_id=\"{{product.id}}\" currency_code=\"{{ cart.currency.iso_code }}\" money_format=\"{{ shop.money_format }}\"><\/div>","color_scheme":"","padding_top":40,"padding_bottom":52}}},"order":["main","related-products","6da4da50-b3d6-4a3e-a98b-bc46bad08166","f1320c37-41ea-4775-9e2c-a1db73deb51f"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "08471065-0d79-4ec1-a752-383e4e701706": {
+          "type": "sizepop",
+          "settings": {
+            "title": "Size Guide"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "5e303b25-0710-40c7-a920-8ca0762c703e": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "PRODUCT DESCRIPTION",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.custom.description | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        },
+        "d6e13d10-beff-4f0a-bd8f-bd618ce75f8f": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "SHIPPING & RETURNS",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.custom.shipping | metafield_tag }}<\/p>",
+            "page": "shipping-returns"
+          }
+        },
+        "8671d855-0fe2-4ea9-92d2-648c1a69ac71": {
+          "type": "accordion",
+          "settings": {
+            "title": "Product Description",
+            "title2": "Shipping & Returns",
+            "text": "<p>Short Sleeve T-Shirt in Cream with a slightly oversized fit, crafted from medium weight cotton. The T-Shirt features a ribbed crewneck collar, and our Decade of Speed graphic logo to the chest and motif to the back.<\/p><ul><li>Graphic T-Shirt<\/li><li>Screen Printed<\/li><li>Round Neck<\/li><li>Short Sleeves<\/li><li>Oversized fit<\/li><\/ul><p>Composition: 100% Cotton220gsmModel is 186cm and 74kg wearing size MediumProduct Style Code: M05233-94<\/p>"
+          }
+        },
+        "ae2b1c94-8d4e-412c-8ebb-0eab59307864": {
+          "type": "fcollection",
+          "disabled": true,
+          "settings": {
+            "collection": "frontpage"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "08471065-0d79-4ec1-a752-383e4e701706",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "5e303b25-0710-40c7-a920-8ca0762c703e",
+        "d6e13d10-beff-4f0a-bd8f-bd618ce75f8f",
+        "8671d855-0fe2-4ea9-92d2-648c1a69ac71",
+        "ae2b1c94-8d4e-412c-8ebb-0eab59307864"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "STYLED WITH",
+        "heading_size": "h2",
+        "products_to_show": 3,
+        "columns_desktop": 4,
+        "color_scheme": "background-2",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "6da4da50-b3d6-4a3e-a98b-bc46bad08166": {
+      "type": "naRelated-products",
+      "disabled": true,
+      "settings": {
+        "heading": "STYLED WITH",
+        "heading_size": "h1",
+        "products_to_show": 3,
+        "columns_desktop": 1,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "f1320c37-41ea-4775-9e2c-a1db73deb51f": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div a1p=\"product\" product_id=\"{{product.id}}\" currency_code=\"{{ cart.currency.iso_code }}\" money_format=\"{{ shop.money_format }}\"><\/div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "6da4da50-b3d6-4a3e-a98b-bc46bad08166",
+    "f1320c37-41ea-4775-9e2c-a1db73deb51f"
+  ]
+}

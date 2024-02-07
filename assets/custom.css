@@ -1047,7 +1047,7 @@ button.disclosure__button.localization-form__select.localization-selector.link.l
     padding-bottom: 0.15rem;
 }
 summary.list-menu__item.header__menu-item {
-    padding-right: 2.55rem!important;
+    padding-right: 1.35rem!important;
     padding-left: 1.35rem !important;
 padding-top: .8rem;
 }
@@ -1163,7 +1163,7 @@ predictive-search input#Search-In-Modal-1:focus{
     height: 3.5rem !important;
 }
 summary.list-menu__item.header__menu-item {
-    padding-right: 2.75rem!important;
+    padding-right: 1.35rem!important;
     padding-left: 1.35rem!important;
     padding-top: 0.6rem!important;
     padding-bottom: 1rem!important;
