@@ -3856,13 +3856,7 @@ main#MainContent {
     font-size: 11px;
     font-weight: 400;
 }
-.customer h1{
-    font-size: 16px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0;
-      margin-bottom: 80px;
-}
+
 .customer .field input {
     background: transparent;
     border-bottom: 0.5px solid rgba(0, 0, 0, 1);
@@ -4544,13 +4538,7 @@ button.password-button {
     left: 0;
     color: #00000080;
 }
-.customer .toplinkk .customer__title {
-    margin-bottom: 5rem!important;
-    text-align: center;
-    font-size: 16px;
-    color: #21232266;
-    font-weight: 500;
-}
+
 .toplinkk {
     display: flex;
     align-items: flex-start;
@@ -4839,19 +4827,13 @@ select#request-type:focus {
 .customer .toplinkk .customer__title,
 a.logouttext {
     font-family: 'TstarP';
-    font-size: 24px !important;
-    letter-spacing: normal !important;
-    color: #000 !important;
-    font-weight: 900 !important;
+    font-size: 24px;
+    letter-spacing: normal;
+    color: #000;
+    font-weight: 900;
+    margin-bottom: 40px;
 }
-/* a.logouttext {
-    font-weight: 900 !important;
-    font-size: 20px !important;
-    letter-spacing: normal !important;
-} */
-.customer form {
-    margin-top: 1rem !important;
-}
+
 .customer .field input {
     font-family: 'TstarP' !important;
 }  
@@ -4874,10 +4856,7 @@ div#Tokyo span {
 .customer button {
   max-width: 290px !important;
 }
-.customer h1 {
-  font-size: 24px;
-  margin-bottom: 0px !important;
-}
+
 .addresses h2 {
     text-align: center!important;
     letter-spacing: normal!important;
@@ -5288,9 +5267,7 @@ ul.list-menu.list-menu--inline li a, ul.list-menu.list-menu--inline li span{
     padding-top: 16px !important;
     padding-bottom: 16px !important;
 }  
-aside#main-collection-filters {
-    display: none;
-}
+
 .foo-menu ul li.menu-link.menu-link2 a{
   font-family: 'TstarW' !important;
 }
@@ -5394,14 +5371,6 @@ font-weight: 900;
 margin-bottom: 40px;
 margin-top: 0;
 }
-h1.register_title{
-  font-size: 24px !important;
-  font-family: TstarP;
-  font-weight: 900;
-}
-h1.register_title {
-  margin-bottom: 70px !important;
-}
 .tab.naTab-- button {
   fill: none;
   filter: none;
@@ -5460,4 +5429,88 @@ h1.register_title {
 }
 .button_na_submit::after{
   box-shadow: none !important;
+}
+
+@media screen and (max-width:768px){
+  h1#login{
+    font-size: 20px !important;
+  }
+  .customer form{
+    margin-top: 60px !important;
+  }
+  .customer h1{
+    font-size: 20px !important;
+    margin-bottom: 60px !important;
+  }
+  .recovery_message{
+    font-size: 16px;
+    font-weight: 700;
+  }
+  button.recoverybtn {
+    margin-bottom: 18px !important;
+}
+.customer .form__message svg{
+  margin-right: 0;
+}
+h3.form__message{
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 60px !important;
+}
+form#customer_login {
+  margin-top: 40px !important;
+}
+.nem_img{
+  align-items: baseline !important;
+}
+.facets-container{
+  display: flex !important; 
+}
+.mobile-facets__open{
+  margin-left: 30px !important;
+}
+.facet-filters{
+  grid-column: 3 !important;
+}
+.mobile-facets__inner.gradient {
+  width: 400px !important;
+  margin-left: 83px;
+  margin-top: 94px;
+}
+span.mobile-facets__open-label.button-label.small-hide {
+  font-size: 16px;
+  font-weight: 700;
+}
+.collection.page-width {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+p.error_msg {
+  display: flex;
+  justify-content: center;
+}
+ul.incorrect_msg {
+  display: flex;
+  justify-content: center;
+}
+.coupling{
+  display: block !important;
+}
+.customer.account{
+  max-width: 392px !important;
+}
+.customer .toplinkk .customer__title{
+  font-size: 20px !important;
+  margin-bottom: 60px !important;
+}
+.toplinkk a.logouttext{
+  font-size: 20px !important;
+  margin-bottom: 60px !important;
+}
+a.arAddBtn_cba {
+  margin-top: -30px !important;
+}
+.noorder p {
+  margin-bottom: 59px;
+}
 }

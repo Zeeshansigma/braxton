@@ -20,9 +20,6 @@
   margin-top: 0;
 }
 
-.customer form {
-  /* margin-top: 4rem; */
-}
 
 .customer button {
   margin: 4rem 0 1.5rem;
@@ -923,11 +920,12 @@ span.login-cp {
 h1#login, h1#recover {
     color: #000;
     text-align: center;
-    font-size: 20px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
-    text-transform: uppercase;margin-bottom:70px;
+    text-transform: uppercase;
+    margin-bottom:70px;
 }
 .customer .field label, a.recoverylink {
     left: 0;

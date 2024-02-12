@@ -9,9 +9,6 @@ h3.form__message {
   text-transform: uppercase !important;
 }
 
-.template-reset_password .customer form {
-  /* margin-top: 0 !important; */
-}
 .template-reset_password .reset-pass-p {
   margin-top: 70px !important;
 }
@@ -726,13 +723,13 @@ marquee {
 
 /*** LOGIN ***/
 h1#login, h1#recover {
-  font-size: 24px !important;
+  /* font-size: 24px !important; */
 }
 .login a {
   font-size: 16px !important;
 }
 .login-d form {
-  margin-top: 7rem !important;
+  margin-top: 7rem;
 }
 a.create-account-link span {
   color: #000 !important;
@@ -767,9 +764,7 @@ button.arTabBtns.arActive {
 #EditAddress_9999929475364 form div:nth-of-type(12) {
   text-align: center !important;
 }
-.customer .toplinkk .customer__title {
-  margin-bottom: 40px !important;
-}
+
 .arMainAddress form {
   margin-top: 0px !important;
 }

@@ -160,10 +160,7 @@ border-radius: .4rem;
 .customer .updateform{
   margin-bottom: 10rem;
 }
-.customer form,
-.login form{
-  margin-bottom: 6rem;
-}
+
 .customer .updateform form{
   margin-bottom: 0;
 }
