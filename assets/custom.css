@@ -152,11 +152,7 @@ margin-bottom:0;
 .customer .updateform a.arAddBtn_cba:hover{
 color: #fff;
 }
-.customer .updateform a.arAddBtn_cba{
-font-size: 1.8rem;
-height: 4.2rem;
-border-radius: .4rem;
-}
+
 .customer .updateform{
   margin-bottom: 10rem;
 }

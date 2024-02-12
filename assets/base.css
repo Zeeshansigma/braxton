@@ -5430,7 +5430,9 @@ margin-top: 0;
 .button_na_submit::after{
   box-shadow: none !important;
 }
-
+div#g-recaptcha {
+  margin-bottom: 20px;
+}
 @media screen and (max-width:768px){
   h1#login{
     font-size: 20px !important;
@@ -5498,6 +5500,8 @@ ul.incorrect_msg {
 }
 .customer.account{
   max-width: 392px !important;
+  padding-left: 0;
+  padding-right: 0;
 }
 .customer .toplinkk .customer__title{
   font-size: 20px !important;
@@ -5506,11 +5510,15 @@ ul.incorrect_msg {
 .toplinkk a.logouttext{
   font-size: 20px !important;
   margin-bottom: 60px !important;
+  text-decoration: underline !important;
 }
 a.arAddBtn_cba {
   margin-top: -30px !important;
+  font-size: 20px !important;
 }
 .noorder p {
-  margin-bottom: 59px;
+  margin-bottom: 59px !important;
 }
+
+
 }

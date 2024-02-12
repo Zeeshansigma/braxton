@@ -658,7 +658,7 @@ button.product-form__submit.button.button--full-width.button--primary,
 a.arAddBtn_cba,
 a.acc-btn {
   box-shadow: 1px 4px 8px #00000020 !important;
-  font-size: 1.8rem !important;
+  font-size: 1.8rem ;
   height: 4.2rem !important;
   border-radius: 0.4rem !important;
   width: 315px !important;
