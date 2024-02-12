@@ -148,6 +148,7 @@
     },
     "f1320c37-41ea-4775-9e2c-a1db73deb51f": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "<div a1p=\"product\" product_id=\"{{product.id}}\" currency_code=\"{{ cart.currency.iso_code }}\" money_format=\"{{ shop.money_format }}\"><\/div>",
         "color_scheme": "",
