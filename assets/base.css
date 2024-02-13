@@ -3864,8 +3864,6 @@ main#MainContent {
 .login .field+a {
     font-size: 12px !important;
     text-decoration: none;
-    font-family: TstarP;
-    font-weight: 900;
 }
 .customer button {
     margin: 30px 0 30px !important;
@@ -4223,8 +4221,8 @@ a.restockbtn {
     width: 22px;
 }
 .menu__btn-icon {
-    height: 4.4rem;
-    width: 4.4rem;
+    height: inherit;
+    width: 22px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4701,8 +4699,7 @@ ul.na_list--about a {
     text-align: center;
 }
   .na_content--image {
-    padding-top: 31px;
-    margin-bottom: 133px;
+    padding-top: 16px;
 }
 section#shopify-section-template--20360064532772__b45eef37-118a-4e72-859f-80406f2e18aa {
     display: none;
@@ -5269,7 +5266,7 @@ ul.list-menu.list-menu--inline li a, ul.list-menu.list-menu--inline li span{
 }  
 
 .foo-menu ul li.menu-link.menu-link2 a{
-  font-family: 'TstarW' !important;
+  font-family: 'TstarP' !important;
 }
 .naProduct .product__title {
     margin-bottom: 0px !important;
@@ -5323,7 +5320,7 @@ a.cart-item__name.h4.break{
 
 @media only screen and (max-width: 768px){
 .footer__content-top.page-width {
-    padding-bottom: 40px !important;
+    padding-bottom: 0px !important;
 }
 }
 
@@ -5375,6 +5372,7 @@ margin-top: 0;
   fill: none;
   filter: none;
 }
+<<<<<<< Updated upstream
 .nem_img {
   display: flex;
   align-items: center;
@@ -5522,3 +5520,7 @@ a.arAddBtn_cba {
 
 
 }
+=======
+
+/* today */
+>>>>>>> Stashed changes

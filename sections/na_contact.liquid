@@ -12,7 +12,7 @@
 }  
 #ContactForm button.button {
     text-transform: uppercase;
-    font-size: 22px!important;
+    font-size: 16px!important;
     font-weight: 900;
     letter-spacing: normal!important;
     box-shadow: none!important;
@@ -61,7 +61,7 @@
         assign contact_form_class = 'isolate '
       endif
     -%}
-  <div class="na_contact-form custom-page">
+<div class="na_contact-form custom-page">
       <div class="na_link--list--contact na_links--about">
         <div class="na_links--abouts">
           <div class="na_links--inner">
@@ -77,21 +77,6 @@
       </div>
   <div class="na_contact--form na_content--d">
     {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
-      {%- if form.errors contains 'email' -%}
-      <div class="erro_contact_main">
-        <h3 class="custom_error"> {%- render 'icon-error' -%} {{'Please adjust the following:'}} </h3>
-        <small class="contact__field-error" id="ContactForm-email-error">
-          <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
-          <span class="form__message">
-            {% comment %} {%- render 'icon-error' -%} {% endcomment %}
-            {% comment %} {{- form.errors.translated_fields.email | capitalize }}
-            {{ form.errors.messages.email -}} {% endcomment %}
-            <li class="email_message">{{ 'Incorrect or missing e-mail' }}</li>
-          </span>
-        </small>
-        <li class="email_message mb_form">{{ 'Text can not be blank.' }}</li>
-      </div>
-      {%- endif -%}
       <div class="contact__fields">
         <div class="field">
           <input type="text" class="field__input" name="contact[first_name]" placeholder="First name" id="first-name" />
@@ -122,6 +107,16 @@
             E-mail
             <span aria-hidden="true">*</span></label
           >
+          {%- if form.errors contains 'email' -%}
+            <small class="contact__field-error" id="ContactForm-email-error">
+              <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+              <span class="form__message">
+                {%- render 'icon-error' -%}
+                {{- form.errors.translated_fields.email | capitalize }}
+                {{ form.errors.messages.email -}}
+              </span>
+            </small>
+          {%- endif -%}
         </div>
       </div>
       <div class="field">
@@ -155,25 +150,18 @@
           {{- 'templates.contact.form.comment' | t -}}
         </label> -->
       </div>
-        <div class="contact__button">
-      {%- if form.posted_successfully? -%}
-        <button type="submit" class="button na_submit button_na_submit" id="na_submit">
-          {{ 'THANKS FOR CONTACTING US!' }}
+      <div class="contact__button">
+        <button type="submit" class="button na_submit" id="na_submit">
+          {{ 'templates.contact.form.send' | t }}
         </button>
-          {% else %}
-          <button type="submit" class="button na_submit" id="na_submit">
-            {{ 'templates.contact.form.send' | t }}
-          </button>
-      {% endif %}
-          </div>
-       
+      </div>
      {%- if form.posted_successfully? -%}
         <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
            Our customer service works from Monday - Friday (9:00am - 5.30pm GMT).<br>
            Note that if your contact was submitted on Friday after 11:00am, you will most likely receive a return from us in the next working day. 
         </h2>
       {%- elsif form.errors -%}
-        {% comment %} <div class="form__message">
+        <div class="form__message">
           <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
             {% render 'icon-error' %}
              Sorry Fill the form Correctly
@@ -186,7 +174,7 @@
               {{ form.errors.messages.email }}
             </a>
           </li>
-        </ul> {% endcomment %}
+        </ul>
       {%- endif -%}
     {%- endform -%}
   </div>

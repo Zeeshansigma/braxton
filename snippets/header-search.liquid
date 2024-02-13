@@ -8,11 +8,11 @@
   {% render 'header-search', input_id: 'My-Id'%}
 {% endcomment %}
 
-<details-modal class="header__search headers--{{ section.id }}">
+<details-modal class="header__search headers--{{ section.id }} desktop-seach-icon">
   <details>
-    <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
+    <summary class="header__icon header__icon--search  header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
       <span>
-        <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false">
+        <svg class="modal__toggle-open icon icon-search " aria-hidden="true" focusable="false">
           <use href="#icon-search">
         </svg>
         <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false">

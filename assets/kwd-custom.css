@@ -117,8 +117,8 @@ header.arHeaderMain {
 }
 
 .header__icon .icon {
-  width: 17.895px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
 }
 .header__icon .icon-cart-empty {
@@ -555,10 +555,9 @@ section .collapsible-content__wrapper {
 }
 .content--inner p {
   font-size: 16px !important;
-  font-weight: 700 !important;
-  line-height: normal !important;
+  font-weight: 500 !important;
+  line-height: 19.04px !important;
   text-align: justify !important;
-  color: #4D4F4E!important;
 }
 .na_contact--form textarea#ContactForm-body {
   font-size: 16px !important;
@@ -587,20 +586,17 @@ section .collapsible-content__wrapper {
 }
 .template-page .accordion__content li, .template-page .accordion .accordion__content p, .na_Inner--content li, .na_Inner--content p, .content--inner p {
   font-family: 'TstarP',Helvetica,sans-serif;
-  font-weight: 700 !important;
+  font-weight: 500 !important;
   font-size: 16px !important;
 }
 .na_Inner--content h2 {
   font-size: 16px !important;
   line-height: 20.48px !important;
-  margin-top: 15px;
 }
 .na_Inner--content p {
   font-size: 16px !important;
-  font-weight: 700 !important;
+  font-weight: 500 !important;
   line-height: 18px !important;
-  font-family: TstarW;
-  color: rgba(0,0,0, 0.60) !important;
 }
 .collapsible-content .accordion {
   border-top: none !important;
@@ -942,9 +938,9 @@ div#returnTTab p {
 #London p,
 #Paris p,
 #Tokyo p {
-  padding-top: 15px !important;
+  padding-top: 10px !important;
   font-size: 16px !important;
-  font-weight: 700 !important;
+  font-weight: 600 !important;
 }
 .noorder p {
   margin-top: 0px !important;
@@ -989,7 +985,8 @@ footer ul.pages-menu2 a {
 }
 small.copyright__content {
   margin: 0px;
-  font-size: 16px;
+  font-size: 12px;
+  font-weight: 700;
 }
 .footer-block__newsletter h2.footer-block__heading {
   font-size: 16px !important;
@@ -997,25 +994,12 @@ small.copyright__content {
 .social-icon {
   margin-top: 42px !important;
 }
-#Paris p{
-  padding-top: 20px !important;
-}
-.na_Inner--content.contents--2 h2:nth-child(2) {
-  margin-top: 9px;
-}
-.na_Inner--content.contents--2 h2:nth-child(1) {
-  margin-bottom: 0px !important;
-}
-
-.na_Inner--content.contents--2 p {
-  margin-top: 15px;
-}
-.na_Inner--content.contents--3 p {
-  margin-top: 15px !important;
-}
-.na_Inner--content.contents--4 h2:nth-child(3) {
-  margin-bottom: 15px;
-}
-.na_Inner--content.contents--5 h2 {
-  margin-bottom: 15px;
+@media(max-width: 991px){
+  .header__heading-logo{
+    width: 181px !important;
+  }
+  footer .newsletter-form__field-wrapper .field__input{
+    font-weight: 700 !important;
+    font-size: 16px !important;
+  }
 }
