@@ -154,12 +154,18 @@ h3.accordion__title.inline-richtext.h4 {
                       <h3 class="accordion__title inline-richtext h4" style="color: {{ section.settings.aClr }}">
                         {{ block.settings.heading | default: block.settings.page.title }}
                       </h3>
-                      <svg class="icon ic-close icon-ic icon-caret" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                      {% comment %} <svg class="icon ic-close icon-ic icon-caret" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
                        <path d="M6.58972 8.63965L10.7147 13.1396L14.8397 8.63965" stroke="#4D4F4E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
                       <svg class="icon ic-open icon-ic icon-caret" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
                        <path d="M6.58972 8.63965L10.7147 13.1396L14.8397 8.63965" stroke="#4D4F4E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
+                      </svg> {% endcomment %}
+                      <svg class="b-arrow icon ic-close icon-ic icon-caret"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M7 10L12 15L17 10H7Z" fill="black"/>
+</svg>
+<svg class="b-arrow icon ic-open icon-ic icon-caret" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M7 10L12 15L17 10H7Z" fill="black"/>
+</svg>
                       <!-- <svg
                         class="icon ic-close icon-ic icon-caret"
                         viewBox="0 0 10 10"

@@ -1602,8 +1602,8 @@ padding-bottom: 7rem !important;
 }
 .na_content--d{
 width: 89.5% !important;
-padding-left: 2rem !important;
-  padding-right: 2rem !important;
+/* padding-left: 2rem !important;
+  padding-right: 2rem !important; */
 }
   .custom-page{
     padding-top: 4rem !important
@@ -1764,7 +1764,7 @@ button.product-form__submit.button.button--full-width.button--primary{
 .na_Inner--content li,
 .na_Inner--content p,
 .content--inner p{
-  font-family: 'TstarP', Helvetica, sans-serif;
+  font-family: 'TstarW', Helvetica, sans-serif;
 }
 
 /*  */
@@ -1880,10 +1880,6 @@ ul.pages-menu2 {
 .foo-menu ul li.menu-link.menu-link2 a{
   margin-top: 10px;
 }
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 .foo-menu ul li svg{
   float: right !important;
 }
@@ -1943,4 +1939,23 @@ ul.pages-menu2 {
     font-weight: 900;
     line-height: 18px;
 }
+.custom-page{
+  
+  padding-bottom: 44px !important;
+}
+section.custom-page, section .contact{
+  padding-top: 70px !important;
+}
+.na_content--privacy{
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 140px !important;
+}
+.na_title h1{
+  margin-bottom: 47px !important;
+}
+.b-arrow{
+  margin-top:10px !important
+}
+
 }
