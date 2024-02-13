@@ -1,1 +1,48 @@
-{"sections":{"43ad25f8-65af-4b3d-b249-685abf8500fc":{"type":"custom-liquid","disabled":true,"custom_css":[],"settings":{"custom_liquid":"","color_scheme":"background-2","padding_top":60,"padding_bottom":28}},"main":{"type":"main-page","disabled":true,"settings":{"padding_top":28,"padding_bottom":28}},"467c2071-3ae0-4d61-85a2-c0a1a7ab1910":{"type":"naAboutUs","settings":{"bgclr":"#f3f3f3","clr":"#4d4f4e","menu":"footer","desc":"<p>At Aran Braxton we combine British iconography with nostalgic athletic references. With no formal training specific to fashion design we understand the construction required to produce luxury lifetime pieces.<\/p><p>We don't reinvent the wheel, however we do refine classic silhouettes whilst only designing for ourselves in mind. We embrace the process of curating, refining and designing whilst balancing sportswear techniques with luxury elements.<\/p><p>Never has it been more important to think about our environment and our people. We produce all garments from start to finish in England. This allows us to oversee every single element of production and maintain the highest quality, whilst keeping a low carbon footprint. We handcraft our garment bags & hangtags to ensure all materials used a 100% recyclable.<\/p><p>Designed by brothers<\/p><p>J & A<\/p><p><\/p>","image":"shopify:\/\/shop_images\/AMI5_2_0ec6a391-b55e-47c2-89a9-94c4b587de58.png"}}},"order":["43ad25f8-65af-4b3d-b249-685abf8500fc","main","467c2071-3ae0-4d61-85a2-c0a1a7ab1910"]}
+{
+  "sections": {
+    "custom_menu_e6bcXc": {
+      "type": "custom-menu",
+      "settings": {
+        "menu": "mobile-nav"
+      }
+    },
+    "43ad25f8-65af-4b3d-b249-685abf8500fc": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "custom_css": [
+
+      ],
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "background-2",
+        "padding_top": 60,
+        "padding_bottom": 28
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "467c2071-3ae0-4d61-85a2-c0a1a7ab1910": {
+      "type": "naAboutUs",
+      "settings": {
+        "bgclr": "#f3f3f3",
+        "titleClr": "#000",
+        "clr": "#4d4f4e",
+        "menu": "footer",
+        "desc": "<p>At Aran Braxton we combine British iconography with nostalgic athletic references. With no formal training specific to fashion design we understand the construction required to produce luxury lifetime pieces.<\/p><p>We don't reinvent the wheel, however we do refine classic silhouettes whilst only designing for ourselves in mind. We embrace the process of curating, refining and designing whilst balancing sportswear techniques with luxury elements.<\/p><p>Never has it been more important to think about our environment and our people. We produce all garments from start to finish in England. This allows us to oversee every single element of production and maintain the highest quality, whilst keeping a low carbon footprint. We handcraft our garment bags & hangtags to ensure all materials used a 100% recyclable.<\/p><p>Designed by brothers<\/p><p>J & A<\/p><p><\/p>",
+        "image": "shopify:\/\/shop_images\/AMI5_2_0ec6a391-b55e-47c2-89a9-94c4b587de58.png"
+      }
+    }
+  },
+  "order": [
+    "custom_menu_e6bcXc",
+    "43ad25f8-65af-4b3d-b249-685abf8500fc",
+    "main",
+    "467c2071-3ae0-4d61-85a2-c0a1a7ab1910"
+  ]
+}

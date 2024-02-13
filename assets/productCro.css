@@ -77,7 +77,9 @@ span.size-text {
   .product--large:not(.product--no-media) .product__info-wrapper{padding-top:95px !important;}
 }
 @media only screen and (max-width:500px){
-.product__info-wrapper{padding:0 25px !important; }
+.product__info-wrapper{
+    padding:0 35px !important; 
+}
   .product__title {
     padding-top: 30px;
     margin-bottom: 25px;

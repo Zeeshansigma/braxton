@@ -77,6 +77,29 @@
       </div>
   <div class="na_contact--form na_content--d">
     {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
+      {%- if form.errors contains 'email' -%}
+      <div class="form_top_error">
+        <div class="form__message">
+          <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
+            {% render 'icon-error' %}
+             Please adjust the following:
+          </h2>
+        </div>
+        {% comment %} <small class="contact__field-error" id="ContactForm-email-error">
+          <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+          <span class="form__message">
+            {%- render 'icon-error' -%}
+            {{- form.errors.translated_fields.email | capitalize }}
+            {{ form.errors.messages.email -}}
+          </span>
+        </small> {% endcomment %}
+        <ul class="e-mail-form">
+          <li> Incorrect or missing e-mail.</li>
+          <li> Text can not be blank. </li>
+        </ul>
+      </div>
+       
+      {%- endif -%}
       <div class="contact__fields">
         <div class="field">
           <input type="text" class="field__input" name="contact[first_name]" placeholder="First name" id="first-name" />
@@ -107,16 +130,7 @@
             E-mail
             <span aria-hidden="true">*</span></label
           >
-          {%- if form.errors contains 'email' -%}
-            <small class="contact__field-error" id="ContactForm-email-error">
-              <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
-              <span class="form__message">
-                {%- render 'icon-error' -%}
-                {{- form.errors.translated_fields.email | capitalize }}
-                {{ form.errors.messages.email -}}
-              </span>
-            </small>
-          {%- endif -%}
+        
         </div>
       </div>
       <div class="field">
@@ -161,20 +175,20 @@
            Note that if your contact was submitted on Friday after 11:00am, you will most likely receive a return from us in the next working day. 
         </h2>
       {%- elsif form.errors -%}
-        <div class="form__message">
+        {% comment %} <div class="form__message">
           <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
             {% render 'icon-error' %}
              Sorry Fill the form Correctly
           </h2>
-        </div>
-        <ul class="form-status-list caption-large" role="list">
+        </div> {% endcomment %}
+        {% comment %} <ul class="form-status-list caption-large" role="list">
           <li>
             <a href="#ContactForm-email" class="link">
               {{ form.errors.translated_fields.email | capitalize }}
               {{ form.errors.messages.email }}
             </a>
           </li>
-        </ul>
+        </ul> {% endcomment %}
       {%- endif -%}
     {%- endform -%}
   </div>

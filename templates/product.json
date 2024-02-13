@@ -1,5 +1,11 @@
 {
   "sections": {
+    "custom_menu_DrxwcF": {
+      "type": "custom-menu",
+      "settings": {
+        "menu": "mobile-nav"
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -101,7 +107,7 @@
         "gallery_layout": "stacked",
         "media_position": "left",
         "image_zoom": "lightbox",
-        "mobile_thumbnails": "hide",
+        "mobile_thumbnails": "show",
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 0,
@@ -158,6 +164,7 @@
     }
   },
   "order": [
+    "custom_menu_DrxwcF",
     "main",
     "related-products",
     "6da4da50-b3d6-4a3e-a98b-bc46bad08166",

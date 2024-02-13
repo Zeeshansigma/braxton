@@ -308,9 +308,7 @@ body.template-product .shopify-section .a1p_grid-wrapper.lightSlider .lslide img
 body.template-product .shopify-section .a1p_grid-wrapper.lightSlider .lslide div .money {
   font-size: 20px !important;
 }
-.product--large:not(.product--no-media) .product__info-wrapper {
-  padding: 5rem 7rem 5rem 0rem !important;
-}
+
 button.arAccordBtn:hover .arAccordTxt {
   text-decoration: underline !important;
 }

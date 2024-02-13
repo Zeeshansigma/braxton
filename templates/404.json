@@ -1,1 +1,19 @@
-{"sections":{"main":{"type":"main-404","settings":{}}},"order":["main"]}
+{
+  "sections": {
+    "custom_menu_e3t37F": {
+      "type": "custom-menu",
+      "settings": {
+        "menu": "mobile-nav"
+      }
+    },
+    "main": {
+      "type": "main-404",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "custom_menu_e3t37F",
+    "main"
+  ]
+}

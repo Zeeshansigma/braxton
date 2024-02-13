@@ -122,14 +122,14 @@
     </ul>
     {%- unless is_duplicate -%}
       <div class="slider-buttons no-js-hidden quick-add-hidden{% if hide_mobile_slider %} small-hide{% endif %}">
-        <button
+       <button
           type="button"
           class="slider-button slider-button--prev"
           name="previous"
           aria-label="{{ 'general.slider.previous_slide' | t }}"
         >
           {% render 'icon-caret' %}
-        </button>
+        </button> 
         <div class="slider-counter caption">
           <span class="slider-counter--current">1</span>
           <span aria-hidden="true"> / </span>
@@ -169,7 +169,7 @@
       id="GalleryThumbnails-{{ section.id }}{{ id_append }}"
       class="thumbnail-slider slider-mobile-gutter quick-add-hidden{% unless section.settings.gallery_layout contains 'thumbnail' %} medium-hide large-up-hide{% endunless %}{% if section.settings.mobile_thumbnails != 'show' %} small-hide{% endif %}{% if media_count <= 3 %} thumbnail-slider--no-slide{% endif %}"
     >
-      <button
+      {% comment %} <button
         type="button"
         class="slider-button slider-button--prev{% if media_count <= 3 %} small-hide{% endif %}{% if media_count <= 4 %} medium-hide large-up-hide{% endif %}"
         name="previous"
@@ -178,10 +178,10 @@
         data-step="3"
       >
         {% render 'icon-caret' %}
-      </button>
+      </button> {% endcomment %}
       <ul
-        id="Slider-Thumbnails-{{ section.id }}{{ id_append }}"
-        class="thumbnail-list list-unstyled slider slider--mobile{% if section.settings.gallery_layout == 'thumbnail_slider' %} slider--tablet-up{% endif %}"
+        id="Slider-Thumbnails-{{ section.id }}{{ id_append }} "
+        class="thumbnail-list list-unstyled slider slider--mobile{% if section.settings.gallery_layout == 'thumbnail_slider' %} slider--tablet-up{% endif %} justify_thumnail"
       >
         {%- capture sizes -%}
           (min-width: {{ settings.page_width }}px) calc(({{ settings.page_width | minus: 100 | times: media_width | round }} - 4rem) / 4),
@@ -205,7 +205,7 @@
           -%}
           <li
             id="Slide-Thumbnails-{{ section.id }}-0{{ id_append }}"
-            class="thumbnail-list__item slider__slide{% if section.settings.hide_variants and variant_images contains featured_media.src %} thumbnail-list_item--variant{% endif %}"
+            class="thumbnail-list__item slider__slide{% if section.settings.hide_variants and variant_images contains featured_media.src %} thumbnail-list_item--variant{% endif %} thumnnail_custom_product_width"
             data-target="{{ section.id }}-{{ featured_media.id }}"
             data-media-position="{{ media_index }}"
           >
@@ -213,13 +213,13 @@
               Thumbnail-{{ section.id }}-0{{ id_append }}
             {%- endcapture -%}
             <button
-              class="thumbnail global-media-settings global-media-settings--no-shadow"
+              class="thumbnail global-media-settings global-media-settings--no-shadow thumnnail_custom_product"
               aria-label="{%- if featured_media.media_type == 'image' -%}{{ 'products.product.media.load_image' | t: index: media_index }}{%- elsif featured_media.media_type == 'model' -%}{{ 'products.product.media.load_model' | t: index: media_index }}{%- elsif featured_media.media_type == 'video' or featured_media.media_type == 'external_video' -%}{{ 'products.product.media.load_video' | t: index: media_index }}{%- endif -%}"
               aria-current="true"
               aria-controls="GalleryViewer-{{ section.id }}{{ id_append }}"
               aria-describedby="{{ thumbnail_id }}"
             >
-              {{
+              {% comment %} {{
                 featured_media.preview_image
                 | image_url: width: 416
                 | image_tag:
@@ -229,7 +229,7 @@
                   id: thumbnail_id,
                   alt: featured_media.alt
                 | escape
-              }}
+              }} {% endcomment %}
             </button>
           </li>
         {%- endif -%}
@@ -249,7 +249,7 @@
             -%}
             <li
               id="Slide-Thumbnails-{{ section.id }}-{{ forloop.index }}{{ id_append }}"
-              class="thumbnail-list__item slider__slide{% if section.settings.hide_variants and variant_images contains media.src %} thumbnail-list_item--variant{% endif %}"
+              class="thumbnail-list__item slider__slide{% if section.settings.hide_variants and variant_images contains media.src %} thumbnail-list_item--variant{% endif %} thumnnail_custom_product_width"
               data-target="{{ section.id }}-{{ media.id }}"
               data-media-position="{{ media_index }}"
             >
@@ -266,7 +266,7 @@
                 Thumbnail-{{ section.id }}-{{ forloop.index }}{{ id_append }}
               {%- endcapture -%}
               <button
-                class="thumbnail global-media-settings global-media-settings--no-shadow"
+                class="thumbnail global-media-settings global-media-settings--no-shadow thumnnail_custom_product"
                 aria-label="{%- if media.media_type == 'image' -%}{{ 'products.product.media.load_image' | t: index: media_index }}{%- elsif media.media_type == 'model' -%}{{ 'products.product.media.load_model' | t: index: media_index }}{%- elsif media.media_type == 'video' or media.media_type == 'external_video' -%}{{ 'products.product.media.load_video' | t: index: media_index }}{%- endif -%}"
                 {% if media == product.selected_or_first_available_variant.featured_media
                   or product.selected_or_first_available_variant.featured_media == null
@@ -277,7 +277,8 @@
                 aria-controls="GalleryViewer-{{ section.id }}{{ id_append }}"
                 aria-describedby="{{ thumbnail_id }}"
               >
-                {{
+              
+                {% comment %} {{
                   media.preview_image
                   | image_url: width: 416
                   | image_tag:
@@ -287,13 +288,13 @@
                     id: thumbnail_id,
                     alt: media.alt
                   | escape
-                }}
+                }} {% endcomment %}
               </button>
             </li>
           {%- endunless -%}
         {%- endfor -%}
       </ul>
-      <button
+      {% comment %} <button
         type="button"
         class="slider-button slider-button--next{% if media_count <= 3 %} small-hide{% endif %}{% if media_count <= 4 %} medium-hide large-up-hide{% endif %}"
         name="next"
@@ -302,7 +303,7 @@
         data-step="3"
       >
         {% render 'icon-caret' %}
-      </button>
+      </button> {% endcomment %}
     </slider-component>
   {%- endif -%}
 </media-gallery>

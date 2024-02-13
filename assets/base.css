@@ -491,11 +491,6 @@ table:not([class]) th {
   border: 0.1rem solid rgba(var(--color-foreground), 0.2);
 }
 
-@media screen and (max-width: 749px) {
-  .medium-hide {
-    display: none !important;
-  }
-}
 
 @media screen and (min-width: 750px) and (max-width: 989px) {
   .medium-hide {
@@ -1902,9 +1897,9 @@ input[type='checkbox'] {
 .form__message .icon,
 .customer .form__message svg {
   flex-shrink: 0;
-  height: 1.3rem;
+  height: 15px;
   margin-right: 0.5rem;
-  width: 1.3rem;
+  width: 15px;
 }
 
 .form__message--large .icon,
@@ -5232,6 +5227,19 @@ button.disclosure__button.localization-form__select.localization-selector.link.l
 ul.list-menu.list-menu--inline li a, ul.list-menu.list-menu--inline li span{
   font-family: 'TstarP' !important;
 }
+h2.title.title-wrapper--no-top-margin.inline-richtext.h1 {
+  margin-bottom: 0 !important;
+}
+.na_contact-form.custom-page {
+  margin-top: 40px;
+}
+.form_top_error {
+  margin-left: 40px;
+}
+ul.e-mail-form {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
 @media(min-width: 540px){
   .na_mobiles .header__search {
     display: none !important;
@@ -5431,6 +5439,14 @@ margin-top: 0;
 div#g-recaptcha {
   margin-bottom: 20px;
 }
+.e-mail-form li{
+  color: rgba(0, 0, 0, 0.50);
+font-family: TstarW;
+font-size: 12px;
+font-style: normal;
+font-weight: 900;
+line-height: 18px; 
+}
 @media screen and (max-width:768px){
   h1#login{
     font-size: 20px !important;
@@ -5517,8 +5533,41 @@ a.arAddBtn_cba {
 .noorder p {
   margin-bottom: 59px !important;
 }
-
-
+.thumnnail_custom_product {
+  width: 100% !important;
+  max-width: 30px;
+  height: 2.8px !important;
+  background: #00000033 !important;
+}
+.thumnnail_custom_product_width {
+  width: 100% !important;
+  max-width: 30px !important;
+}
+.justify_thumnail{
+  justify-content: center !important;
+}
+.thumbnail[aria-current]{
+  background: black !important;
+  box-shadow:unset !important;
+  border: none !important;
+}
+.naContact.contact {
+  padding-top: 70px !important;
+}
+.na_contact-form.custom-page {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 130px !important;
+}
+h2.title.title-wrapper--no-top-margin.inline-richtext.h1 {
+  margin-bottom: 60px !important;
+  font-size: 20px !important;
+}
+textarea#ContactForm-body {
+  margin-top: 12px !important;
+  font-family: 'TstarW';
+  font-weight: 700 !important;
+}
 }
 
 /* today */
