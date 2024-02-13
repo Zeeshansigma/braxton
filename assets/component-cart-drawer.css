@@ -16,7 +16,9 @@
 }
 
 .drawer__inner {
-  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  height: inherit;
   width: 660px !important;
   max-width: calc(100vw - 3rem);
   padding: 0 2.5rem;
@@ -24,6 +26,7 @@
   border-right: 0;
   background-color: rgb(var(--color-background));
   overflow: hidden;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   transform: translateX(100%);
@@ -34,7 +37,7 @@
   height: 100%;
   padding: 0 1.5rem;
   background-color: rgb(var(--color-background));
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
   flex-direction: column;
 }
