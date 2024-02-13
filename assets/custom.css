@@ -1800,14 +1800,11 @@ button.product-form__submit.button.button--full-width.button--primary{
   color:red;
   text-decoration: none!important;
 }
-<<<<<<< Updated upstream
 @media(min-width: 991px){
   .foo-menu ul li svg{
     display: none;
   }
 }
-=======
->>>>>>> Stashed changes
 @media(max-width: 991px){
   .focus-inset .icon-search{
     /* display: none; */
@@ -1815,11 +1812,7 @@ button.product-form__submit.button.button--full-width.button--primary{
   .menu__burger {
     position: relative;
     width: 22px;
-<<<<<<< Updated upstream
   }
-=======
-}
->>>>>>> Stashed changes
 .menu__btn-icon {
     height: inherit;
     width: 22px;
@@ -1859,7 +1852,6 @@ footer.footer{
 .footer-block--newsletter{
   margin-top: 33px !important;
 }
-<<<<<<< Updated upstream
 .footer__content-bottom-wrapper{
   flex-direction: column !important;
 }
@@ -1877,14 +1869,13 @@ ul.pages-menu2 {
 .foo-menu ul li {
   display: flex;
   justify-content: space-between;
-  align-items: self-start !important;
+  align-items: center !important;
   width: 100%;
-=======
+}
 .foo-menu ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
->>>>>>> Stashed changes
 }
 .foo-menu ul li.menu-link.menu-link2 a{
   margin-top: 10px;
@@ -1930,7 +1921,6 @@ ul.pages-menu2 {
   .desktop-seach-icon{
     display: none;
   }
-<<<<<<< Updated upstream
   summary.list-menu__item{
     padding-left: 30px !important;
     padding-right: 30px !important;
@@ -1939,6 +1929,18 @@ ul.pages-menu2 {
     padding-top: 32.5px !important;
     padding-bottom: 32.5px !important;
   } */
-=======
->>>>>>> Stashed changes
+  .foo-menu ul li{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #f3f3f3;
+  }
+  .foo-menu ul li.menu-link.menu-link2 a {
+    margin-left: 0;
+    color: #000;
+    font-family: TstarP;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 18px;
+}
 }
