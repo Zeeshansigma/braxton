@@ -1800,6 +1800,18 @@ button.product-form__submit.button.button--full-width.button--primary{
   color:red;
   text-decoration: none!important;
 }
+.collection{
+  padding-left: 90px;
+  padding-right: 90px;
+  padding-bottom: 48px;
+}
+.mobile-facets__open span{
+  font-size: 16px;
+}
+.select .svg-icon-d{
+  margin-left: 0px;
+  margin-right: 0px;
+}
 @media(min-width: 991px){
   .foo-menu ul li svg{
     display: none;
@@ -1959,3 +1971,10 @@ section.custom-page, section .contact{
 }
 
 }
+
+@media(max-width: 768px){
+  facet-filters-form.facets{
+    display: none !important;
+  }
+  
+  }
