@@ -700,9 +700,6 @@ stroke: #000;
 section.section, section.section .color-background-1, section.section .product__info-wrapper{
     background-color: #fcfbfa!important;
 }
-.predictive-search{
-background: #fcfbfa!important;
-}
 ul.header__submenu li a{
 font-weight: 500 !important;
 }
@@ -1778,12 +1775,12 @@ button.product-form__submit.button.button--full-width.button--primary{
 }
 
 .field__input:focus ~ .field__label, .field__input:not(:placeholder-shown) ~ .field__label, .field__input:-webkit-autofill ~ .field__label, .customer .field input:focus ~ label, .customer .field input:not(:placeholder-shown) ~ label, .customer .field input:-webkit-autofill ~ label{
-  top:10px!important;
+  top:7px!important;
   font-size:13px!important;
 }
 
 .field__input:focus, .field__input:not(:placeholder-shown), .field__input:-webkit-autofill, .customer .field input:focus, .customer .field input:not(:placeholder-shown), .customer .field input:-webkit-autofill{
-  padding: 2.5rem 1rem 0.5rem 1.5rem!important; 
+  padding: 2.5rem 1rem 0.5rem 1.5rem; 
 }
 
 .customer ul{
@@ -1801,8 +1798,8 @@ button.product-form__submit.button.button--full-width.button--primary{
   text-decoration: none!important;
 }
 .collection{
-  padding-left: 90px;
-  padding-right: 90px;
+  padding-left: 158px;
+  padding-right: 158px;
   padding-bottom: 48px;
 }
 .mobile-facets__open span{

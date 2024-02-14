@@ -131,7 +131,7 @@ button.disclosure__button.localization-form__select.localization-selector.link.l
   font-weight: 700 !important;
 }
 .header__inline-menu ul.list-menu.list-menu--inline li span {
-  font-size: 15px !important;
+  font-size: 16px !important;
 }
 
 /*** SEARCH BAR ***/
@@ -139,8 +139,9 @@ predictive-search input {
   font-family: 'TstarW' !important;
 }
 .predictive-search {
-  background-color: #FFF !important;
-  border-radius: 0.3rem !important;
+  background-color: #FCFBFA !important;
+  border-radius: .3rem!important;
+  z-index: 10;
 }
 predictive-search input#Search-In-Modal-1:focus {
   padding-bottom: 10px !important;
@@ -216,7 +217,7 @@ input#Search-In-Modal-1 {
   margin-right: 90px;
 }
 .facet-filters__sort,.facet-filters__label, .mobile-facets__open{
-  font-size: 16px;
+  font-size: 16px !important;
 }
 .mobile-facets__open {
   display: flex !important;

@@ -197,10 +197,12 @@
 }
 
 .facets__summary {
-  color: rgba(var(--color-foreground), 0.75);
-  font-size: 1.4rem;
+  color: #4d4f4e;
+  font-size: 16px;
   padding: 0 1.75rem 0 0;
   margin-bottom: 1.5rem;
+  font-family: TstarW;
+  font-weight: 700;
 }
 
 .facets__disclosure fieldset {

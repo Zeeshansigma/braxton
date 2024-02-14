@@ -136,10 +136,12 @@ form.recovery_form {
           {{ 'templates.contact.form.error_heading' | t }}
         </h2> {% endcomment %}
         {% if form.errors %}
+         <div class="error_msg_custom">
           <p class="error_msg" style="font-size: 16px;text-align:left;"><svg class="error_img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0,0,256,256" ><g fill="#fa5252" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(4,4)"><path d="M58,32c0,14.359 -11.641,26 -26,26c-14.359,0 -26,-11.641 -26,-26c0,-14.359 11.641,-26 26,-26c14.359,0 26,11.641 26,26zM32.024,48.358c1.316,0 2.726,-1.53 2.726,-3.339c0,-1.902 -1.41,-3.388 -2.726,-3.388c-1.646,0 -2.774,1.485 -2.774,3.388c0,1.809 1.128,3.339 2.774,3.339zM33.5,37.99c0,0 1.375,-7.367 1.5,-9.504c0.182,-3.114 0,-12.476 0,-12.476h-6c0,0 -0.182,9.362 0,12.476c0.125,2.137 1.5,9.504 1.5,9.504z"></path></g></g></svg> Please adjust the following:</p>
           <ul class="incorrect_msg" style="list-style-type: disc; margin-left: 40px; margin-top: -15px;">
             <li>Incorrect email or password.</li>
           </ul>
+         </div>
         {% endif %}
       {%- endif -%}
 

@@ -440,7 +440,9 @@ blockquote {
 
 @media screen and (min-width: 750px) {
   .caption {
-    font-size: 1.2rem;
+    font-size: 16px;
+    font-family: TstarW;
+    font-weight: 700;
   }
 }
 
@@ -4474,14 +4476,15 @@ img.password-logo {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-    /* background: #4FCC6D; */
-    color: #fff;
+    background: #4FCC6D;
+    color: #000000;
     font-size: 13px;
     text-transform: uppercase;
+     display: none;
     
 }
 .newsletter-form__message svg {
-  display: none;
+  /* display: none; */
 }
 .formsf {
     display: none !important;
@@ -5574,3 +5577,46 @@ textarea#ContactForm-body {
 /* today */
 
 /* today */
+#spopupCont {
+  background: #00000040;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+input#Search-In-Template {
+  border-bottom: 0.5px solid #E0E0DF;
+  border-radius: 0;
+  padding-bottom: 10px !important;
+  padding: 0 !important;
+  max-width: 700px;
+}
+.my_select{
+  align-items: center;
+}
+.card__badge.bottom.left{
+  margin: 0 !important;
+}
+.error_msg_custom{
+  margin-left: 40px;
+}
+@media screen and (max-width:991px){
+  .disclosure {
+    display: none;
+  }
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  color: rgba(0, 0, 0, 0.50);
+}
