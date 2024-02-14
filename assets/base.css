@@ -5620,3 +5620,6 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   color: rgba(0, 0, 0, 0.50);
 }
+facet-remove a {
+  color: black !important;
+}
