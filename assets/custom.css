@@ -1601,9 +1601,9 @@ padding-left: 0rem !important;
 padding-bottom: 7rem !important;
 }
 .na_content--d{
-width: 89.5% !important;
-/* padding-left: 2rem !important;
-  padding-right: 2rem !important; */
+width: calc(100%) !important;
+padding-left: 2rem !important;
+  padding-right: 2rem !important;
 }
   .custom-page{
     padding-top: 4rem !important
