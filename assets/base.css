@@ -4474,7 +4474,7 @@ img.password-logo {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-    background: #4FCC6D;
+    /* background: #4FCC6D; */
     color: #fff;
     font-size: 13px;
     text-transform: uppercase;
@@ -5380,7 +5380,6 @@ margin-top: 0;
   fill: none;
   filter: none;
 }
-<<<<<<< Updated upstream
 .nem_img {
   display: flex;
   align-items: center;
@@ -5428,12 +5427,12 @@ margin-top: 0;
   line-height: normal;
   text-align: center;
 }
-.button_na_submit{
+.custom_submit{
   background-color: #4FCC6D !important;
   fill: #4FCC6D;
   filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.08)) drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.08));
 }
-.button_na_submit::after{
+.custom_submit::after{
   box-shadow: none !important;
 }
 div#g-recaptcha {
@@ -5569,9 +5568,9 @@ textarea#ContactForm-body {
   font-weight: 700 !important;
 }
 }
+#variant-select-container .input-lg{
+  font-size: 16px !important;
+}
+/* today */
 
 /* today */
-=======
-
-/* today */
->>>>>>> Stashed changes

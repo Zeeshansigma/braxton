@@ -307,11 +307,12 @@ filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.08)) drop-shadow(0px 4px 6px rgb
                   <h3
                     class="newsletter-form__message newsletter-form__message--success form__message"
                     id="ContactFooter-success"
-                    tabindex="-1"
+                    tabindex="-1" 
                     autofocus
                   >
-                    {% render 'icon-success' -%}
-                    {{- 'newsletter.success' | t }}
+                  {{ 'thanks for subscribing' }}
+                    {% comment %} {% render 'icon-success' -%} {% endcomment %}
+                    {% comment %} {{- 'newsletter.success' | t }} {% endcomment %}
                   </h3>
                 {%- endif -%}
               {%- endform -%}

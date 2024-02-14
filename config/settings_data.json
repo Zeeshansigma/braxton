@@ -173,15 +173,15 @@
         "settings": {
         }
       },
-      "12526071353035850722": {
-        "type": "shopify:\/\/apps\/back-in-stock-customer-alerts\/blocks\/app-embed\/bfa6a8c4-24e2-411a-9396-e35031b33f34",
-        "disabled": false,
+      "5294968793578418440": {
+        "type": "shopify:\/\/apps\/king-product-options-variant\/blocks\/app-embed\/ce104259-52b1-4720-9ecf-76b34cae0401",
+        "disabled": true,
         "settings": {
         }
       },
       "5294968793578418440": {
         "type": "shopify:\/\/apps\/king-product-options-variant\/blocks\/app-embed\/ce104259-52b1-4720-9ecf-76b34cae0401",
-        "disabled": true,
+        "disabled": false,
         "settings": {
         }
       }

@@ -60,7 +60,6 @@
 
   assign product_form_id = 'product-form-' | append: section.id
 -%}
-
 {%- for value in option.values -%}
   {%- liquid
     assign option_disabled = true
@@ -86,11 +85,10 @@
   {%- if block.settings.picker_type == 'button' -%}
     <input
       type="radio"
-      id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+      id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }} my_option"
       name="{{ option.name }}"
       value="{{ value | escape }}"
       form="{{ product_form_id }}"
-      idd="{{ option.id }}"
       {% if option.selected_value == value %}
         checked
       {% endif %}
@@ -98,15 +96,17 @@
         class="disabled"
       {% endif %}
     >
-    <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" class="{% if option.name == 'Color' %}arColorOption{% endif %}" data-valuee="{{ value }}">
-      
-      <span style="background:{{- value -}}"></span>
-      <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
-    
-    </label>
-    {% if forloop.last %}
-{% if option.name == 'Color' %}<i id="swatchSelectVal" style="font-weight:normal;font-size:12px;line-height:1;"></i>{% endif %}
-      {% endif %}
+  {% if product.variants[forloop.index0].image != blank and option.name == 'Color' %}
+      <label
+        for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+        style="background-image: url({{ product.variants[forloop.index0].image | img_url: '' }});height:40px;width:40px;background-size: cover;"
+      ></label>
+    {% else %}
+      <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+        {{ value -}}
+        <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+      </label>
+    {% endif %}
   {%- elsif block.settings.picker_type == 'dropdown' -%}
     <option
       value="{{ value | escape }}"
@@ -122,3 +122,4 @@
     </option>
   {%- endif -%}
 {%- endfor -%}
+
