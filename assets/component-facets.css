@@ -184,7 +184,7 @@
 .facets__heading {
   display: block;
   color: rgba(var(--color-foreground), 0.85);
-  font-size: 1.4rem;
+  font-size:16px;
   margin: -1.5rem 2rem 0 0;
 }
 
@@ -434,9 +434,6 @@ span.active-facets__button-inner:after {
 }
 
 @media screen and (max-width: 989px) {
-  .active-facets {
-    margin: 0 -1.2rem -1.2rem;
-  }
 
   .active-facets__button,
   .active-facets__button-remove {
@@ -452,6 +449,9 @@ span.active-facets__button-inner:after {
   .active-facets__button-wrapper {
     padding-top: 0;
     margin-left: 1.2rem;
+  }
+  .mobile-facets__wrapper{
+    width: 100%;
   }
 }
 
@@ -925,7 +925,7 @@ input.mobile-facets__checkbox {
 }
 
 .product-count__text {
-  font-size: 1.4rem;
+  font-size: 16px;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
   margin: 0;
 }

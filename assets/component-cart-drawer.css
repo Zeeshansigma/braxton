@@ -474,3 +474,12 @@ td.cart-item__quantity {
     margin-left: 0;
   }
 }
+
+@media screen and (max-width: 482px) { 
+  .drawer__inner {
+    width: calc(100% - 83px) !important;
+    margin-left: auto;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
