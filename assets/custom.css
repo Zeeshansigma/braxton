@@ -274,9 +274,7 @@ margin-left: auto !important;
 margin-right: auto !important;
 }
 
-product-recommendations ul.grid.product-grid .slick-list{
-  width: 100%;
-}
+
 product-recommendations.related-products ul.grid.product-grid .grid__item{
 width: calc(33.334% - 2rem) !important;
  max-width: calc(33.334% - 2rem)!important;
@@ -1438,27 +1436,8 @@ margin-bottom: 1rem;
 font-weight: 800;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media(min-width: 767px){
-  product-recommendations ul.grid.product-grid .slick-track{
-  min-width: 100% !important;
-    display: flex;
-  }
+
   .related-products ul.grid.product-grid{
   display: flex!important
 }

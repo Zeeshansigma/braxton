@@ -651,18 +651,6 @@
           
          {% assign collection_cart = 'frontpage' %}
 {% assign my_collection = collections['frontpage'] %}
-<div class="owl-carousel my-cart-carousal">
-  {% for product in my_collection.products %}
-    <div class="item"> 
-      <img src="{{ product.featured_image | img_url: 'master' }}" alt="">
-      <p>{{ product.title }}</p>
-      <h4>{{ product.price | money }}</h4>
-      {% for variant in product.variants %}
-        <a href="">{{ variant.title }}</a>
-      {% endfor %}
-    </div>
-  {% endfor %}
-</div>
 
          {% comment %} cart collection add end{% endcomment %}
 

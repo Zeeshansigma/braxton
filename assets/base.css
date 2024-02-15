@@ -4142,28 +4142,7 @@ span.fsheading {
 .product .global-media-settings{
   border: none !important;
 }
-.fs-wrapper .slick-prev:before, .fs-wrapper .slick-next:before {
-  display: none;
-}
-.fs-wrapper .slick-prev {
-  left: 0;
-  z-index: 9;
-}
-.fs-wrapper .slick-next {
-  right: 0;
-}
-.slick-next img, .slick-prev img {
-    width: 20px;
-    height: 20px;
-}
 
-.slick-next img {
-    transform: rotate(270deg);
-}
-
-.slick-prev img {
-    transform: rotate(90deg);
-}
 .containerimg {
   position: relative;
 }
