@@ -1827,7 +1827,7 @@ button.product-form__submit.button.button--full-width.button--primary{
     width: 22px;
 }
 .header__icons.header__icons--localization.header-localization{
-  gap:0;
+  gap:0 !important;
   margin-top: 4px;
 }
 .header__icon {
