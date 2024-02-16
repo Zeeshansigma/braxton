@@ -643,12 +643,12 @@
           <div id="CartDrawer-CartErrors" role="alert"></div>
         </form>
       </cart-drawer-items>
+      {%  render 'cart-drawer-slider' %} 
 
       <!-- Recommended -->
-      <div a1p="cart" product_ids="{{cart.items|map:'product'|map:'id'|join:','}}" currency_code="{{ cart.currency.iso_code }}" money_format="{{ shop.money_format }}"></div>
+      {% comment %} <div a1p="cart" product_ids="{{cart.items|map:'product'|map:'id'|join:','}}" currency_code="{{ cart.currency.iso_code }}" money_format="{{ shop.money_format }}"></div> {% endcomment %}
       <!-- Recommended -->
          {% comment %} cart collection add{% endcomment %}
-          
          {% assign collection_cart = 'frontpage' %}
 {% assign my_collection = collections['frontpage'] %}
 

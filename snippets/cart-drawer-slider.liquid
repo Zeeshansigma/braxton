@@ -1,0 +1,113 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<style>
+    .related_custom.related_custom_cart img {
+    width: 70% !important;
+    margin: 0 auto;
+}
+    .related_custom.related_custom_cart {
+    height: 256px;
+}
+.related_custom.related_custom_cart img {
+    width: 50%;
+    margin: 0 auto;
+}
+.related_width.related_width_cart .owl-nav button.owl-prev::after {
+    content: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 6L9 12L15 18' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.related_width.related_width_cart .owl-nav button.owl-next::after {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><g id="chevron-right"><path id="Vector" d="M9 18L15 12L9 6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></svg>');
+}
+
+
+.owl-nav button.owl-prev span,
+.owl-nav button.owl-next span{
+    display: none;
+}
+.related_custom {
+    text-align: center;
+    background: #f2f1f0;
+    padding: 10px 35px 23px;
+}
+.related_custom.related_custom_cart h3 {
+    margin: 0;
+    margin-top: 18.22px;
+    font-size: 14px;
+    font-family: TstarP;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.related_custom.related_custom_cart h5{
+    margin: 0;
+    margin-top: 8px;
+    font-size: 14px;
+    font-family: TstarP;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+    .related_custom a {
+        text-decoration: none;
+    }
+    .related_width_cart{
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .owl-nav button.owl-prev,
+    .owl-nav button.owl-next {
+    top: 50% !important;
+    position: absolute;
+}
+.related_width.related_width_cart .owl-nav button.owl-next {
+    right: -46px;
+}
+.related_width.related_width_cart .owl-nav button.owl-prev{
+    left: -46px;
+}
+</style>
+{% assign collection_handle = 'frontpage' %}
+{% assign collection_cart = collections[collection_handle] %}
+      <div class="related_width  related_width_cart">
+        <div class="owl-carousel cart-carousal">
+            {% for product in collection_cart.products %}
+                <div class="item">
+             <div class="related_custom related_custom_cart">
+                <a href="{{ product.url }}">
+                    <img src="{{ product.featured_image | img_url: 'master' }}" alt="">
+                <h3>{{ product.title }}</h3>
+                <h5>{{ product.price | money }}</h5>
+                </a>
+             </div>
+             </div>
+            
+            {% endfor %}
+            </div>
+      </div>
+     
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    $('.cart-carousal').owlCarousel({
+      loop:true,
+      margin:20,
+      nav:true,
+    
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:2
+          },
+          1000:{
+              items:2
+          }
+      }
+    });
+  });
+</script>
