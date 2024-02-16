@@ -4405,7 +4405,10 @@ body.password hr {
 }
 .password h2.email-signup-banner__heading.h2 {
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 24px;
+    font-family: 'TstarP' !important;
+    font-weight: 900;
+
 }
 
 .password .newsletter-form__field-wrapper .field__input {
@@ -5233,10 +5236,7 @@ ul.e-mail-form {
 }
 }
 @media(max-width: 750px){ 
- .footer__content-bottom-wrapper:nth-of-type(2){ 
-  padding-left: 44px !important;
-  padding-right: 44px !important;
- }
+
   .account-menu .tab button.active{
     color: #000 !important;
   }
@@ -5471,8 +5471,8 @@ form#customer_login {
 }
 .mobile-facets__inner.gradient {
   width: 400px !important;
-  margin-left: 83px;
-  margin-top: 94px;
+  /* margin-left: 83px; */
+  margin-top: 84px;
 }
 span.mobile-facets__open-label.button-label.small-hide {
   font-size: 16px;
@@ -5586,6 +5586,15 @@ input#Search-In-Template {
 @media screen and (max-width:991px){
   .disclosure {
     display: none;
+  }
+  .active-facets-mobile{
+    display: none !important;
+  }
+}
+@media screen and (max-width:460px){
+
+  .mobile-facets__inner.gradient{
+    width: calc(100% - 83px) !important;
   }
 }
 input:-webkit-autofill,

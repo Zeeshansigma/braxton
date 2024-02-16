@@ -1285,3 +1285,11 @@ jQuery(function($) {
       }
      });
     });
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+      // Select the button and store it in a variable
+      var closeButton = document.querySelector('#closebb');
+      console.log(" chal gya", closeButton);
+      // Now you can use the closeButton variable to reference the button
+  });
