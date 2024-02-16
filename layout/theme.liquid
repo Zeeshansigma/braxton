@@ -27,9 +27,6 @@
     {% endif %}
 
     {% render 'meta-tags' %}
-    
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
@@ -239,8 +236,6 @@
       }
       
     {% endstyle %}
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css" rel="stylesheet">
     {{ 'base.css' | asset_url | stylesheet_tag }}
 {% render 'fonts' %}
     {%- unless settings.type_body_font.system? -%}
@@ -270,18 +265,11 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
      {{ 'custom.css' | asset_url | stylesheet_tag }}
 
     <!-- KWD -->
     {{ 'kwd-custom.css' | asset_url | stylesheet_tag }}
     <!-- KWD -->
-    {% comment %} for slider  {% endcomment %}
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
-    {% comment %} end slider css cdn  {% endcomment %}
 
   </head>
 
@@ -421,28 +409,6 @@
 </script>
 
     {% if template contains 'product' %}
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script>
-
-        $('.slider-fc').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            arrows: true, 
-            prevArrow: '<button type="button" class="slick-prev"><img src="https://cdn.shopify.com/s/files/1/0799/7872/5668/files/arrow-bot.svg?v=1693665329" /></button>',
-            nextArrow: '<button type="button" class="slick-next"><img src="https://cdn.shopify.com/s/files/1/0799/7872/5668/files/arrow-bot.svg?v=1693665329" /></button>',
-            responsive: [
-                {
-                    breakpoint: 768, 
-                    settings: {
-                        slidesToShow: 1,
-                    }
-                }
-            ]
-        });
-    </script>
-
     <script>
       const elementsToClick = document.querySelectorAll(".product__media img");
 
@@ -521,7 +487,8 @@ a.button.arContinueShopBtnCart,
   box-shadow: 1px 4px 8px #00000020 !important;
 }
 button.product-form__submit.button.button--full-width.button--primary {
-  width: 100% !important;
+    width: 500px !important;
+    margin-top: 30px;
 }
 a.button.arContinueShopBtnCart {
   fill: #000;
@@ -565,31 +532,7 @@ h2.cart__empty-text {
   margin-bottom: 40px !important;
 }
 </style>
-{% comment %} for slider js cdn {% endcomment %}
-<script src="jquery.min.js"></script>
-<script src="owlcarousel/owl.carousel.min.js"></script>
-{% comment %} slider js cdn end {% endcomment %}
-<script>
-  $('.my-cart-carousal').owlCarousel({
-    loop:true,
-    margin:10,
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:1,
-            nav:true
-        },
-        600:{
-            items:3,
-            nav:false
-        },
-        1000:{
-            items:2,
-            nav:true,
-            loop:false
-        }
-    }
-})
-</script>
+
+
 </body>
 </html>

@@ -1,24 +1,10 @@
 <style>
-  .swatchOption{display:block;}
-  .noSwatchOption{display:none;}label.form__label.arSizeLAbel {
+  .my_custom_variants {
     display: flex;
-    justify-content: space-between;
-}
-  select#ar_varSelector {
-    height: 45px !important;
-}
-  span.badge {
-    text-transform: uppercase;
-    color: #FFF;
-    text-align: center;
-    font-family: TstarP;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 1;
-    text-transform: uppercase;
+    flex-direction: column-reverse;
 }
 </style>
+
 {% comment %}
   Renders product variant-picker
 
@@ -30,89 +16,11 @@
   Usage:
   {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 {% endcomment %}
-
-<noscript class="product-form__noscript-wrapper-{{ section.id }}">
-  <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
-    <label class="form__label" for="Variants-{{ section.id }}">
-      {{- 'products.product.product_variants' | t -}}
-    </label>
-    <div class="select">
-      <select
-        name="id"
-        id="Variants-{{ section.id }}"
-        class="select__select custom-select"
-        form="{{ product_form_id }}"
-      >
-        {%- for variant in product.variants -%}
-          <option
-            
-            {% if variant.available == false %}
-              disabled
-            {% endif %}
-            value="{{ variant.id }}"
-          >
-            {%- liquid
-              echo variant.title
-              echo variant.price | money | strip_html | prepend: ' - '
-              if variant.available == false
-                echo 'products.product.sold_out' | t | prepend: ' - '
-              endif
-              if variant.quantity_rule.increment > 1
-                echo 'products.product.quantity.multiples_of' | t: quantity: variant.quantity_rule.increment | prepend: ' - '
-              endif
-              if variant.quantity_rule.min > 1
-                echo 'products.product.quantity.minimum_of' | t: quantity: variant.quantity_rule.min | prepend: ' - '
-              endif
-              if variant.quantity_rule.max != null
-                echo 'products.product.quantity.maximum_of' | t: quantity: variant.quantity_rule.max | prepend: ' - '
-              endif
-              # TODO: enable theme-check once `item_count_for_variant` is accepted as valid filter
-              # theme-check-disable
-              assign cart_quantity = cart | item_count_for_variant: variant.id
-              # theme-check-enable
-              if cart_quantity > 0
-                echo 'products.product.quantity.in_cart_html' | t: quantity: cart_quantity | prepend: ' - '
-              endif
-            -%}
-          </option>
-        {%- endfor -%}
-      </select>
-      {% render 'icon-caret' %}
-    </div>
-  </div>
-</noscript>
-{% if product.has_only_default_variant %}
-{% else %}
-{% for option in product.options_with_values %}
-  {% if option.name != 'Color'  %}
-<div class="product-form__input product-form__inputARRR">
-          <label class="form__label arSizeLAbel" for="Option-{{ section.id }}-{{ forloop.index0 }}">
-            {{ option.name }} {% if optiion.name == 'size' or option.name == 'Size' %}<div id="KiwiSizingChart"></div>{% endif %}
-          </label>
-          <div class="select">
-            <select
-              id="ar_varSelector"
-              class="select__select custom-select"
-              name="options[{{ option.name | escape }}]"
-              form="{{ product_form_id }}"
-            >
-               <option>{{ 'Select Size' | upcase }}</option>
-              {% for value in option.values %}
-                <option value="{{ value }}">{{- value -}}</option>
-              {% endfor %}
-            </select>
-            {% render 'icon-caret' %}
-          </div>
-        </div>
-    {% endif %}
-  {% endfor %}
-{% endif %}
-
 {%- unless product.has_only_default_variant -%}
   {%- if block.settings.picker_type == 'button' -%}
     <variant-radios
       id="variant-radios-{{ section.id }}"
-      class="no-js-hidden"
+      class="no-js-hidden my_custom_variants"
       data-section="{{ section.id }}"
       data-url="{{ product.url }}"
       {% if update_url == false %}
@@ -121,10 +29,8 @@
       {{ block.shopify_attributes }}
     >
       {%- for option in product.options_with_values -%}
-        <fieldset class="js product-form__input ar_option_{{option.name}} {% if option.name == 'Color' %}swatchOption{% else %}noSwatchOption{% endif %}" {% if option.name != 'Color' %}style="display:none"{% endif %}>
-          <legend class="form__label" {% if option.name == 'Color' %}style="display:none"{% endif %}>{{ option.name }} 
-        
-        </legend>
+        <fieldset class="js product-form__input">
+          <legend class="form__label">{{ option.name }}:<span id="selected-value-{{ forloop.index }}">{{ option.selected_value }}</span></legend>
           {% render 'product-variant-options', product: product, option: option, block: block %}
         </fieldset>
       {%- endfor -%}
@@ -169,45 +75,55 @@
   {%- endif -%}
 {%- endunless -%}
 
-<variant-ids class="variant-ids">
-{% for variant in product.variants %}
-    <div id-index="id{{ forloop.index }}" title="{{ variant.title }}" id="{{ variant.id }}"></div>
-{% endfor %}
-</variant-ids>
-
-<script>
-    
-// Get the select box element
-var varSelector = document.getElementById('ar_varSelector');
-
-// Add an event listener for the change event
-varSelector.addEventListener('change', function() {
-  // Get the selected option text
-  var arOption = varSelector.options[varSelector.selectedIndex].text;
-
-  // Get all labels within the fieldset
-  var labels = document.querySelectorAll('.noSwatchOption label');
-
-  // Iterate over the labels
-  for (var i = 0; i < labels.length; i++) {
-    var label = labels[i];
-
-    // Get the label text without the span and its content
-    // var labelText = label.childNodes[0].textContent.trim();
-    var labelText = label.getAttribute('data-valuee');
-    // Check if the label's text matches the selected option text
-    if (labelText === arOption) {
-      // Click the label
-      label.click();
-      break; // Exit the loop after clicking the label
-    }
-  }
-});
-  var selectSwatch = $('.swatchOption input[type=radio]:checked+label').attr('data-valuee');
-  
-  $('#swatchSelectVal').text(selectSwatch);
-  $('.swatchOption label').on('click', function(){
-    var cba = $(this).attr('data-valuee');
-    $('#swatchSelectVal').text(cba);
-  });
-  </script>
+<noscript class="product-form__noscript-wrapper-{{ section.id }}">
+  <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
+    <label class="form__label" for="Variants-{{ section.id }}">
+      {{- 'products.product.product_variants' | t -}}
+    </label>
+    <div class="select">
+      <select
+        name="id"
+        id="Variants-{{ section.id }}"
+        class="select__select"
+        form="{{ product_form_id }}"
+      >
+        {%- for variant in product.variants -%}
+          <option
+            {% if variant == product.selected_or_first_available_variant %}
+              selected="selected"
+            {% endif %}
+            {% if variant.available == false %}
+              disabled
+            {% endif %}
+            value="{{ variant.id }}"
+          >
+            {%- liquid
+              echo variant.title
+              echo variant.price | money | strip_html | prepend: ' - '
+              if variant.available == false
+                echo 'products.product.sold_out' | t | prepend: ' - '
+              endif
+              if variant.quantity_rule.increment > 1
+                echo 'products.product.quantity.multiples_of' | t: quantity: variant.quantity_rule.increment | prepend: ' - '
+              endif
+              if variant.quantity_rule.min > 1
+                echo 'products.product.quantity.minimum_of' | t: quantity: variant.quantity_rule.min | prepend: ' - '
+              endif
+              if variant.quantity_rule.max != null
+                echo 'products.product.quantity.maximum_of' | t: quantity: variant.quantity_rule.max | prepend: ' - '
+              endif
+              # TODO: enable theme-check once `item_count_for_variant` is accepted as valid filter
+              # theme-check-disable
+              assign cart_quantity = cart | item_count_for_variant: variant.id
+              # theme-check-enable
+              if cart_quantity > 0
+                echo 'products.product.quantity.in_cart_html' | t: quantity: cart_quantity | prepend: ' - '
+              endif
+            -%}
+          </option>
+        {%- endfor -%}
+      </select>
+      {% render 'icon-caret' %}
+    </div>
+  </div>
+</noscript>

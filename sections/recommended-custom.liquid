@@ -1,0 +1,117 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<style>
+    .owl-nav button.owl-prev::after {
+    content: url("data:image/svg+xml,%3Csvg width='77' height='78' viewBox='0 0 77 78' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='chevron-right'%3E%3Cpath id='Vector' d='M48.125 19.5L28.875 39L48.125 58.5' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+}
+.owl-nav button.owl-next::after {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="78" height="78" viewBox="0 0 78 78" fill="none"><g id="chevron-right"><path id="Vector" d="M29.25 58.5L48.75 39L29.25 19.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></svg>');
+}
+
+.owl-nav button.owl-prev span,
+.owl-nav button.owl-next span{
+    display: none;
+}
+.related_custom {
+    text-align: center;
+    background: #f2f1f0;
+    padding: 10px 35px 23px;
+}
+.related_custom h3 {
+    margin: 0;
+    margin-top: 18.22px;
+    font-size: 20px;
+    font-family: TstarP;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.related_custom h5 {
+    margin: 0;
+    margin-top: 8px;
+    font-size: 20px;
+    font-family: TstarP;
+    font-weight: 900;
+}
+    .related_custom a {
+        text-decoration: none;
+    }
+    @media screen and (min-width:1440px) {
+        .related_width{
+            width: 100%;
+            max-width: 1293px;
+            margin: 0 auto;
+        }
+    }
+    .owl-nav button.owl-prev,
+    .owl-nav button.owl-next {
+    top: 50% !important;
+    position: absolute;
+}
+.owl-nav button.owl-next {
+    right: -100px;
+}
+.owl-nav button.owl-prev {
+    left: -100px;
+}
+</style>
+      <div class="related_width">
+        <div class="owl-carousel">
+            {% assign related-products =  collections[section.settings.collection_custom] %}
+            {% for product in related-products.products %}
+                <div class="item">
+             <div class="related_custom">
+                <a href="{{ product.url }}">
+                    <img src="{{ product.featured_image | img_url: 'master' }}" alt="">
+                <h3>{{ product.title }}</h3>
+                <h5>{{ product.price | money }}</h5>
+                </a>
+             </div>
+             </div>
+            
+            {% endfor %}
+            </div>
+      </div>
+     
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+    
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:3
+          },
+          1000:{
+              items:3
+          }
+      }
+    });
+  });
+</script>
+{% schema %}
+{
+  "name": "Recommended-slider",
+  "settings": [
+    {
+  "type": "collection",
+  "id": "collection_custom",
+  "label": "Collection"
+}
+  ],
+  "presets": [
+    {
+      "name": "Recommended-slider"
+    }
+  ]
+}
+{% endschema %}

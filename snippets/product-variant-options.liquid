@@ -1,41 +1,84 @@
 <style>
-  label.arColorOption {
-    padding: 0 !important;
-    width: 23px;
-    height: 23px;
-    border: 0 !important;
-    display: flex !important;
-    background: #fff;
-    margin: 0;
+  label.my_option {
+    width: 68px !important;
+    height: 55px !important;
+    border-radius: unset !important;
+    justify-content: center !important;
     align-items: center;
-    justify-content: center;
+    text-align: center;
 }
-  label.arColorOption span{
-    font-size: 0 !important;
-    width: 14px;
-    height: 14px;
-    border-radius: 50% !important;
-    display: block;
+  label.my_option {
+    padding: 17px !important;
+    margin:0 !important;
+        font-size: 15px;
+    font-family: TstarW;
+    font-weight: 900;
+        color: #a9a9a9 !important;
+}
+  .custom_image {
+    display: flex;
+}
+ .custom_image label.my_option {
+    display: block !important;
+    width: 100%; /* Ensure the label takes up the full width */
+    height: auto; /* Allow the height to adjust based on the content */
+    background-size: contain; /* Ensure the background image fits within the label */
+}
+
+  .product-form__input input[type=radio]:checked+label{
+    border: 1px solid black;
+    border-left: 1px solid black !important;
+    color: black !important;
+    background: none;
   }
-  .product-form__input input[type=radio]:checked + label.arColorOption {
-    border: 2px solid #000 !important;
-    background: #fff;
-    padding: 0 !important;
-    padding: 0px 0 !important;
+  .product-form__input input[type=radio]+label {
+      color: #a9a9a9 ;
+    background-color: unset;
 }
-  fieldset.ar_option_Color.swatchOption {
-    display: flex;align-items:center;
+  .product-form__input input[type=radio].disabled+label{
+        background: #f2f1f0;
+    border: 0.5px solid #f2f1f0;
+    border-left: 0 !important;
+    text-decoration:none !important;
+  }
+  .product-form__input input[type=radio]:checked.disabled+label {
+    background: #f2f1f0;
+    border: 0.5px solid #f2f1f0;
+    border-left: 0 !important;
+    text-decoration: none !important;
+    color: #a9a9a9!important;
 }
-  fieldset.ar_option_Color.swatchOption i{position:relative;top:2px;font-style:normal}
-  i#swatchSelectVal {
-    color: #4D4F4E;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1;
+  .product-form__input input[type=radio]+label {
+    border: 0.5px solid #f2f1f0;
+    border-left: 0 !important;
+    background: no-repeat;
 }
-  label.form__label.arSizeLAbel{display:none;}
+  .product-form__input input[type=radio].disabled:checked+label, .product-form__input input[type=radio]:disabled:checked+label{
+        border: 1px solid black !important;
+        border-left: 1px solid black !important;
+  }
+  .product-form__input input[type=radio].disabled+label:before {
+    height: 0.5px !important;
+    background: #a9a9a9;
+    top: 25px !important;
+    transform: rotate(142deg) !important;
+    z-index: 1;
+    width: 82px !important;
+    left: -8px;
+}
+   .product-form__input input[type=radio]+label:hover {
+    border-color: rgb(var(--color-foreground));
+    border-left: 1px solid black !important;
+}
+.product-form__input input[type=radio][name=color].disabled+label:before {
+    background: none;
+  }
+  label.line_not_variant::before {
+    background: none !important;
+}
+
 </style>
+
 {% comment %}
   Renders product variant options
 
@@ -60,6 +103,7 @@
 
   assign product_form_id = 'product-form-' | append: section.id
 -%}
+ <div class="custom_image">
 {%- for value in option.values -%}
   {%- liquid
     assign option_disabled = true
@@ -83,9 +127,10 @@
   -%}
 
   {%- if block.settings.picker_type == 'button' -%}
-    <input
+  
+      <input
       type="radio"
-      id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }} my_option"
+      id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
       name="{{ option.name }}"
       value="{{ value | escape }}"
       form="{{ product_form_id }}"
@@ -93,18 +138,19 @@
         checked
       {% endif %}
       {% if option_disabled %}
-        class="disabled"
+        class="disabled disabled_my"
       {% endif %}
     >
   {% if product.variants[forloop.index0].image != blank and option.name == 'Color' %}
       <label
         for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-        style="background-image: url({{ product.variants[forloop.index0].image | img_url: '' }});height:40px;width:40px;background-size: cover;"
+        style="background-image: url({{ product.variants[forloop.index0].image | img_url: '' }});height:93px;width:93px;background-size: cover; border-radius:0;"
+        class="line_not_variant"
       ></label>
     {% else %}
-      <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+      <label class="my_option" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
         {{ value -}}
-        <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+        <span class="visually-hidden my_product disabled_my">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
       </label>
     {% endif %}
   {%- elsif block.settings.picker_type == 'dropdown' -%}
@@ -122,4 +168,5 @@
     </option>
   {%- endif -%}
 {%- endfor -%}
+ </div>
 
