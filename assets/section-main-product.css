@@ -198,7 +198,12 @@ variant-selects {
 }
 
 fieldset.product-form__input .form__label {
-  margin-bottom: 0.2rem;
+  margin-bottom: 14px;
+  font-size: 16px;
+  font-family: 'TstarP';
+  color: black;
+  font-weight: 900;
+  margin: 0;
 }
 
 .product-form__input input[type='radio'] {

@@ -326,9 +326,12 @@ h4.sgPrTitle {
   font-size: 24px !important;
 }
 .product__info-wrapper .sizepopup .sp-text {
-  position: unset !important;
+  position: absolute !important;
   float: right;
-  margin-top: 16px;
+  margin-top: 32%;
+}
+.sp-text svg {
+  display: none;
 }
 .size-img {
   margin-top: 103px !important;

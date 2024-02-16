@@ -13,11 +13,11 @@
     width: 50%;
     margin: 0 auto;
 }
-.related_width.related_width_cart .owl-nav button.owl-prev::after {
+.related_width_cart .owl-nav button.owl-prev::after {
     content: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 6L9 12L15 18' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
-.related_width.related_width_cart .owl-nav button.owl-next::after {
+.related_width_cart .owl-nav button.owl-next::after {
     content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><g id="chevron-right"><path id="Vector" d="M9 18L15 12L9 6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></svg>');
 }
 
@@ -61,16 +61,16 @@
     top: 50% !important;
     position: absolute;
 }
-.related_width.related_width_cart .owl-nav button.owl-next {
+.related_width_cart .owl-nav button.owl-next {
     right: -46px;
 }
-.related_width.related_width_cart .owl-nav button.owl-prev{
+.related_width_cart .owl-nav button.owl-prev{
     left: -46px;
 }
 </style>
 {% assign collection_handle = 'frontpage' %}
 {% assign collection_cart = collections[collection_handle] %}
-      <div class="related_width  related_width_cart">
+      <div class="related_width_cart">
         <div class="owl-carousel cart-carousal">
             {% for product in collection_cart.products %}
                 <div class="item">
@@ -80,6 +80,13 @@
                 <h3>{{ product.title }}</h3>
                 <h5>{{ product.price | money }}</h5>
                 </a>
+                {% for option in product.options_with_values %}
+                            {% for values in option.values %}
+                        {% if option.name == 'Size' or option.name == 'size' %}
+                                    {{ values }}
+                        {% endif %}
+                            {% endfor %}
+                {% endfor %}
              </div>
              </div>
             
