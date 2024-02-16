@@ -456,7 +456,21 @@
     {% endif %}
     
   <script type="text/javascript" src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script>
-<script> window.start.init({Palette:"palette2",Mode:"banner bottom",Theme:"wire",Time:"5",Message:"To ensure you get the best experience on our website, this website uses cookies.",LinkText:"Privacy Policy",ButtonText:"ACCEPT & CLOSE",Location:"/pages/privacy-policy", ButtonText:"ACCEPT & CLOSE"})</script> 
+{% comment %} <script> window.start.init({Palette:"palette2",Mode:"banner bottom",Theme:"wire",Time:"5",Message:"To ensure you get the best experience on our website, this website uses cookies.",LinkText:"Privacy Policy",ButtonText:"ACCEPT & CLOSE",Location:"/pages/privacy-policy", ButtonText:"ACCEPT & CLOSE"})</script>  {% endcomment %}
+
+<script>
+    window.start.init({
+        Palette: "palette2",
+        Mode: "banner bottom",
+        Theme: "wire",
+        Time: "5",
+        Message: "To ensure you get the best experience on our website, this website uses cookies.",
+        LinkText: "Privacy Policy",
+        ButtonText: "ACCEPT & CLOSE <span></span>",
+        Location: "/pages/privacy-policy"
+    });
+
+</script>
 
 
 
