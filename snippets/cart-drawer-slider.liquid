@@ -67,32 +67,150 @@
 .related_width_cart .owl-nav button.owl-prev{
     left: -46px;
 }
+.custom-btn-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.custom-cart-button .product-form__buttons button {
+    width: 25px;
+    height: 21px;
+    font-size: 9px !important;
+    font-family: 'TstarP';
+    font-weight: 900 !important;
+}
+.custom_variant {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+.item img {
+    width: 100%;
+    max-width: 50%;
+    margin: 0 auto;
+}
+.item {
+    text-align: center;
+}
+.item {
+    padding: 25px 21.5px;
+    background: #e9e9e9;
+}
+.custom_variant button {
+    width: 25px !important;
+    height: 21.5px !important;
+    border-radius: 0 !important;
+    background: white;
+    border: 0.5px #a9a9a9;
+}
 </style>
 {% assign collection_handle = 'frontpage' %}
+
 {% assign collection_cart = collections[collection_handle] %}
       <div class="related_width_cart">
         <div class="owl-carousel cart-carousal">
             {% for product in collection_cart.products %}
-                <div class="item">
-             <div class="related_custom related_custom_cart">
+                {% for option in product.options_with_values %}
+                    {% if option.name == 'Color' %}
+                        {% for values in option.values %}
+                          <div class="item">
+                         {% for variant in product.variants %}
+                            {% if variant.option2 == values %}
+                            {% if variant.image != blank %}
+                                <img src=" {{ variant.image |  img_url: 'master' }}" alt="">
+                                <br>
+                                {% else %}
+                                <img src=" {{ product.featured_image |  img_url: 'master' }}" alt="">
+                                <br>
+                                {% endif %}
+                                {% break  %}
+                            {% endif %}
+                        {% endfor  %}  
+                        {{ product.title }}<br>
+                        {{ values }} <br>
+                        {{ product.selected_or_first_available_variant.price | money }}
+                           <br>
+                           <div class="custom_variant">
+                            {% for variant in product.variants %}
+
+                              {% if variant.option2 == values %}
+
+                                {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                                    <input type="hidden" name="id" value="{{ variant.id }}">
+                                    <div class="product-form__buttons">
+                                      <button type="submit" name="add" class="reset-btn" {% if variant.available == false %}disabled{% endif %} style="font-size: 1rem;">
+                                        {{ variant.option1 }}
+                                        <div class="loading-overlay__spinner hidden">
+                                          <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><circle class="path ajax-spin" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle></svg>
+                                        </div>
+                                      </button> 
+                                       </div>
+                                  {%- endform -%}
+                               
+                            
+                            {% endif %}
+                            
+                            {% endfor %}
+                            </div>  
+                          </div>  
+
+
+                        {% endfor %}
+                {% endif %}
+                {% endfor %}
+            {% endfor %}
+</div>
+</div>
+
+             {% comment %} <div class="related_custom related_custom_cart">
                 <a href="{{ product.url }}">
                     <img src="{{ product.featured_image | img_url: 'master' }}" alt="">
                 <h3>{{ product.title }}</h3>
                 <h5>{{ product.price | money }}</h5>
                 </a>
-                {% for option in product.options_with_values %}
+                <div class="custom-btn-flex"> {% endcomment %}
+                    {% comment %} {% for option in product.options_with_values %}
+                            {% if option.name == 'Color' %}
                             {% for values in option.values %}
-                        {% if option.name == 'Size' or option.name == 'size' %}
-                                    {{ values }}
-                        {% endif %}
+                                {{ values }}
+                                {% for variant in product.variants %}
+
+                                    {% endfor %}
                             {% endfor %}
+                    {% endif %}
+                    {% endfor %} {% endcomment %}
+                {% comment %} {% for variant in product.variants %}
+                    {% for option in product.options_with_values %}
+                        {% for values in option.values %}
+                    {% if option.name == 'Size' or option.name == 'size' %}
+                        <div class="custom-cart-button">
+                            {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                                <input type="hidden" name="id" value="{{ variant.id }}">
+                                <div class="product-form__buttons">
+                                  <button type="submit" name="add" class="reset-btn" {% if variant.available == false %}disabled{% endif %} style="font-size: 1rem;">
+                                    <span> {{ values }} 
+                                    </span>
+                                    <div class="loading-overlay__spinner hidden">
+                                      <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><circle class="path ajax-spin" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle></svg>
+                                    </div>
+                                  </button> 
+                                   </div>
+                              {%- endform -%}
+                        </div>
+                    {% endif %}
+                    {% endfor %}
                 {% endfor %}
+                    {% endfor %} {% endcomment %}
+                    </div>
+
+       
              </div>
-             </div>
-            
-            {% endfor %}
-            </div>
-      </div>
+
+             {% comment %} </div> {% endcomment %}
+            {% comment %} {% endfor %} {% endcomment %}
+             
+            {% comment %} {% endfor %} {% endcomment %}
+            {% comment %} </div> {% endcomment %}
+      {% comment %} </div> {% endcomment %}
      
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

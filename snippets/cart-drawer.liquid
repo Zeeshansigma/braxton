@@ -642,19 +642,16 @@
           </div>
           <div id="CartDrawer-CartErrors" role="alert"></div>
         </form>
+      
+
       </cart-drawer-items>
-      {%  render 'cart-drawer-slider' %} 
+      {% if cart != blank %}
+        {% comment %} {%  render 'cart-drawer-slider' %}  {% endcomment %}
 
-      <!-- Recommended -->
-      {% comment %} <div a1p="cart" product_ids="{{cart.items|map:'product'|map:'id'|join:','}}" currency_code="{{ cart.currency.iso_code }}" money_format="{{ shop.money_format }}"></div> {% endcomment %}
-      <!-- Recommended -->
-         {% comment %} cart collection add{% endcomment %}
-         {% assign collection_cart = 'frontpage' %}
-{% assign my_collection = collections['frontpage'] %}
-
-         {% comment %} cart collection add end{% endcomment %}
+      {% endif %}
 
       <div class="drawer__footer">
+
         {%- if settings.show_cart_note -%}
           <details id="Details-CartDrawer">
             <summary>
