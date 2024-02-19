@@ -352,6 +352,17 @@
 }
     </style>
 
+<script>
+document.getElementById("myForm").addEventListener("submit", function(event) {
+  // Prevent default form submission
+  event.preventDefault();
+  
+  // Change button text to "THANKS FOR SUBSCRIBING"
+  var button = document.querySelector(".wizard__submit");
+  button.innerHTML = "THANKS FOR SUBSCRIBING";
+});
+</script>
+
       <script>
   $(".size-selector span").click(function(){
     if($(this).hasClass("inches")){

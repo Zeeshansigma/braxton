@@ -102,11 +102,11 @@
       {%- endif -%}
       <div class="contact__fields">
         <div class="field">
-          <input type="text" class="field__input" name="contact[first_name]" placeholder="First name" id="first-name" />
+          <input type="text" class="field__input" name="contact[first_name]" placeholder="First name" id="first-name" required/>
           <label class="field__label" for="first-name">First name</label>
         </div>
         <div class="field">
-          <input type="text" class="field__input" name="contact[last_name]" placeholder="Last name" id="last-name" />
+          <input type="text" class="field__input" name="contact[last_name]" placeholder="Last name" id="last-name" required/>
           <label class="field__label" for="last-name">Last name</label>
         </div>
         <div class="field field--with-error">
@@ -157,6 +157,7 @@
           class="text-area field__input"
           name="contact[{{ 'templates.contact.form.comment' | t }}]"
           placeholder="Type here (If your enquiry is about an order, do not forget to include your order number)."
+          required
         >
           {{- form.body -}}
         </textarea>
