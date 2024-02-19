@@ -642,13 +642,12 @@
           </div>
           <div id="CartDrawer-CartErrors" role="alert"></div>
         </form>
-      
+        {% if cart != blank %}
+          {%  render 'cart-drawer-slider' %} 
+        {% endif %}
 
       </cart-drawer-items>
-      {% if cart != blank %}
-        {% comment %} {%  render 'cart-drawer-slider' %}  {% endcomment %}
-
-      {% endif %}
+      
 
       <div class="drawer__footer">
 

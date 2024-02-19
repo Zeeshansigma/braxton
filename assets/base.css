@@ -5623,3 +5623,23 @@ select:-webkit-autofill:focus {
 facet-remove a {
   color: black !important;
 }
+
+.drawer__footer {
+    position: absolute;
+    bottom: 30px;
+    right: 5%;
+    width: 540px;
+
+}
+.product__info-wrapper .sizepopup .sp-text{
+  margin-top: 37%;
+  left: 85%;
+}
+@media screen and (min-width:1440px) {
+
+  .product__info-wrapper .sizepopup .sp-text{
+    margin-top: 37%;
+    left: 85%;
+  }
+  
+}

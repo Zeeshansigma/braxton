@@ -1,12 +1,13 @@
 <style>
   .arAccordionText {
     border-bottom: 1px solid #ccc;
-}
+  }
+
   button.arAccordBtn.arAccordOne {
     border-top: 1px solid #ccc;
-}
+  }
 
-button.arAccordBtn {
+  button.arAccordBtn {
     width: 100%;
     padding: 0;
     background: transparent;
@@ -17,34 +18,46 @@ button.arAccordBtn {
     line-height: 1;
     padding-top: 12px;
     padding-bottom: 12px;
-    border-bottom: 1px solid #ccc;cursor:pointer;
-}
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+  }
+
   span.arAccordTxt {
-    font-size: 14px;color:#000;
+    font-size: 14px;
+    color: #000;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
     text-transform: uppercase;
-}
+  }
+
   button.arAccordBtn span.arAccordIcon {
-    transform: rotate(180deg);transition:all 0.5s ease-in-out;
-}
-button.arAccordBtn.arAccordActive span.arAccordIcon {
+    transform: rotate(180deg);
+    transition: all 0.5s ease-in-out;
+  }
+
+  button.arAccordBtn.arAccordActive span.arAccordIcon {
     transform: rotate(0);
-}
-  .arAccordionText p, .arAccordionText li, .arAccordionText, .arAccordionText span  {
-    color: #4D4F4E;
+  }
+
+  .arAccordionText p,
+  .arAccordionText li,
+  .arAccordionText,
+  .arAccordionText span {
+    color: #4d4f4e;
     text-align: left;
     font-size: 13px;
     font-style: normal;
     font-weight: 700;
     line-height: 1.5;
     letter-spacing: normal;
-}
+  }
+
   button.arAccordBtn span.arAccordIcon {
     display: flex;
-}
+  }
 </style>
+
 <div class="arAccordions">
   <div class="arAccordionInner">
     <div class="arAccordion arAccordion1">
@@ -72,20 +85,38 @@ button.arAccordBtn.arAccordActive span.arAccordIcon {
     </div>
   </div>
 </div>
+
 <script>
-  $(document).ready(function(){
-    $('.arAccordBtn').on('click', function(){
-      var target = $(this).attr('data-target');
-      
-      // Close all .arAccordionText elements except the target
-      $('.arAccordionText').not('.' + target).css('display','none');
-      
-      // Toggle the target element
-      $('.' + target).toggle();
-      
-      // Remove active class from all buttons and add it to the clicked button
-      $('.arAccordBtn').removeClass('arAccordActive');
-      $(this).addClass('arAccordActive');
+  document.addEventListener("DOMContentLoaded", function () {
+    var accordBtns = document.querySelectorAll(".arAccordBtn");
+    accordBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var target = this.getAttribute("data-target");
+
+        // Close all .arAccordionText elements except the target
+        var accordionTexts = document.querySelectorAll(".arAccordionText");
+        accordionTexts.forEach(function (text) {
+          if (!text.classList.contains(target)) {
+            text.style.display = "none";
+          }
+        });
+
+        // Toggle the target element
+        var targetElement = document.querySelector("." + target);
+        targetElement.style.display =
+          targetElement.style.display === "none" ? "block" : "none";
+
+        // Rotate the accordion icon
+        var accordionIcon = this.querySelector(".arAccordIcon");
+        accordionIcon.style.transform =
+          targetElement.style.display === "none" ? "rotate(180deg)" : "rotate(0)";
+
+        // Remove active class from all buttons and add it to the clicked button
+        accordBtns.forEach(function (btn) {
+          btn.classList.remove("arAccordActive");
+        });
+        this.classList.add("arAccordActive");
+      });
     });
   });
 </script>

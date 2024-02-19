@@ -339,8 +339,8 @@ h4.sgPrTitle {
 .product__info-wrapper .sizepopup .sp-text {
   position: absolute !important;
   float: right;
-  margin-top: 43%;
-  left: 100%;
+  margin-top: 37%;
+  left: 85%;
 } 
 .sp-text svg {
   display: none;
@@ -403,7 +403,7 @@ span.price.price--end {
 .drawer__contents {
   overflow: hidden;
   overflow-y: auto;
-  height: 350px;
+  height: 200px;
 }
 .drawer__header {
   padding: 0px !important;

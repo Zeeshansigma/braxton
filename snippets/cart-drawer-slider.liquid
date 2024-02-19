@@ -80,27 +80,27 @@
 }
 .custom_variant {
     display: flex;
-    gap: 5px;
-    flex-wrap: wrap;
 }
 .item img {
     width: 100%;
-    max-width: 50%;
+    max-width: 35%;
     margin: 0 auto;
-}
-.item {
-    text-align: center;
 }
 .item {
     padding: 25px 21.5px;
     background: #e9e9e9;
+    text-align: center;
+    height: 256px;
 }
 .custom_variant button {
     width: 25px !important;
     height: 21.5px !important;
     border-radius: 0 !important;
     background: white;
-    border: 0.5px #a9a9a9;
+    border: 0.5px solid #a9a9a9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 </style>
 {% assign collection_handle = 'frontpage' %}
@@ -200,7 +200,7 @@
                     {% endfor %}
                 {% endfor %}
                     {% endfor %} {% endcomment %}
-                    </div>
+                    {% comment %} </div> {% endcomment %}
 
        
              </div>
