@@ -1055,6 +1055,9 @@ input:-moz-placeholder {
     top: 14px;
     cursor: pointer;
 }
+.title.title--primary a{
+  color: #000;
+}
 @media(max-width: 991px){
   .header__heading-logo{
     width: 181px !important;
@@ -1172,6 +1175,9 @@ template-page .accordion__content li, .template-page .accordion .accordion__cont
   margin-left:  auto !important;
   margin-right: auto !important;
   width: 100% !important;
+}
+.collection.collection--empty.page-width{
+  padding-top: 20px;
 }
 }
 @media(max-width: 768px){

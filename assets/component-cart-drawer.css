@@ -112,6 +112,7 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 .drawer__close svg {
   height: 2.4rem;
   width: 2.4rem;
+  opacity: 0.7;
 }
 
 .drawer__contents {
