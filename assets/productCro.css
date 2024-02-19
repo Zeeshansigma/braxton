@@ -26,22 +26,12 @@
 button svg.icon.icon-cart {
     display: none;
 }
-button.product-form__submit.button.button--full-width.button--primary {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;
-    text-transform: uppercase;
-    height: 48px;
-}
+
 .sp-text a {
     display: flex;
     align-items: center;
     line-height: 1;
     gap: 7px;
-}
-.sp-text  {
-    top:25px;
 }
 span.size-text {
     color: #4D4F4E;

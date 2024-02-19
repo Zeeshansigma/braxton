@@ -296,9 +296,7 @@ button.arAccordBtn.arAccordOne {
 button.arAccordBtn,
 .arAccordionText {
   border-bottom: 1px solid #e5e5e4 !important;
-}
-button.product-form__submit.button.button--full-width.button--primary {
-  width: unset !important;
+}width: unset !important;
 }
 body.template-product .shopify-section .a1p_grid-box {
   width: 1293px !important;
@@ -341,8 +339,9 @@ h4.sgPrTitle {
 .product__info-wrapper .sizepopup .sp-text {
   position: absolute !important;
   float: right;
-  margin-top: 32%;
-}
+  margin-top: 43%;
+  left: 100%;
+} 
 .sp-text svg {
   display: none;
 }
@@ -669,7 +668,6 @@ section .collapsible-content__wrapper {
 .newsletter-form__field-wrapper button {
   /* box-shadow: 1px 4px 8px #00000020 !important; */
 }
-button.product-form__submit.button.button--full-width.button--primary,
 a.arAddBtn_cba,
 a.acc-btn {
   box-shadow: 1px 4px 8px #00000020 !important;

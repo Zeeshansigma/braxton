@@ -73,26 +73,19 @@ button.arAccordBtn.arAccordActive span.arAccordIcon {
   </div>
 </div>
 <script>
-  $('.arAccordBtn').on('click', function(){
-    var target = $(this).attr('data-target');
-    
-    // Close all .arAccordionText elements except the target
-    $('.arAccordionText').not('.' + target).css('display','none');
-    
-    // Toggle the target element
-    $('.' + target).toggle();
-    
-    // Remove active class from all buttons and add it to the clicked button
-    $('.arAccordBtn').removeClass('arAccordActive');
-    var targetElement = $('.' + target);
-    setTimeout(function() {
-    if ($(targetElement).is(':visible')) {
-        $(this).addClass('arAccordActive');
-    } else {
-        $(this).removeClass('arAccordActive');
-    }
-}.bind(this), 0); // Delayed by 500 milliseconds (adjust the delay as needed)
-
-    
-})
+  $(document).ready(function(){
+    $('.arAccordBtn').on('click', function(){
+      var target = $(this).attr('data-target');
+      
+      // Close all .arAccordionText elements except the target
+      $('.arAccordionText').not('.' + target).css('display','none');
+      
+      // Toggle the target element
+      $('.' + target).toggle();
+      
+      // Remove active class from all buttons and add it to the clicked button
+      $('.arAccordBtn').removeClass('arAccordActive');
+      $(this).addClass('arAccordActive');
+    });
+  });
 </script>

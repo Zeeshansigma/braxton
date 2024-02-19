@@ -13,9 +13,7 @@ legend[data-name="Size"] {
   button.product-form__submit.button.button--full-width.button--primary:disabled {
     display: none;
 }
-  button.product-form__submit.button.button--full-width.button--primary{
-    width:100%;visibility:visible !important;height:48px !important;
-  }
+
 </style>
 {% comment %}
   Renders product buy-buttons.
@@ -70,13 +68,13 @@ legend[data-name="Size"] {
         novalidate: 'novalidate',
         data-type: 'add-to-cart-form'
       -%}
-        <input
+         <input
           type="hidden"
           name="id"
           value="{{ product.selected_or_first_available_variant.id }}"
           disabled
           class="product-variant-id"
-        >
+        > 
 
         {%- if gift_card_recipient_feature_active -%}
           {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
@@ -92,17 +90,14 @@ legend[data-name="Size"] {
               assign quantity_rule_soldout = true
             endif
           -%}
-        {% comment %}
-          {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+          {% comment %} {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
             <a href="#" data-drawer-trigger aria-controls="drawer-soldout" class="restockbtn" aria-expanded="false"> 
                 <span>Restock Notification</span>
             </a>
-          {% endif%}
-        {% endcomment %}
-
+          {% endif%} {% endcomment %}
           <!-- BUTTON -->
           <div id="add-to-cart-container">
-            <button
+           <button
               id="ProductSubmitButton-{{ section_id }}"
                {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%} style="visibility: hidden; min-height: 0;height:0;" {% endif %}
               type="submit"
@@ -135,7 +130,7 @@ legend[data-name="Size"] {
                   <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
                 </svg>
               </div>
-            </button>
+            </button> 
           </div>
 
           
@@ -148,18 +143,18 @@ legend[data-name="Size"] {
       {%- endform -%}
     </product-form>
   {%- else -%}
-    <div class="product-form">
-      <div class="product-form__buttons form">
-        <button
-          type="submit"
-          name="add"
-          class="product-form__submit button button--full-width button--primary"
-          disabled
-        >
-          {{ 'products.product.sold_out' | t }}
-        </button>
-      </div>
-    </div>
+       <div class="product-form">
+        <div class="product-form__buttons form">
+          <button
+            type="submit"
+            name="add"
+            class="product-form__submit button button--full-width button--primary"
+            disabled
+          >
+            {{ 'products.product.sold_out' | t }}
+          </button> 
+        </div>
+      </div> 
   {%- endif -%}
 
 

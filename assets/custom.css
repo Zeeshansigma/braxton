@@ -795,10 +795,7 @@ cart-remove-button .icon-remove{
 .product__info-wrapper .product-form__input.product-form__inputARRR select{
 background-color: #fff
 }
-button.product-form__submit.button.button--full-width.button--primary{
-background-color: #000;
-color: #fff;
-}
+
 button.product-form__submit.button.button--full-width.button--primary:after,
 button.product-form__submit.button.button--full-width.button--primary:before{
 display: none;
@@ -1660,9 +1657,6 @@ ul.list-menu.list-menu--inline li span{
   color:#000!important;
 }
 
-button.product-form__submit.button.button--full-width.button--primary{
-       box-shadow: 0 1px 3px #00000014, 0 4px 6px #32325d1c;
-}
 
 .product .product__title h1{
   font-size:24px;
