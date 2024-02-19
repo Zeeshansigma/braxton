@@ -81,7 +81,7 @@
         "1aaa5dc1-66f4-4b13-aae7-fd20ba37f85d"
       ],
       "custom_css": [
-        "svg.icon-ic {height: 26px !important; top: 7px !important;}"
+        "svg.icon-ic {height: 26px !important;}"
       ],
       "settings": {
         "clr": "#000000",

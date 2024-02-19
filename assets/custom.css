@@ -1677,7 +1677,7 @@ button.product-form__submit.button.button--full-width.button--primary{
 }
 
 .template-page .accordion .accordion__content{
-  padding:1.5rem 0!important
+  padding:10px 0px 0px 0px !important
 }
 
 
@@ -1722,6 +1722,7 @@ button.product-form__submit.button.button--full-width.button--primary{
 
 .field__input:focus, .field__input:not(:placeholder-shown), .field__input:-webkit-autofill, .customer .field input:focus, .customer .field input:not(:placeholder-shown), .customer .field input:-webkit-autofill{
   padding: 2.5rem 1rem 0.5rem 1.5rem; 
+  margin: 5px !important;
 }
 
 .customer ul{
@@ -1942,5 +1943,12 @@ section.custom-page, section .contact{
   }
 
   button#BIS_trigger {
-    width: 500px !important;
+    max-width: 500px !important;
+    width: 100% !important;
+}
+.field-icon {
+  margin-top: 14px;
+  right: 10px;
+  position: absolute;
+  z-index: 2;
 }

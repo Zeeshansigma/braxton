@@ -562,6 +562,9 @@ h2.h1 {
   font-weight: 900 !important;
   margin-bottom: 45px !important;
 }
+.naCollapse .h1{
+  margin-bottom: 70px !important;
+}
 section.custom-page,
 section .contact {
   margin:0;
@@ -605,7 +608,7 @@ section .collapsible-content__wrapper {
 .template-page .accordion__content li, .template-page .accordion .accordion__content p, .na_Inner--content li, .na_Inner--content p, .content--inner p {
   font-family: 'TstarW',Helvetica,sans-serif;
   font-weight: 700 !important;
-  font-size: 16px !important;
+  font-size: 14px !important;
   color:  #4D4F4E;
 }
 .na_Inner--content h2 {
@@ -621,12 +624,12 @@ section .collapsible-content__wrapper {
   border-top: none !important;
   border-bottom: 1px solid #e0e0dfbd !important; 
 }
-.collapsible-content .accordion:last-of-type {
+/* .collapsible-content .accordion:last-of-type {
   border-bottom: none !important;
-}
+} */
 .na_Shipping--collapsable details summary:hover, .na_Shipping--collapsable details summary[aria-expanded=true] {
-  background: none !important;
-  border-bottom: 1px solid #e0e0dfbd !important;
+  /* background: none !important; */
+  /* border-bottom: 1px solid #e0e0dfbd !important; */
 }
 
 /*** CONTACT ***/
@@ -693,6 +696,7 @@ a.acc-btn {
   display: block !important;
   top: 0px !important;
   margin-top: 48px !important;
+  /* margin-top: 21px !important; */
 }
 .na_privacy--content--links ul.na_list--about {
   margin-top: 0px !important;
@@ -729,8 +733,8 @@ marquee {
   text-decoration: none !important;
 }
 .template-page .grid__item summary:hover {
-  background-color: #F2F1EF !important;
-  text-decoration: underline !important;
+  background-color: #e5e5e4 !important;
+  text-decoration: none !important;
 }
 .na_Shipping--collapsable .grid {
   border-top: 1px solid #e0e0dfbd!important;
@@ -1195,4 +1199,12 @@ input:-internal-autofill-selected {
 
   color: fieldtext !important;
 }
-
+::placeholder {
+  opacity: 0.5; /* Firefox */
+}
+::-webkit-input-placeholder { /* Edge 12 -18 */
+  opacity: 0.5; /* Firefox */
+}
+::-ms-input-placeholder { /* Edge 12 -18 */
+  opacity: 0.5; /* Firefox */
+}

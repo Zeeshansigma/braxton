@@ -469,6 +469,21 @@
   }, 100);
   
 </script> {% endcomment %}
+<script>
+function togglePasswordVisibility() {
+    var passwordField = document.getElementById("RegisterForm-password");
+    var toggleButton = document.querySelector(".toggle-password");
+
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+        toggleButton.classList.add("show-password");
+    } else {
+        passwordField.type = "password";
+        toggleButton.classList.remove("show-password");
+    }
+};
+
+</script>
 
 <style>
 /*** BUTTON CORRECTIONS ***/
