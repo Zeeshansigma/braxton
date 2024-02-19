@@ -47,6 +47,15 @@
         "padding_top": 64,
         "padding_bottom": 84
       }
+    },
+    "custom_liquid_HYzckJ": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"globo-formbuilder\" data-id=\"Mjk3OTM=\"><\/div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -54,6 +63,7 @@
     "8a9be3b9-23d8-4cf5-aa5f-c050a8cfee4e",
     "main",
     "form",
-    "ef90f2f2-cf5d-4651-80b1-a3ba5b53e9e3"
+    "ef90f2f2-cf5d-4651-80b1-a3ba5b53e9e3",
+    "custom_liquid_HYzckJ"
   ]
 }
