@@ -1049,7 +1049,11 @@ input:-moz-placeholder {
 input:-moz-placeholder {
   -moz-text-fill-color: #00000080; /* Set the color of the autofill text */
 }
-
+.toggle-password{
+  position: absolute;
+    right: 10px;
+    top: 14px;
+}
 @media(max-width: 991px){
   .header__heading-logo{
     width: 181px !important;
