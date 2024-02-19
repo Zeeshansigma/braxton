@@ -416,7 +416,7 @@ padding-top: 2rem !important
 max-width: 100% !important;
 padding-left: 32rem !important;
   padding-right: 32rem !important;
-padding-bottom: 14rem !important;
+padding-bottom: 70px !important;
 }
 ul.na_list--about li a:hover{
 color: #000 !important;
@@ -1436,7 +1436,7 @@ padding: 2rem 8rem !important
 .custom-page{
 padding-left: 17rem !important;
   padding-right: 17rem !important;
-padding-bottom: 10rem !important;
+padding-bottom: 70px !important;
 }
 .na_links--about{
 width: 20rem;

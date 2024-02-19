@@ -573,6 +573,7 @@ section .contact {
 }
 section .collapsible-content__wrapper {
   padding-top: 83px !important;
+  padding-bottom: 90px !important;
 }
 .content--inner p {
   font-size: 16px !important;
@@ -609,27 +610,15 @@ section .collapsible-content__wrapper {
   font-family: 'TstarW',Helvetica,sans-serif;
   font-weight: 700 !important;
   font-size: 14px !important;
-  color:  #4D4F4E;
+  color:  #4D4F4E!important;
 }
 .na_Inner--content h2 {
   font-size: 16px !important;
   line-height: 20.48px !important;
 }
-.na_Inner--content p {
-  font-size: 16px !important;
-  font-weight: 500 !important;
-  line-height: 18px !important;
-}
 .collapsible-content .accordion {
   border-top: none !important;
   border-bottom: 1px solid #e0e0dfbd !important; 
-}
-/* .collapsible-content .accordion:last-of-type {
-  border-bottom: none !important;
-} */
-.na_Shipping--collapsable details summary:hover, .na_Shipping--collapsable details summary[aria-expanded=true] {
-  /* background: none !important; */
-  /* border-bottom: 1px solid #e0e0dfbd !important; */
 }
 
 /*** CONTACT ***/
@@ -1113,8 +1102,8 @@ section .collapsible-content__wrapper{
 template-page .accordion__content li, .template-page .accordion .accordion__content p, .na_Inner--content li, .na_Inner--content p, .content--inner p {
   font-family: TstarW;
   font-weight: 700!important;
-  font-size: 16px!important;
-  color: #4D4F4E;
+  font-size: 14px!important;
+  color: #4D4F4E!important;
 }
 .drawer__contentc {
   padding: 0rem 54px 68px 54px !important;
