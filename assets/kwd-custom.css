@@ -1053,6 +1053,7 @@ input:-moz-placeholder {
   position: absolute;
     right: 10px;
     top: 14px;
+    cursor: pointer;
 }
 @media(max-width: 991px){
   .header__heading-logo{
