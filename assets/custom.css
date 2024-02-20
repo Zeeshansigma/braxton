@@ -1717,7 +1717,8 @@ ul.list-menu.list-menu--inline li span{
 
 .field__input:focus, .field__input:not(:placeholder-shown), .field__input:-webkit-autofill, .customer .field input:focus, .customer .field input:not(:placeholder-shown), .customer .field input:-webkit-autofill{
   padding: 2.5rem 1rem 0.5rem 1.5rem!important; 
-padding: 10px 13px !important;
+  padding: 10px 13px !important;
+
   border-bottom: 0.5px solid #e0e0df;
   border-radius: 0px;
   background: transparent;
