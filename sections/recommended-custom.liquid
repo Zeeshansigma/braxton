@@ -17,6 +17,7 @@
     text-align: center;
     background: #f2f1f0;
     padding: 10px 35px 23px;
+    height: 663px;
 }
 .related_custom h3 {
     margin: 0;
@@ -42,20 +43,66 @@
             width: 100%;
             max-width: 1293px;
             margin: 0 auto;
+            margin-bottom: 57px;
         }
     }
-    .owl-nav button.owl-prev,
-    .owl-nav button.owl-next {
-    top: 50% !important;
+   .related_width .owl-nav button.owl-prev,
+   .related_width .owl-nav button.owl-next {
+    top: 44.5% !important;
     position: absolute;
 }
-.owl-nav button.owl-next {
+.related_width .owl-nav button.owl-next {
     right: -100px;
 }
-.owl-nav button.owl-prev {
+.related_width .owl-nav button.owl-prev {
     left: -100px;
 }
+.recommended-title h3{
+  text-align: center;
+  font-size: 32px;
+  font-family: TstarP;
+  font-weight: 900;
+  margin-top: 135px;
+  margin-bottom: 50px;
+}
+@media screen and (max-width:768px) {
+  .related_width .owl-nav button.owl-next {
+    right: 20px;
+}
+.related_width .owl-nav button.owl-prev {
+    left: 20px;
+}
+.related_custom {
+    height: 381px;
+} 
+.related_width {
+    background: #f2f1f0;
+    padding: 20px 0 0 0;
+}
+.owl-nav button.owl-next::after {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="5" height="10" viewBox="0 0 5 10" fill="none"><path d="M0 10L5 5L1.31134e-06 0L0 10Z" fill="black"/></svg>');
+}
+.owl-nav button.owl-prev::after {
+    content: url("data:image/svg+xml,%3Csvg width='5' height='10' viewBox='0 0 5 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Group 55482'%3E%3Cg id='Group 55027'%3E%3Cpath id='Vector' d='M5 0L-2.18557e-07 5L5 10L5 0Z' fill='black'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.related_custom h3{
+  margin-top: 16px;
+  font-size: 16px;
+}
+.related_custom h5{
+  font-size: 16px;
+}
+.recommended-title h3{
+  font-size: 20px;
+  margin-top: 121px;
+    margin-bottom: 30px;
+
+}
+}
 </style>
+<div class="recommended-title">
+  <h3> {{ section.settings.recommended_title }} </h3>
+</div>
       <div class="related_width">
         <div class="owl-carousel">
             {% assign related-products =  collections[section.settings.collection_custom] %}
@@ -87,7 +134,7 @@
     
       responsive:{
           0:{
-              items:1
+              items:2
           },
           600:{
               items:3
@@ -103,6 +150,13 @@
 {
   "name": "Recommended-slider",
   "settings": [
+  {
+"type": "text",
+"id": "recommended_title",
+"label": "ADD Title",
+"default": "STYLED WITH:"
+
+  },
     {
   "type": "collection",
   "id": "collection_custom",

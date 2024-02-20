@@ -480,7 +480,11 @@ td.cart-item__quantity {
   .drawer__inner {
     width: calc(100% - 83px) !important;
     margin-left: auto;
-    padding-left: 20px !important;
+    padding-left: 25px !important;
     padding-right: 20px !important;
+    padding-top: 15px !important;
   }
+  .drawer__footer {
+    max-width: 67%;
+}
 }

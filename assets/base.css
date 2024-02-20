@@ -4085,10 +4085,7 @@ span.ss-in.activess {
     font-weight: 600;
   margin-top: 12px;
 }
-.activess {
-    border: 0.5px solid rgba(0,0,0,1) !important;
-    color: #000 !important;
-}
+
 .actives {
   display: flex !important;
 }
@@ -4746,6 +4743,10 @@ border-bottom: thin solid rgba(0,0,0,.3) !important;
 }  
 
 @media(max-width: 768px){
+  .custom_image label {
+    width: 54px !important;
+    height: 54px !important;
+}
   button#BIS_trigger{
     width: 413px !important;
   }
@@ -4754,14 +4755,12 @@ border-bottom: thin solid rgba(0,0,0,.3) !important;
   }
   .custom_image{
     flex-wrap: wrap;
+    margin-bottom: 38px;
   }
   button.product-form__submit.button.button--full-width.button--primary{
     width: 413px !important;
   }
-  .product__info-wrapper .sizepopup .sp-text{
-    margin-top: 33% !important;
-    left: 80% !important;
-  }
+ 
 .na_links--about {
     display: none!important;
 }
@@ -5441,6 +5440,9 @@ font-weight: 900;
 line-height: 18px; 
 }
 @media screen and (max-width:768px){
+  span.price.price--end{
+    font-size: 12px !important;
+  }
   h1#login{
     font-size: 20px !important;
   }
@@ -5631,18 +5633,7 @@ facet-remove a {
     width: 540px;
 
 }
-.product__info-wrapper .sizepopup .sp-text{
-  margin-top: 37%;
-  left: 85%;
-}
-@media screen and (min-width:1440px) {
 
-  .product__info-wrapper .sizepopup .sp-text{
-    margin-top: 37%;
-    left: 85%;
-  }
-  
-}
 .globo-form-app .message.success {
   background: none !important;
   text-align: center;
@@ -5689,4 +5680,22 @@ button.action.next.submit.classic-button.wizard__submit {
 }
 .classic-input::placeholder {
   font-size: 16px !important;
+}
+@media screen and (max-width:1240px) {
+  .product__info-wrapper .sizepopup .sp-text{
+    margin-top: 140px !important;
+    right: 0% !important;
+  }
+}
+@media screen and (min-width:1241px) and (max-width:1320px) {
+  .product__info-wrapper .sizepopup .sp-text{
+    margin-top: 181px;
+    right: -80px !important;
+  }
+}
+@media screen and (min-width:1321px) and (max-width:1440px) {
+  .product__info-wrapper .sizepopup .sp-text{
+    margin-top: 181px;
+    right: -50px !important;
+  }
 }
