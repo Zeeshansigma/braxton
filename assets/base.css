@@ -5626,7 +5626,7 @@ facet-remove a {
 
 .drawer__footer {
     position: absolute;
-    bottom: 30px;
+    bottom: 0px;
     right: 5%;
     width: 540px;
 
@@ -5642,4 +5642,51 @@ facet-remove a {
     left: 85%;
   }
   
+}
+.globo-form-app .message.success {
+  background: none !important;
+  text-align: center;
+  box-shadow: none;
+} 
+.globo-form-app .message .dismiss {
+  display: none;
+}
+.globo-form-app .header {
+  display: none !important; 
+}
+.globo-form-control input, .globo-form-control textarea, .globo-form-control select {
+  height: 52px !important;
+  border-radius: 4px !important;
+  background: #FCFBFA !important;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.08) !important;
+  font-size: 16px !important;
+  font-weight: 900 !important;
+  font-family: 'TstarP' !important;
+  color: black !important;
+  text-transform: uppercase !important;
+}
+.iti--separate-dial-code .iti__selected-flag {
+  background: none !important;
+  font-size: 16px;
+  font-weight: 900;
+  font-family: Tstarp;
+}
+.globo-form-control input::placeholder{
+  color: #000 !important; 
+}
+.globo-form-control textarea {
+  height: 125px !important;
+  background: #f2f1f0 !important;
+}
+ .globo-form-app {
+  background: none !important;
+}
+button.action.next.submit.classic-button.wizard__submit {
+  height: 52px !important;
+  font-size: 22px !important;
+  font-weight: 900 !important;
+  font-family: TstarP !important;
+}
+.classic-input::placeholder {
+  font-size: 16px !important;
 }
