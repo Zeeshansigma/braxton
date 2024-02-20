@@ -5059,9 +5059,6 @@ h3.form__message:focus-visible{
     align-items: center;
     justify-content: space-between;
 }
-.na_drawer_link .menu-drawer__menu-item{
-  padding: 0!important;
-}
 /*  */
 .arHeaderMain{
   box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.06);
@@ -5097,7 +5094,17 @@ h3.form__message:focus-visible{
     text-transform: uppercase;
 }
   .na_links--arrows {
-    padding: 0px 30px 5px;}
+    padding: 0px;
+    position: relative;
+  }
+  .na_links--arrows  .na_drawer_link{
+    width: 100%;
+  }
+  .na_links--arrows .na_drawer--icon{
+    position: absolute;
+    right:30px;
+    padding-top: 7px;
+  }
   button.menu-drawer__close-button.link.link--text {
     background: #f3f3f3;
     text-transform: uppercase;margin-bottom:18px;
@@ -5507,8 +5514,8 @@ ul.incorrect_msg {
 }
 .customer.account{
   max-width: 392px !important;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 60px !important;
+  padding-right: 60px !important;
 }
 .customer .toplinkk .customer__title{
   font-size: 20px !important;
@@ -5608,6 +5615,14 @@ input#Search-In-Template {
   .mobile-facets__inner.gradient{
     width: calc(100% - 83px) !important;
   }
+@media screen and (max-width: 400px){
+    .customer.account {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+    .account-menu .tab button{
+      font-size: 14px !important;
+    }
 }
 input:-webkit-autofill,
 input:-webkit-autofill:hover,

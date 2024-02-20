@@ -1077,6 +1077,7 @@ font-size: 1.6rem !important;
 .account-menu .tab.naTab--,
 .customer.order .arTabNav{
     max-width: 700px !important;
+    width: 100% !important;
   justify-content: space-around;
 }
 .back-btn-d{
@@ -1938,7 +1939,7 @@ section.custom-page, section .contact{
   @media screen and (max-width:460px){
 
     .drawer__inner{
-      width: calc(100% - 83px) !important;
+      width: calc(100% - 40px) !important;
       margin-left:auto !important;
     }
   }

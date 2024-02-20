@@ -12,7 +12,10 @@
   }
 }
  @media screen and (max-width: 750px) {
-    .customer:not(.account):not(.order){max-width:370px !important;}
+    .customer:not(.account):not(.order){
+      max-width:370px !important;
+      width: calc(100% - 40px) !important;
+    }
     .customer .field label, a.recoverylink{font-size:13px !important;}
   }
 .customer > h1,

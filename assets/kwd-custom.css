@@ -505,6 +505,8 @@ span.price.price--end {
   width: 60.6rem !important;
   padding-left: 60px !important;
   padding-right: 60px !important;
+  margin-right: 0px;
+  margin-left: auto;
 }
 button.drawer__close.arDrawFillclose {
   left: unset !important;
@@ -666,7 +668,8 @@ a.acc-btn {
   font-size: 1.8rem ;
   height: 4.2rem !important;
   border-radius: 0.4rem !important;
-  width: 315px !important;
+  max-width: 315px !important;
+  width: 100% !important;
 }
 .field__label, .customer .field label {
   transition: unset !important;
@@ -758,7 +761,8 @@ button.arTabBtns.arActive {
   border-color: #0000000d!important;
 }
 .customer.account {
-  width: 1280px !important;
+  max-width: 1280px !important;
+  width: 100% !important;
 }
 .section-template--21499031126308__main-padding,
 .customer.order {
@@ -1056,6 +1060,22 @@ input:-moz-placeholder {
 .title.title--primary a{
   color: #000;
 }
+.menu-drawer__menu-item--active:hover {
+  background-color: inherit !important;
+}
+/* .menu-drawer__menu-item--active{
+  position: relative;
+}
+.menu-drawer__menu-item--active::before{
+  content: '';
+  background-color: #f3f3f3;
+  width: 100%;
+  height: 100px;
+  display: block;
+  position:absolute;
+  left:0px;
+  right: 0px;
+} */
 @media(max-width: 991px){
   .header__heading-logo{
     width: 181px !important;
@@ -1066,12 +1086,6 @@ input:-moz-placeholder {
   }
   section.custom-page, section .contact{
     padding-top: 70px !important;
-  }
-  .na_content--privacy.na_content--d{
-    padding-bottom: 135px !important;
-  }
-  .na_privacy--template--22050624733476__38f8d274-22e8-4d3b-ae01-9c4d329b44d1.custom-page .na_content--privacy.na_content--d{
-    padding-bottom: 166px !important;
   }
   .grid__item .accordion summary {
     padding-top: 15px!important;
@@ -1176,6 +1190,9 @@ template-page .accordion__content li, .template-page .accordion .accordion__cont
 }
 .collection.collection--empty.page-width{
   padding-top: 20px;
+}
+#spopupCont .palette2{
+  height: 200px !important;
 }
 }
 @media(max-width: 768px){

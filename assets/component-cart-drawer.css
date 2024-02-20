@@ -13,6 +13,7 @@
 
 .drawer.active {
   visibility: visible;
+  display: block;
 }
 
 .drawer__inner {
@@ -212,9 +213,8 @@ cart-drawer-items {
 
   .drawer__inner {
     /* overflow: scroll; */
-    max-width: calc(483px - 83px);
-    width: 100%;
-    margin-left: 83px;
+    max-width: 400px;
+    width: 400px !important;
   }
   .drawer__inner-empty{
     padding: 0px 0px;
@@ -478,9 +478,9 @@ td.cart-item__quantity {
 
 @media screen and (max-width: 482px) { 
   .drawer__inner {
-    width: calc(100% - 83px) !important;
-    margin-left: auto;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    width: calc(100% - 40px) !important;
+    margin-left: auto !important;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
   }
 }
