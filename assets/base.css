@@ -5696,6 +5696,6 @@ button.action.next.submit.classic-button.wizard__submit {
 @media screen and (min-width:1321px) and (max-width:1440px) {
   .product__info-wrapper .sizepopup .sp-text{
     margin-top: 181px;
-    right: -50px !important;
+    right: 0px !important;
   }
 }

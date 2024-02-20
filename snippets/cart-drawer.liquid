@@ -9,8 +9,7 @@
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
 
 <style>
   .drawer {
@@ -643,8 +642,8 @@
           </div>
           <div id="CartDrawer-CartErrors" role="alert"></div>
         </form>
+        {%  render 'cart-drawer-slider' %} 
         
-          {%  render 'cart-drawer-slider' %} 
       
 
       </cart-drawer-items>
@@ -674,6 +673,7 @@
 
         <!-- Start blocks -->
         <!-- Subtotals -->
+
 
         <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
           <div>
