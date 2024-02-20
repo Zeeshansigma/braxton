@@ -75,8 +75,7 @@
           </div>
         </div>
       </div> <div class="na_contact--form na_content--d">
-        <div class="globo-formbuilder" data-id="Mjk3OTM="></div>
-    {% comment %} {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
+    {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
       {%- if form.errors contains 'email' -%}
       <div class="form_top_error">
         <div class="form__message">
@@ -197,7 +196,9 @@
           </li>
         </ul> {% endcomment %}
       {%- endif -%}
-    {%- endform -%} {% endcomment %}
+    {%- endform -%} 
+    <div class="globo-formbuilder" data-id="Mjk3OTM="></div>
+
   </div> 
 </div>    
   </div>

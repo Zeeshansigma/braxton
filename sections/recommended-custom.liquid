@@ -59,18 +59,19 @@
       <div class="related_width">
         <div class="owl-carousel">
             {% assign related-products =  collections[section.settings.collection_custom] %}
+         
             {% for product in related-products.products %}
-                <div class="item">
-             <div class="related_custom">
-                <a href="{{ product.url }}">
-                    <img src="{{ product.featured_image | img_url: 'master' }}" alt="">
-                <h3>{{ product.title }}</h3>
-                <h5>{{ product.price | money }}</h5>
-                </a>
-             </div>
-             </div>
-            
-            {% endfor %}
+              <div class="item">
+           <div class="related_custom">
+              <a href="{{ product.url }}">
+                  <img src="{{ product.featured_image | img_url: 'master' }}" alt="">
+              <h3>{{ product.title }}</h3>
+              <h5>{{ product.price | money }}</h5>
+              </a>
+           </div>
+           </div>
+          
+          {% endfor %}
             </div>
       </div>
      
