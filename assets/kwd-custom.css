@@ -265,7 +265,7 @@ span.colorname {
   font-size: 20px !important;
 }
 .price__regular .price-item--regular {
-  font-size: 20px !important;
+  font-size: 24px !important;
 }
 .card-information>*:not(.visually-hidden:first-child)+*:not(.rating):not(.card__information-volume-pricing-note) {
   margin-top: 0px !important;
@@ -338,7 +338,7 @@ h4.sgPrTitle {
 .product__info-wrapper .sizepopup .sp-text {
   position: absolute !important;
   float: right;
-  margin-top: 181px;
+  margin-top: 205px;
   right:0;
 } 
 .sp-text svg {

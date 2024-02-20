@@ -358,7 +358,7 @@ display: none !important;
 }
 
 .product__info-wrapper .product-form{
-width: calc(100% - 120px + 1rem);
+width: 100% !important;
 margin-bottom: 4.5rem !important;
   margin-top: 1rem !important
 }

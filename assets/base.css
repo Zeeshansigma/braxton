@@ -4758,7 +4758,7 @@ border-bottom: thin solid rgba(0,0,0,.3) !important;
     margin-bottom: 38px;
   }
   button.product-form__submit.button.button--full-width.button--primary{
-    width: 413px !important;
+    /* width: 413px !important; */
   }
  
 .na_links--about {

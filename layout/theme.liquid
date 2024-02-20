@@ -433,7 +433,7 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
     
     {% endif %}
     
-  <script type="text/javascript" src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script>
+  <script defer type="text/javascript" src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script>
 {% comment %} <script> window.start.init({Palette:"palette2",Mode:"banner bottom",Theme:"wire",Time:"5",Message:"To ensure you get the best experience on our website, this website uses cookies.",LinkText:"Privacy Policy",ButtonText:"ACCEPT & CLOSE",Location:"/pages/privacy-policy", ButtonText:"ACCEPT & CLOSE"})</script>  {% endcomment %}
 
 <script>
@@ -519,7 +519,8 @@ a.button.arContinueShopBtnCart,
   box-shadow: 1px 4px 8px #00000020 !important;
 }
 button.product-form__submit.button.button--full-width.button--primary {
-    width: 500px ;
+    width:100% !important;
+    max-width: 500px;
     margin-top: 30px;
     box-shadow: 0 1px 3px #00000014, 0 4px 6px #32325d1c;
     background-color: #000;
