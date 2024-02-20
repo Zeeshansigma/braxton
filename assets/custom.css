@@ -1762,6 +1762,9 @@ ul.list-menu.list-menu--inline li span{
   .focus-inset .icon-search{
     /* display: none; */
   }
+  .facet-filters{
+    display: none !important;
+  }
   .menu__burger {
     position: relative;
     width: 22px;

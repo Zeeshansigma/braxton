@@ -4756,7 +4756,8 @@ border-bottom: thin solid rgba(0,0,0,.3) !important;
     flex-wrap: wrap;
   }
   button.product-form__submit.button.button--full-width.button--primary{
-    width: 413px !important;
+    width: 100% !important;
+    max-width: 413px !important;
   }
   .product__info-wrapper .sizepopup .sp-text{
     margin-top: 33% !important;
@@ -5235,7 +5236,7 @@ h2.title.title-wrapper--no-top-margin.inline-richtext.h1 {
   margin-bottom: 0 !important;
 }
 .na_contact-form.custom-page {
-  margin-top: 40px;
+  margin-top: 60px;
 }
 .form_top_error {
   margin-left: 40px;
