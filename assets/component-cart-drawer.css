@@ -483,4 +483,7 @@ td.cart-item__quantity {
     padding-left: 40px !important;
     padding-right: 40px !important;
   }
+  .drawer__footer {
+    max-width: 67%;
+}
 }

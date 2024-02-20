@@ -295,8 +295,7 @@ button.arAccordBtn.arAccordOne {
 }
 button.arAccordBtn,
 .arAccordionText {
-  border-bottom: 1px solid #e5e5e4 !important;
-}width: unset !important;
+  border-bottom: 0.5px solid #e5e5e4 !important;
 }
 body.template-product .shopify-section .a1p_grid-box {
   width: 1293px !important;
@@ -339,8 +338,8 @@ h4.sgPrTitle {
 .product__info-wrapper .sizepopup .sp-text {
   position: absolute !important;
   float: right;
-  margin-top: 43%;
-  left: 100%;
+  margin-top: 181px;
+  right:0;
 } 
 .sp-text svg {
   display: none;
@@ -403,7 +402,7 @@ span.price.price--end {
 .drawer__contents {
   overflow: hidden;
   overflow-y: auto;
-  height: 350px;
+  height: 200px;
 }
 .drawer__header {
   padding: 0px !important;
@@ -471,7 +470,7 @@ cart-drawer.is-empty div[a1p="cart"] {
 }
 span.price.price--end {
   margin-right: 5px;
-  font-size: 22px !important;
+  font-size: 22px ;
 }
 .cart-items .cart-item__quantity {
   padding-top:0 !important;;
@@ -712,7 +711,6 @@ a.acc-btn {
 }
 marquee {
   position: absolute;
-  z-index: 5000;
 }
 .drawer__wrapperc {
   max-width: 660px !important;

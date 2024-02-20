@@ -1015,7 +1015,7 @@ margin: 1.2rem 0;
 }
 .arAccordBtn span.arAccordTxt{
     text-transform: capitalize;
-font-size: 1.55rem;
+font-size: 16px;
 }
 .na_contact--form form#ContactForm .field input:focus, .na_contact--form textarea#ContactForm-body:focus{
 outline: none !important;
@@ -1528,7 +1528,7 @@ margin-top:0 !important
 
 
 .product__info-wrapper .product__title h1{
-font-size: 2.5rem !important;
+font-size: 24px !important;
 }
 .product__info-wrapper .product__title .price .price-item--regular{
 font-size: 2rem !important;

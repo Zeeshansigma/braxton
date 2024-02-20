@@ -150,6 +150,7 @@
       ></label>
     {% else %}
       <label class="my_option" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+       
         {{ value -}}
         <span class="visually-hidden my_product disabled_my">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
       </label>
