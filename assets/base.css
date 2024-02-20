@@ -5635,6 +5635,7 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   color: rgba(0, 0, 0, 0.50);
+  background-color: transparent;
 }
 facet-remove a {
   color: black !important;

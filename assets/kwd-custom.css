@@ -1040,17 +1040,43 @@ small.copyright__content {
 }
 input:-webkit-autofill {
   -webkit-text-fill-color: #00000080; /* Set the color of the autofill text */
+  background-color: transparent !important;
 }
 
 /* Mozilla Firefox */
 input:-moz-placeholder {
   color: #00000080; /* Set the color of the autofill text */
+  background-color: transparent !important;
 }
 
 /* For newer versions of Firefox */
 input:-moz-placeholder {
   -moz-text-fill-color: #00000080; /* Set the color of the autofill text */
+  background-color: transparent !important;
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+}
+input:-webkit-autofill {
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+
+
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important; /* Change the color to match your background */
+    box-shadow: 0 0 0px 1000px transparent inset !important; /* Change the color to match your background */
+
+    border: none !important;
+    outline: none !important;
+}
+input:focus, textarea:focus, select:focus{
+  outline: none !important;
+  box-shadow: none !important;
+ }
+
 .toggle-password{
   position: absolute;
     right: 10px;
