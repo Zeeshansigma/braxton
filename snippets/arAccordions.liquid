@@ -73,19 +73,29 @@ button.arAccordBtn.arAccordActive span.arAccordIcon {
   </div>
 </div>
 <script>
-  $(document).ready(function(){
-    $('.arAccordBtn').on('click', function(){
-      var target = $(this).attr('data-target');
-      
-      // Close all .arAccordionText elements except the target
-      $('.arAccordionText').not('.' + target).css('display','none');
-      
-      // Toggle the target element
-      $('.' + target).toggle();
-      
-      // Remove active class from all buttons and add it to the clicked button
-      $('.arAccordBtn').removeClass('arAccordActive');
-      $(this).addClass('arAccordActive');
+  document.addEventListener("DOMContentLoaded", function() {
+    var accordButtons = document.querySelectorAll('.arAccordBtn');
+    accordButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        var target = this.getAttribute('data-target');
+        var accordionTexts = document.querySelectorAll('.arAccordionText');
+        var accordText = document.querySelector('.' + target);
+
+        // Close all .arAccordionText elements except the target
+        accordionTexts.forEach(function(text) {
+          if (text.classList.contains(target)) {
+            text.style.display = (text.style.display === 'none' || text.style.display === '') ? 'block' : 'none';
+          } else {
+            text.style.display = 'none';
+          }
+        });
+
+        // Remove active class from all buttons and add it to the clicked button
+        accordButtons.forEach(function(btn) {
+          btn.classList.remove('arAccordActive');
+        });
+        this.classList.add('arAccordActive');
+      });
     });
   });
 </script>
