@@ -9,6 +9,8 @@
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
 <style>
   .drawer {
@@ -641,9 +643,9 @@
           </div>
           <div id="CartDrawer-CartErrors" role="alert"></div>
         </form>
-        {% if cart != blank %}
+        
           {%  render 'cart-drawer-slider' %} 
-        {% endif %}
+      
 
       </cart-drawer-items>
       
@@ -828,3 +830,7 @@ if(window.location.hash === "cart-open"){
 }
   
 </script>
+
+
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

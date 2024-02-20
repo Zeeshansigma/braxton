@@ -1262,7 +1262,7 @@ button.arAccordBtn span.arAccordIcon,
     height: 62px !important;
 }
 .drawer__contentc{
-padding: 3rem 5rem !important
+  padding: 3rem 5rem 121px !important;
 }
 .drawer__wrapperc {
     max-width: 613px !important;

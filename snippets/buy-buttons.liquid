@@ -10,10 +10,12 @@ legend[data-name="Size"] {
   background-color: transparent !important;
   }
 }
-  button.product-form__submit.button.button--full-width.button--primary:disabled {
+  /* button.product-form__submit.button.button--full-width.button--primary:disabled {
+    display: none;
+} */
+.sold_out_none {
     display: none;
 }
-
 </style>
 {% comment %}
   Renders product buy-buttons.
@@ -98,8 +100,8 @@ legend[data-name="Size"] {
           <!-- BUTTON -->
           <div id="add-to-cart-container">
            <button
-              id="ProductSubmitButton-{{ section_id }}"
-               {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%} style="visibility: hidden; min-height: 0;height:0;" {% endif %}
+              id="ProductSubmitButton-{{ section_id }} {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %} sold_out_none {% endif %}"
+               {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}    {% endif %}
               type="submit"
               name="add"
               class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"

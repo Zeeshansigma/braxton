@@ -132,7 +132,8 @@ p.cart_price {
 
 {% assign collection_cart = collections[collection_handle] %}
       <div class="related_width_cart">
-        <div class="owl-carousel cart-carousal">
+        
+<div class="owl-carousel cart-carousal">
             {% for product in collection_cart.products %}
                 {% for option in product.options_with_values %}
                     {% if option.name == 'Color' %}
