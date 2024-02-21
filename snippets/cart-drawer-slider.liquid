@@ -127,12 +127,22 @@ p.cart_price {
 .related_width_cart button.owl-next{
     top: 42% !important;
 }
+
+@media screen and (max-width:768px) {
+    .custom_variant{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .cart-carousal .item img{
+        max-width: 73%;
+    }
+}
 </style>
 {% assign collection_handle = product.metafields.custom.collection %}
-{% for item in cart.items %}
+{% comment %} {% for item in cart.items %}
     {{ item.title }}
     {{ item.metafields.custom.collection.title }}
-{% endfor %}
+{% endfor %} {% endcomment %}
 
 {% assign collection_cart = collections[collection_handle] %}
       <div class="related_width_cart">
@@ -255,7 +265,7 @@ p.cart_price {
     
       responsive:{
           0:{
-              items:1
+              items:2
           },
           600:{
               items:2

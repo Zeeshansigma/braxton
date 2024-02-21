@@ -13,7 +13,6 @@
 
 .drawer.active {
   visibility: visible;
-  display: block;
 }
 
 .drawer__inner {
@@ -484,6 +483,7 @@ td.cart-item__quantity {
     padding-right: 40px !important;
   }
   .drawer__footer {
-    max-width: 67%;
+    max-width: 360px;
+    padding: 0 35px !important;
 }
 }

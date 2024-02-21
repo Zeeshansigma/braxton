@@ -1293,3 +1293,6 @@ jQuery(function($) {
       console.log(" chal gya", closeButton);
       // Now you can use the closeButton variable to reference the button
   });
+
+
+ 

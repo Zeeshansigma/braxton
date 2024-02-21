@@ -5723,4 +5723,6 @@ button.action.next.submit.classic-button.wizard__submit {
   right: 0;
   position: absolute;
   padding: 0 58px;
+  bottom: 0;
+  padding: 0 65px !important;
 }
