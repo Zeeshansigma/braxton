@@ -265,7 +265,9 @@ span.colorname {
   font-size: 20px !important;
 }
 .price__regular .price-item--regular {
-  font-size: 24px !important;
+  font-size: 20px !important;
+  font-family: TstarW !important;
+  font-weight: 900 !important;
 }
 .card-information>*:not(.visually-hidden:first-child)+*:not(.rating):not(.card__information-volume-pricing-note) {
   margin-top: 0px !important;
