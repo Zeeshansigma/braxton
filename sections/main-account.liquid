@@ -277,7 +277,7 @@ td#RowOrder a {
         </a></button>{% endcomment %}
     </div>
     <div id="London" class="tabcontent">
-        <div>
+        <div class="tab-in">
 
        {% comment %}   
 
@@ -457,7 +457,7 @@ td#RowOrder a {
       </div>
       
       <div id="Paris" class="tabcontent arOrdersTab">
-        <div>
+        <div >
       {%- if customer.orders.size > 0 -%}
       <h2>{{ 'customer.orders.title' | t }}</h2>
       {% endif %}

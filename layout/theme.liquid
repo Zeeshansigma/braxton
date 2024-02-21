@@ -27,6 +27,9 @@
     {% endif %}
 
     {% render 'meta-tags' %}
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
@@ -236,6 +239,8 @@
       }
       
     {% endstyle %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     {{ 'base.css' | asset_url | stylesheet_tag }}
 {% render 'fonts' %}
     {%- unless settings.type_body_font.system? -%}
@@ -265,6 +270,8 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+
+  
      {{ 'custom.css' | asset_url | stylesheet_tag }}
 
     <!-- KWD -->
@@ -355,17 +362,6 @@
 }
     </style>
 
-<script>
-document.getElementById("myForm").addEventListener("submit", function(event) {
-  // Prevent default form submission
-  event.preventDefault();
-  
-  // Change button text to "THANKS FOR SUBSCRIBING"
-  var button = document.querySelector(".wizard__submit");
-  button.innerHTML = "THANKS FOR SUBSCRIBING";
-});
-</script>
-
       <script>
   $(".size-selector span").click(function(){
     if($(this).hasClass("inches")){
@@ -387,8 +383,8 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
   });
 
   $(".sizes").click(function(){
-    $('.sizes').removeClass("activess-size");
-    $(this).addClass("activess-size");
+    $('.sizes').removeClass("activess");
+    $(this).addClass("activess");
 
     if($(this).hasClass("xs")){
       $(".sizeinn div").removeClass("actives");
@@ -424,6 +420,9 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
 </script>
 
     {% if template contains 'product' %}
+
+    
+
     <script>
       const elementsToClick = document.querySelectorAll(".product__media img");
 
@@ -435,11 +434,13 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
     </script>
     
     {% endif %}
-    
-  <script defer type="text/javascript" src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script>
-{% comment %} <script> window.start.init({Palette:"palette2",Mode:"banner bottom",Theme:"wire",Time:"5",Message:"To ensure you get the best experience on our website, this website uses cookies.",LinkText:"Privacy Policy",ButtonText:"ACCEPT & CLOSE",Location:"/pages/privacy-policy", ButtonText:"ACCEPT & CLOSE"})</script>  {% endcomment %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-<script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script>
+  {% comment %} <script> window.start.init({Palette:"palette2",Mode:"banner bottom",Theme:"wire",Time:"5",Message:"To ensure you get the best experience on our website, this website uses cookies.",LinkText:"Privacy Policy",ButtonText:"ACCEPT & CLOSE",Location:"/pages/privacy-policy",})</script> 
+   {% endcomment %}
+   <script>
     window.start.init({
         Palette: "palette2",
         Mode: "banner bottom",
@@ -452,12 +453,11 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
     });
 
 </script>
-
   <!-- Back in Stock helper snippet -->
 {% render 'back-in-stock-helper' %}
 <!-- End Back in Stock helper snippet -->
-{% comment %} <script>
-
+<script>
+ 
   setTimeout(function(){
 
     $('#spopupCont #poper .close-cok').click(function(){
@@ -473,7 +473,7 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
     }
   }, 100);
   
-</script> {% endcomment %}
+</script>
 <script>
 function show()
 {
@@ -493,8 +493,7 @@ document.getElementById('s_show_hide').innerHTML = '<svg xmlns="http://www.w3.or
  }
 }
 
-</>
-
+</script>
 <style>
 /*** BUTTON CORRECTIONS ***/
 button.product-form__submit.button.button--full-width.button--primary,
@@ -512,16 +511,10 @@ a.button.arContinueShopBtnCart,
   box-shadow: 1px 4px 8px #00000020 !important;
 }
 button.product-form__submit.button.button--full-width.button--primary {
-    width:100% !important;
-    max-width: 500px;
-    margin-top: 30px;
-    box-shadow: 0 1px 3px #00000014, 0 4px 6px #32325d1c;
-    background-color: #000;
-    color: #fff;
+  width: 100% !important;
 }
 a.button.arContinueShopBtnCart {
-  fill: #000;
-  filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.08)) drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.08));
+  box-shadow: 1px 4px 8px #00000020 !important;
 }
   
 .totals h2, .totals p {
@@ -542,7 +535,7 @@ cart-drawer-items {
     width:100% !important;
 }
 .customer form {
-  margin-top: 70px ;
+  margin-top: 70px !important;
 }
 a.backlogin {
   font-size: 16px !important;
@@ -552,7 +545,7 @@ body.template-product .shopify-section .a1p_grid-wrapper.lightSlider .lslide div
 }
   a.button.arContinueShopBtnCart {
   height: 52px !important;
-  width: 100% !important;
+  width: 385px;
   max-width:385px !important;
   font-size: 20px;
   font-family: 'TstarP' !important;
@@ -561,7 +554,7 @@ h2.cart__empty-text {
   margin-bottom: 40px !important;
 }
 </style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
 </body>
 </html>
