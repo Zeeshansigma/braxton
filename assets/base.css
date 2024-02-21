@@ -555,7 +555,14 @@ h6:empty {
   font-size: 1.4rem;
   font-family: inherit;
 }
-
+.logouttext{
+  text-decoration: none !important;
+  position: relative;
+  top:2px;
+}
+.logouttext:hover{
+  text-decoration: underline !important;
+}
 .link--text {
   color: rgb(var(--color-foreground));
 }
@@ -3746,7 +3753,7 @@ ul.pages-menu a.active {
 small.copyright__content {
     color: #4D4F4E;
     text-align: center;
-    font-size: 13px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: 18px;
@@ -4384,9 +4391,18 @@ svg.icon.icon-caret.iconopen {
 }
 
 .password .banner__content, .password-header, .password__footer {
-  background-color: #FFFAF4;
+  background-color: #f3f3f3;
 }
-
+.password .banner__box{
+  background-color: transparent;
+}
+.password details.modal .modal__toggle-open {
+  display: flex;
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 900;
+}
 body.password hr {
     display: none;
 }
@@ -4394,15 +4410,16 @@ body.password hr {
 .pass-logo {
     max-width: 300px;
     margin: 0 auto;
+    margin-top: 34px !important;
 }
 
 .pass-logo img {
     max-width: 100%;
 }
 .password h2.email-signup-banner__heading.h2 {
-    margin-top: 10px;
+    margin-top: 30px;
     font-size: 24px;
-    font-family: 'TstarP' !important;
+    /* font-family: 'TstarP' !important; */
     font-weight: 900;
 
 }
@@ -4422,7 +4439,9 @@ body.password hr {
         margin-left: -2px;
 }
 .password .email-signup-banner__box .newsletter__subheading p {
-    font-size: 12px;
+    font-size: 16px;
+    margin-top: 120px;
+    font-weight: 900;
 }
 .ns-social li {
     list-style: none;
@@ -4565,11 +4584,11 @@ img.mobimg {
     border-width: 2px;
 }
 .search-modal.modal__content {
-    background: #fff;
+    background: #fcfbfa;
 }
 
 input#Search-In-Modal-1 {
-    background: #fff;
+    background: transparent;
 }
 h3#ContactFooter-success {
     width: 100%;
@@ -5235,7 +5254,7 @@ h2.title.title-wrapper--no-top-margin.inline-richtext.h1 {
   margin-bottom: 0 !important;
 }
 .na_contact-form.custom-page {
-  margin-top: 60px;
+  margin-top: 65px;
 }
 .form_top_error {
   margin-left: 40px;
@@ -5391,7 +5410,7 @@ margin-top: 0;
   border-radius: 4px;
 }
 .na_contact-form.custom-page {
-  padding-bottom: 70px !important;
+  padding-bottom: 85px !important;
 }
 .custom_error{
   display: flex;
@@ -5604,6 +5623,7 @@ input#Search-In-Template {
 }
 .error_msg_custom{
   margin-left: 40px;
+  color: #000;
 }
 @media screen and (max-width:991px){
   .disclosure {

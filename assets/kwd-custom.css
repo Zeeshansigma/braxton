@@ -169,7 +169,7 @@ predictive-search.search-modal__form {
   margin-top: 15px;
 }
 .arHeaderMain input#Search-In-Modal-1:focus+label.field__label {
-  top: 0px !important;
+  top: -10px !important;
 }
 .field__input:not(:placeholder-shown)~.field__label {
   top: 0px !important;
@@ -210,7 +210,7 @@ input#Search-In-Modal-1 {
 
 /*** HERO AREA ***/
 .home-banner-d {
-  padding-bottom: 69px !important;
+  padding-bottom: 100px !important;
 }
 .home-banner-d .container-d {
   max-width: 766.312px;
@@ -575,7 +575,7 @@ section .contact {
 }
 section .collapsible-content__wrapper {
   padding-top: 83px !important;
-  padding-bottom: 90px !important;
+  padding-bottom: 120px !important;
 }
 .content--inner p {
   font-size: 16px !important;
@@ -596,13 +596,16 @@ section .collapsible-content__wrapper {
 }
 .contact__button {
   margin-top: 30px !important;
+  
+}
+.na_contact--form #ContactForm button.button{
   box-shadow: 1px 4px 8px #00000020 !important;
 }
 .na_contact--form form#ContactForm .field input+label, .customer .field input+label {
   font-size: 16px !important;
 }
 .na_Shipping--collapsable {
-  width: 700px !important;
+  width: 628px !important;
 }
 .grid__item .accordion summary {
   padding-top: 10px !important;
@@ -620,7 +623,7 @@ section .collapsible-content__wrapper {
 }
 .collapsible-content .accordion {
   border-top: none !important;
-  border-bottom: 1px solid #e0e0dfbd !important; 
+  border-bottom: 0.5px solid #f3f3f3!important; 
 }
 
 /*** CONTACT ***/
@@ -720,10 +723,11 @@ marquee {
 
 /*** INFO ***/
 .template-page .grid__item summary[aria-expanded="true"] {
-  text-decoration: none !important;
+  text-decoration: underline !important;
 }
 .template-page .grid__item summary:hover {
   background-color: #e5e5e4 !important;
+  background-color: #f3f3f3 !important;
   text-decoration: none !important;
 }
 .na_Shipping--collapsable .grid {
@@ -761,8 +765,9 @@ button.arTabBtns.arActive {
   border-color: #0000000d!important;
 }
 .customer.account {
-  max-width: 1280px !important;
+  max-width: 715px !important;
   width: 100% !important;
+  padding-bottom: 0px !important;
 }
 .section-template--21499031126308__main-padding,
 .customer.order {
@@ -811,7 +816,9 @@ button.arTabBtns.arActive {
 .customer:not(.account):not(.order) {
   padding-left: 0px !important;
   padding-right: 0px !important;
-  width: 500px !important;
+  max-width: 800px !important;
+  width: 100%;
+  padding-bottom: 100px !important;
 }
 span.create-account-link {
   font-size: 16px !important;
@@ -820,7 +827,7 @@ span.create-account-link {
   font-family: TstarW;
 }
 .addresses form {
-  width: 715px;
+  /* width: 715px; */
   margin-left: auto;
   margin-right: auto;
 }
@@ -999,11 +1006,12 @@ footer ul.pages-menu2 a {
 }
 small.copyright__content {
   margin: 0px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
 }
 .footer-block__newsletter h2.footer-block__heading {
   font-size: 16px !important;
+  margin-top: 13px;
 }
 .social-icon {
   margin-top: 42px !important;
@@ -1102,7 +1110,13 @@ input:focus, textarea:focus, select:focus{
   left:0px;
   right: 0px;
 } */
+.tab-in{
+  margin-top: -40px;
+}
 @media(max-width: 991px){
+  .tab-in{
+    margin-top: -10px;
+  }
   .header__heading-logo{
     width: 181px !important;
   }

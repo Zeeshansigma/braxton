@@ -79,7 +79,7 @@ display: none;
 footer ul.pages-menu2 a,
 small.copyright__content{
 font-weight: 600;
-font-size: 1.6rem;
+font-size: 16px;
 }
 .footer__content-bottom-wrapper{
 align-items: center;
@@ -240,6 +240,7 @@ text-transform: capitalize;
 @media screen and (min-width: 750px){
 .customer.reset-password{
 max-width: 500px !important;
+padding-bottom: 100px !important;
 }
 }
 
@@ -416,7 +417,7 @@ padding-top: 2rem !important
 max-width: 100% !important;
 padding-left: 32rem !important;
   padding-right: 32rem !important;
-padding-bottom: 70px !important;
+padding-bottom: 85px !important;
 }
 ul.na_list--about li a:hover{
 color: #000 !important;
@@ -877,9 +878,7 @@ top:15.8rem;
 .customer .field input:-webkit-autofill:active{
 -webkit-background-clip: text;
 }
-.header__submenu.list-menu{
-box-shadow: 0 2px 5px rgba(0,0,0,0.05)
-}
+
 predictive-search input#Search-In-Modal-1{
 padding-left: 0 !important;
 }
@@ -1041,7 +1040,7 @@ stroke-width: 0;
 padding-left: 5px;
 }
 .na_Shipping--collapsable details summary:hover, .na_Shipping--collapsable details summary[aria-expanded="true"]{
-background: #F2F1F0;
+background: #f3f3f3;
   text-decoration: underline;
 }
 .customer.addresses a[href="/account"]{
@@ -1170,7 +1169,7 @@ max-width: 100%;
 margin-bottom: 2.1rem ;
 }
 footer.footer{
-padding-top: 7rem
+padding-top: 29px
 }
 .list-social__item .icon {
     width: 19px;
@@ -1182,7 +1181,6 @@ top: -2px;
 left: -2px;
 }
 .search-modal.modal__content {
-    background: #fff;
     height: 10rem !important;
     min-height: initial !important;
     padding-bottom: 3rem;
@@ -1615,7 +1613,7 @@ footer ul.pages-menu2 a, small.copyright__content {
 
 .header__submenu.list-menu{
     padding: 2rem .5rem;
-    box-shadow: 0px 3px 18px 0px rgb(0 0 0 / 22%);
+    box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.06);
     background: #FCFBFA;
 }
 
@@ -1679,12 +1677,12 @@ ul.list-menu.list-menu--inline li span{
 
 .collapsible-content .accordion{
   border:0!important;
-  border-top: 1px solid #e0e0dfbd!important;
+  border-top: 1px solid #f3f3f3!important;
 }
 
 .collapsible-content .accordion:last-child{
   border-bottom:0!important;
-  border-bottom: 1px solid #e0e0dfbd!important;
+  border-bottom: 1px solid #f3f3f3!important;
 }
 
 .template-page .accordion .accordion__content p{
@@ -1741,7 +1739,7 @@ ul.list-menu.list-menu--inline li span{
 .collection{
   padding-left: 158px;
   padding-right: 158px;
-  padding-bottom: 48px;
+  padding-bottom: 78px;
 }
 .mobile-facets__open span{
   font-size: 16px;
