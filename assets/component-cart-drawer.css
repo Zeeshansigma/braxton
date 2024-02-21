@@ -13,7 +13,6 @@
 
 .drawer.active {
   visibility: visible;
-  display: block;
 }
 
 .drawer__inner {
