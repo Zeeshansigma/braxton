@@ -46,14 +46,16 @@ a.pagination__item:hover::after {
 .pagination__item--current::after {
   height: 0.1rem;
 }
-
+.pagination__item[aria-label="Previous page"] svg {
+  transform: rotate(90deg);
+}
 .pagination__item--current::after,
 .pagination__item:hover::after {
   content: '';
   display: block;
   width: 2rem;
   position: absolute;
-  bottom: 8px;
+  bottom: -3px !important;
   left: 50%;
   transform: translateX(-50%);
   background-color: currentColor;

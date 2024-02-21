@@ -404,7 +404,7 @@ span.price.price--end {
 .drawer__contents {
   overflow: hidden;
   overflow-y: auto;
-  height: 200px;
+  /* height: 200px; */
 }
 .drawer__header {
   padding: 0px !important;

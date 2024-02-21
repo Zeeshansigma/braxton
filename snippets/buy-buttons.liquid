@@ -94,12 +94,14 @@ legend[data-name="Size"] {
             <a href="#" data-drawer-trigger aria-controls="drawer-soldout" class="restockbtn" aria-expanded="false"> 
                 <span>Restock Notification</span>
             </a>
-          {% endif%} {% endcomment %}
+          {% endif%} 
+          {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%} style="visibility: hidden; min-height: 0;height:0;" {% endif %}
+        {% endcomment %}
           <!-- BUTTON -->
           <div id="add-to-cart-container">
            <button
               id="ProductSubmitButton-{{ section_id }}"
-            {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%} style="visibility: hidden; min-height: 0;height:0;" {% endif %}
+            
               type="submit"
               name="add"
               class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
@@ -190,3 +192,15 @@ legend[data-name="Size"] {
     <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
 </div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var addButtons = document.querySelectorAll('.product-form__submit');
+    addButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        console.log("clicked");
+        location.reload();
+      });
+    });
+  });
+</script>
+

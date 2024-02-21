@@ -239,7 +239,7 @@ a.button.arContinueShopBtnCart::after, a.button.arContinueShopBtnCart::before {
 }
 a.button.arContinueShopBtnCart {
     display: flex;
-    max-width: 300px;
+    max-width: 385px;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
@@ -250,12 +250,13 @@ a.button.arContinueShopBtnCart {
     color: #FFF;
     text-align: center;
     font-family: TstarP;
-    font-size: 14px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    width: 100%;
 }
 p.cart__login-title.h3 {
     color: #000;
