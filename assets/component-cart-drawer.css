@@ -201,7 +201,7 @@ cart-drawer {
 }
 
 cart-drawer-items {
-  overflow: auto;
+  /* overflow: auto; */
   flex: 1;
 }
 

@@ -639,7 +639,7 @@ details > * {
 
 :root {
   --duration-short: 100ms;
-  --duration-default: 200ms;
+  --duration-default: 300ms;
   --duration-announcement-bar: 250ms;
   --duration-medium: 300ms;
   --duration-long: 500ms;
@@ -5643,13 +5643,7 @@ facet-remove a {
   color: black !important;
 }
 
-.drawer__footer {
-    position: absolute;
-    bottom: 0px;
-    right: 5%;
-    width: 540px;
 
-}
 
 .globo-form-app .message.success {
   background: none !important;
@@ -5721,8 +5715,14 @@ button.action.next.submit.classic-button.wizard__submit {
 .drawer__footer {
   width: 660px;
   right: 0;
-  position: absolute;
+  /* position: absolute; */
   padding: 0 58px;
   bottom: 0;
   padding: 0 65px !important;
+}
+.drawer__inner.emptyCartAr.inner_width{
+   padding-top: 35px !important;
+}
+cart-drawer.drawer.is-empty.cartDraweeer.animate.active {
+  margin-top: 37px;
 }
