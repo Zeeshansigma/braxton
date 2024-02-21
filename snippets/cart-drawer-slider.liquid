@@ -1,4 +1,5 @@
 
+
 <style>
     .related_custom.related_custom_cart img {
     width: 70% !important;
@@ -125,10 +126,30 @@ p.cart_price {
 .related_width_cart button.owl-next{
     top: 42% !important;
 }
-</style>
-{% assign collection_handle = 'frontpage' %}
 
+@media screen and (max-width:768px) {
+    .custom_variant{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .cart-carousal .item img{
+        max-width: 73%;
+    }
+}
+.drawer_heading h3{
+font-size: 20px;
+font-weight: 900;
+font-family: TstarP;
+text-align: center;
+margin-top: 45px;
+margin-bottom: 20px;
+}
+</style>
+{% assign collection_handle = product.metafields.custom.collection %}
 {% assign collection_cart = collections[collection_handle] %}
+<div class="drawer_heading">
+    <h3> STYLE WITH </h3>
+</div>
       <div class="related_width_cart">
         
 <div class="owl-carousel cart-carousal ">
@@ -184,59 +205,4 @@ p.cart_price {
             {% endfor %}
 </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-             {% comment %} <div class="related_custom related_custom_cart">
-                <a href="{{ product.url }}">
-                    <img src="{{ product.featured_image | img_url: 'master' }}" alt="">
-                <h3>{{ product.title }}</h3>
-                <h5>{{ product.price | money }}</h5>
-                </a>
-                <div class="custom-btn-flex"> {% endcomment %}
-                    {% comment %} {% for option in product.options_with_values %}
-                            {% if option.name == 'Color' %}
-                            {% for values in option.values %}
-                                {{ values }}
-                                {% for variant in product.variants %}
-
-                                    {% endfor %}
-                            {% endfor %}
-                    {% endif %}
-                    {% endfor %} {% endcomment %}
-                {% comment %} {% for variant in product.variants %}
-                    {% for option in product.options_with_values %}
-                        {% for values in option.values %}
-                    {% if option.name == 'Size' or option.name == 'size' %}
-                        <div class="custom-cart-button">
-                            {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-                                <input type="hidden" name="id" value="{{ variant.id }}">
-                                <div class="product-form__buttons">
-                                  <button type="submit" name="add" class="reset-btn" {% if variant.available == false %}disabled{% endif %} style="font-size: 1rem;">
-                                    <span> {{ values }} 
-                                    </span>
-                                    <div class="loading-overlay__spinner hidden">
-                                      <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><circle class="path ajax-spin" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle></svg>
-                                    </div>
-                                  </button> 
-                                   </div>
-                              {%- endform -%}
-                        </div>
-                    {% endif %}
-                    {% endfor %}
-                {% endfor %}
-                    {% endfor %} {% endcomment %}
-                    {% comment %} </div> {% endcomment %}
-
-       
-             </div>
-
-             {% comment %} </div> {% endcomment %}
-            {% comment %} {% endfor %} {% endcomment %}
-             
-            {% comment %} {% endfor %} {% endcomment %}
-            {% comment %} </div> {% endcomment %}
-      {% comment %} </div> {% endcomment %}
-     
-      
-
 

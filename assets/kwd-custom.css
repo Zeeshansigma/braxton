@@ -263,6 +263,7 @@ span.colorname {
 .arHeading.price {
   margin-top: 8px !important;
   font-size: 20px !important;
+  margin-bottom: 6px;
 }
 .price__regular .price-item--regular {
   font-size: 20px !important;
@@ -335,7 +336,7 @@ button.arAccordBtn:hover .arAccordTxt {
   margin: 45px 45px 0 0 !important;
 }
 h4.sgPrTitle {
-  font-size: 24px !important;
+  font-size: 32px !important;
 }
 .product__info-wrapper .sizepopup .sp-text {
   position: absolute !important;
@@ -348,7 +349,7 @@ h4.sgPrTitle {
 }
 .size-img {
   margin-top: 103px !important;
-  margin-bottom: 100px !important;
+  margin-bottom: 96px !important;
 }
 .sizesinfo .size-selector span,
 .sizesin span {
@@ -404,7 +405,7 @@ span.price.price--end {
 .drawer__contents {
   overflow: hidden;
   overflow-y: auto;
-  height: 200px;
+  /* height: 200px; */
 }
 .drawer__header {
   padding: 0px !important;
@@ -521,6 +522,7 @@ button.drawer__close.arDrawFillclose {
 }
 #CartDrawer .drawer__header div p {
   color: #000 !important;
+  margin-top: 32px;
 }
 small.tax-note.caption-large.rte {
   color: #000 !important;
@@ -708,7 +710,7 @@ a.acc-btn {
   z-index: 4500;
 }
 .drawer.active {
-  z-index: 4500 !important;
+  z-index: 400 !important;
 
 }
 marquee {
