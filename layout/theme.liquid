@@ -270,8 +270,10 @@
     <!-- KWD -->
     {{ 'kwd-custom.css' | asset_url | stylesheet_tag }}
     <!-- KWD -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    
   </head>
 
   <body class="template-{{ template.name }} gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -384,8 +386,8 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
   });
 
   $(".sizes").click(function(){
-    $('.sizes').removeClass("activess");
-    $(this).addClass("activess");
+    $('.sizes').removeClass("activess-size");
+    $(this).addClass("activess-size");
 
     if($(this).hasClass("xs")){
       $(".sizeinn div").removeClass("actives");
@@ -433,7 +435,7 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
     
     {% endif %}
     
-  <script type="text/javascript" src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script>
+  <script defer type="text/javascript" src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script>
 {% comment %} <script> window.start.init({Palette:"palette2",Mode:"banner bottom",Theme:"wire",Time:"5",Message:"To ensure you get the best experience on our website, this website uses cookies.",LinkText:"Privacy Policy",ButtonText:"ACCEPT & CLOSE",Location:"/pages/privacy-policy", ButtonText:"ACCEPT & CLOSE"})</script>  {% endcomment %}
 
 <script>
@@ -519,8 +521,8 @@ a.button.arContinueShopBtnCart,
   box-shadow: 1px 4px 8px #00000020 !important;
 }
 button.product-form__submit.button.button--full-width.button--primary {
-    max-width: 500px ;
-    width:100%;
+    width:100% !important;
+    max-width: 500px;
     margin-top: 30px;
     box-shadow: 0 1px 3px #00000014, 0 4px 6px #32325d1c;
     background-color: #000;
@@ -568,5 +570,7 @@ h2.cart__empty-text {
   margin-bottom: 40px !important;
 }
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 </body>
 </html>
