@@ -5712,14 +5712,6 @@ button.action.next.submit.classic-button.wizard__submit {
   }
 }
 
-.drawer__footer {
-  width: 660px;
-  right: 0;
-  /* position: absolute; */
-  padding: 0 58px;
-  bottom: 0;
-  padding: 0 65px !important;
-}
 .drawer__inner.emptyCartAr.inner_width{
    padding-top: 35px !important;
 }
