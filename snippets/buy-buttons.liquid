@@ -201,6 +201,13 @@ legend[data-name="Size"] {
         }
 }, 700)
   });
+
+let elementsToHide = document.getElementsById("BIS_trigger);
+
+// Hide the second element with the class 'to-hide'
+if (elementsToHide.length >= 2) {
+    elementsToHide[1].style.display = "none";
+}
         </script>
 {% if product.selected_or_first_available_variant.available %}
 <script>
