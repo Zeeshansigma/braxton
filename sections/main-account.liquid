@@ -6,7 +6,7 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 .customer.account {
-    max-width: 1290px;
+    max-width: 1280px;
     margin: 0 auto;
 }
   .account-menu .tab {
@@ -269,14 +269,14 @@ td#RowOrder a {
   </div>
   <div class="account-menu">
     <div class="tab naTab--{{ forloop.index }}">
-      <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">My Profile</button>
+      <button class="tablinks " onclick="openCity(event, 'London')" id="defaultOpen">My Profile</button>
       <button class="tablinks" onclick="openCity(event, 'Paris')">My Orders</button>
       <button class="tablinks" onclick="openCity(event, 'Tokyo')">Make a Return</button>
       {% comment %}<button class="tablinks"><a class="logouttext" href="{{ routes.account_logout_url }}">
           {{ 'customer.log_out' | t }}
         </a></button>{% endcomment %}
     </div>
-    <div id="London" class="tabcontent">
+    <div id="London" class="tabcontent london">
         <div class="tab-in">
 
        {% comment %}   

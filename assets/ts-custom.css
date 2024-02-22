@@ -17,6 +17,11 @@ h1#login, h1#recover{
 .customer.account{
     padding: 0px !important;
 }
+.london{
+    max-width: 715px;
+    width: 100%;
+    margin: auto;
+}
 .account-menu .tabcontent{
     padding: 0px !important;
 }
