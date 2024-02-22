@@ -138,6 +138,9 @@ predictive-search input#Search-In-Modal-1,input#Search-In-Template{
 #Paris.arOrdersTab{
     margin-bottom: 100px;
 }
+.home-banner-d{
+    margin-top: 50px;
+}
 /*responsive*/
 @media screen and (min-width: 991px){
     h1#login, h1#recover,.customer .toplinkk .customer__title, a.logouttext,.na_title h1, h2.title, h2.h1, .add-title{
