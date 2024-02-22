@@ -192,7 +192,9 @@
   margin-left: auto;
   color: black;
 }
-
+.underlined-link:hover {
+  color: black !important;
+}
 .facets__disclosure {
   margin-right: 3.5rem;
 }
