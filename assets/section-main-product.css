@@ -1624,3 +1624,12 @@ a.product__text {
   .product__column-sticky{top:90px;}
 }
 
+.product-media-modal__toggle {
+  background: unset !important;
+  border: none !important;
+  padding: 0 !important;
+}
+.product-media-modal__toggle svg {
+  width: 34px;
+  height: 34px;
+}

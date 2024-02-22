@@ -9,7 +9,8 @@
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
 <style>
   .drawer {
@@ -79,7 +80,10 @@
     line-height: 1;
     font-weight: 900 !important;
 }
-  .cartDraweeer .drawer__header{margin-bottom:15px;}
+  .cartDraweeer .drawer__header
+  {
+    margin-bottom:40px;
+  }
   a.cart-item__name.h4.break {
     color: #000;
     font-family: TstarP;
@@ -642,11 +646,10 @@
           </div>
           <div id="CartDrawer-CartErrors" role="alert"></div>
         </form>
+        {% if cart != empty %}
         {%  render 'cart-drawer-slider' %} 
-      </cart-drawer-items>
-      
-
-      <div class="drawer__footer">
+        {% endif %}
+        <div class="drawer__footer">
 
         {%- if settings.show_cart_note -%}
           <details id="Details-CartDrawer">
@@ -667,11 +670,11 @@
             </cart-note>
           </details>
         {%- endif -%}
-
+  
         <!-- Start blocks -->
         <!-- Subtotals -->
-
-
+  
+  
         <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
           <div>
             {%- if cart.cart_level_discount_applications.size > 0 -%}
@@ -686,23 +689,23 @@
               </ul>
             {%- endif -%}
           </div>
-
+  
           <div class="totals" role="status">
             <h2 class="totals__total">{{ 'sections.cart.estimated_total' | t }}</h2>
             <p class="totals__total-value">{{ cart.total_price | money_with_currency }}</p>
           </div>
-
+  
           
-
+  
         <!-- CTAs -->
-
+  
         <div class="cart__ctas" {{ block.shopify_attributes }}>
           <noscript>
             <button type="submit" class="cart__update-button button button--secondary" form="CartDrawer-Form">
               {{ 'sections.cart.update' | t }}
             </button>
           </noscript>
-
+  
           <button
             type="submit"
             id="CartDrawer-Checkout"
@@ -729,6 +732,10 @@
           </small>
         </div>
       </div>
+      </cart-drawer-items>
+      
+  
+      
     </div>
   </div>
                                   <form id="form-1" method="post" action="/cart" novalidate >
@@ -828,6 +835,26 @@ if(window.location.hash === "cart-open"){
   
 </script>
 
-
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.cart-carousal').owlCarousel({
+      loop:true,
+      margin:20,
+      nav:true,
+    
+      responsive:{
+          0:{
+              items:2
+          },
+          600:{
+              items:2
+          },
+          1000:{
+              items:2
+          }
+      }
+    });
+  });
+</script>

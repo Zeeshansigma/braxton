@@ -9,11 +9,11 @@
   justify-content: flex-end;
   background-color: rgba(var(--color-foreground), 0.5);
   transition: visibility var(--duration-default) ease;
+  z-index: 200 !important;
 }
 
 .drawer.active {
   visibility: visible;
-  display: block;
 }
 
 .drawer__inner {
@@ -32,6 +32,7 @@
   flex-direction: column;
   transform: translateX(100%);
   transition: transform var(--duration-default) ease;
+ 
 }
 
 
@@ -111,9 +112,8 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 }
 
 .drawer__close svg {
-  height: 2.4rem;
-  width: 2.4rem;
-  opacity: 0.7;
+  height: 34px;
+  width: 34px;
 }
 
 .drawer__contents {

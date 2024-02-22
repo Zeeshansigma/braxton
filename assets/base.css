@@ -646,7 +646,7 @@ details > * {
 
 :root {
   --duration-short: 100ms;
-  --duration-default: 200ms;
+  --duration-default: 300ms;
   --duration-announcement-bar: 250ms;
   --duration-medium: 300ms;
   --duration-long: 500ms;
@@ -5370,7 +5370,7 @@ search__input .field__input header_f_search::-webkit-input-placeholder {
 }
 .facet-filters__label,
 .mobile-facets__open{
-  color: #4D4F4E !important;
+  color: #000000 !important;
 }
 facet-remove.mobile-facets__clear-wrapper a.mobile-facets__clear.underlined-link {
   font-size: 24px;

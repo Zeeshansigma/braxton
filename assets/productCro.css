@@ -64,7 +64,10 @@ span.size-text {
 }
 }
 @media only screen and (min-width:990px){
-  .product--large:not(.product--no-media) .product__info-wrapper{padding-top:95px !important;}
+  .product--large:not(.product--no-media) .product__info-wrapper
+  {
+    padding-top:45px !important;
+}
 }
 @media only screen and (max-width:500px){
 .product__info-wrapper{
