@@ -6,7 +6,6 @@
 
 h3.form__message {
   font-size: 14px !important;
-  text-transform: uppercase !important;
 }
 
 .template-reset_password .reset-pass-p {
@@ -697,9 +696,6 @@ a.acc-btn {
 .na_privacy--content--links ul.na_list--about {
   margin-top: 0px !important;
 }
-.na_content--privacy.na_content--d {
-  margin-top: -20px !important;
-}
 .scroll-trigger:not(.scroll-trigger--offscreen).animate--slide-in {
   animation: none !important;
 }
@@ -736,10 +732,6 @@ marquee {
   border-top: 1px solid #e0e0dfbd!important;
 }
 
-/*** LOGIN ***/
-h1#login, h1#recover {
-  /* font-size: 24px !important; */
-}
 .login a {
   font-size: 16px !important;
 }
@@ -1112,13 +1104,8 @@ input:focus, textarea:focus, select:focus{
   left:0px;
   right: 0px;
 } */
-.tab-in{
-  margin-top: -40px;
-}
 @media(max-width: 991px){
-  .tab-in{
-    margin-top: -10px;
-  }
+
   .header__heading-logo{
     width: 181px !important;
   }

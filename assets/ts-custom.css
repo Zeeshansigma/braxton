@@ -1,0 +1,170 @@
+.customer:not(.account):not(.order){
+    max-width: 500px !important;
+}
+.customer .field input{
+    margin: 0px !important;
+}
+h1#login, h1#recover{
+    margin-bottom: 70px;
+}
+.customer form {
+    margin-top: 0px !important;
+}
+.field__input:focus, .field__input:not(:placeholder-shown), .field__input:-webkit-autofill, .customer .field input:focus, .customer .field input:not(:placeholder-shown), .customer .field input:-webkit-autofill{
+    padding: 15px 16px 0px 16px!important;
+    box-shadow: 0 1px 3px #00000014!important;
+}
+.customer.account{
+    padding: 0px !important;
+}
+.account-menu .tabcontent{
+    padding: 0px !important;
+}
+.customer .updateform{
+    margin-bottom: 100px !important;
+}
+.edit-add-btn{
+    margin: 30px auto 0px auto !important;
+}
+.account-menu .tab.naTab--, .customer.order .arTabNav{
+    max-width: 715px !important;
+    width: 100% !important;
+}
+.toplinkk-wrap{
+    padding-top: 100px;
+}
+.customer .toplinkk .customer__title, a.logouttext{
+    margin-bottom: 70px !important;
+}
+.account-menu .tab button {
+    width: 200px!important;
+    height: inherit !important;
+    min-height: inherit !important;
+    height: inherit !important;
+    margin:0px !important;
+    line-height: 14px !important;
+    margin-bottom: 60px !important;
+}
+.addresses,.addresses.customer:not(.account):not(.order) {
+    max-width: 715px !important;
+}
+.addresses .na_button--addresses{
+    gap :15px;
+}
+.add-btn{
+    font-size: 20px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.addresses ul{
+    padding-left: 0px !important;
+}
+.back-oplinkk.toplinkk{
+    height: 52px;
+}
+.toplinkk .back-btn-d{
+    margin-top:0px !important;
+}
+.addresses.section-template--22050624504100__main-padding{
+    padding-top: 100px !important;
+}
+.add-title{
+    font-family: 'TstarP';
+    font-size: 24px;
+    letter-spacing: normal;
+    color: #000;
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+h3.form__message{
+    color: #000;
+    text-align: center;
+    font-family: TstarW;
+    font-size: 16px !important;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    height: inherit;
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+    letter-spacing: normal;
+    background: transparent;
+    text-align: left;
+}
+.suc-svg{
+    margin-right: 10px;
+}
+.content--inner p{
+    margin-top: 0px !important;
+}
+.na_title h1, h2.title, h2.h1{
+    margin-bottom: 70px !important;
+}
+.na_about--inner ul.na_list--about,.na_Inner--content h2{
+    margin-top: 0px !important;
+}
+.na_contact-form.custom-page{
+    margin-top: 70px !important;
+}
+.facets-container{
+    padding-top: 35px !important
+}
+.pagination-wrapper{
+    padding-bottom: 0px;
+}
+predictive-search input#Search-In-Modal-1,input#Search-In-Template{
+    box-shadow: none !important;
+}
+.template-search__header{
+    padding-top: 36px ;
+}
+.button, .button-label, .shopify-challenge__button, .customer button{
+    font-size: 20px;
+    font-weight: 900;
+}
+#add-to-cart-container{
+    padding-top: 30px !important;
+}
+.sizes.activess{
+    color: #000;
+    border-color: #000;
+    border-width: 0.5px;
+    border-left: 0.5px solid #000;
+}
+.sizescm span.activess:nth-child(1) {
+    border-left-color: #000;
+}
+#Paris.arOrdersTab{
+    margin-bottom: 100px;
+}
+/*responsive*/
+@media screen and (min-width: 991px){
+    h1#login, h1#recover,.customer .toplinkk .customer__title, a.logouttext,.na_title h1, h2.title, h2.h1, .add-title{
+        line-height: 20px !important;
+    }
+    a.create-account-link{
+        line-height: 11px !important;
+    }
+    a.backlogin{
+        line-height: 12px !important;
+    }
+}
+@media only screen and (min-width: 750px){
+    .addresses form>div:nth-of-type(1), .addresses form>div:nth-of-type(2) {
+        box-sizing: border-box;
+        flex-basis: calc(50% - 7.5px) !important;
+    }
+    .addresses form > div:nth-of-type(1) {
+        margin-right: 15px !important;
+      }
+      .addresses form > div:nth-of-type(2) {
+        margin-top: 0;
+      }
+    
+      .addresses form > div:nth-of-type(1),
+      .addresses form > div:nth-of-type(2) {
+        box-sizing: border-box;
+        flex-basis: calc(50% - 15px) !important;
+      }
+}

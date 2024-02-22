@@ -27,7 +27,7 @@
         <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
       </symbol>
     </svg>
-    <h1>{{ 'customer.addresses.title' | t }}</h1>
+    <h1 class="add-title">{{ 'customer.addresses.title' | t }}</h1>
 
     {% comment %}
     <a href="{{ routes.account_url }}">
@@ -46,6 +46,7 @@
           <button
             onclick="editaddressFunction()"
             type="button"
+            class="add-btn" 
             id="EditFormButton_{{ address.id }}"
             aria-label="{{ 'customer.addresses.edit_address' | t }} {{ forloop.index }}"
             aria-controls="EditAddress_{{ address.id }}"
@@ -55,7 +56,7 @@
             {{ 'customer.addresses.edit' | t }}
           </button>
           <button
-            type="button"
+            type="button" class="add-btn" 
             aria-label="{{ 'customer.addresses.delete' | t }} {{ forloop.index }}"
             data-target="{{ address.url }}"
             data-confirm-message="{{ 'customer.addresses.delete_confirm' | t }}"
@@ -64,7 +65,7 @@
           </button>
 
           <button
-            onclick="addnewaddressFunction()"
+            onclick="addnewaddressFunction()" class="add-btn"
             id="addnew_address"
             type="button"
           >
@@ -388,7 +389,7 @@
       {%- endfor -%}
     </ul>
 
-    <div class="toplinkk">
+    <div class="toplinkk back-oplinkk">
       <a class="back-btn-d" href="/account">Back</a>
     </div>
     <style>

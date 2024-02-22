@@ -277,6 +277,10 @@
     <!-- KWD -->
     {{ 'kwd-custom.css' | asset_url | stylesheet_tag }}
     <!-- KWD -->
+    
+    <!-- ts -->
+    {{ 'ts-custom.css' | asset_url | stylesheet_tag }}
+    <!-- ts -->
   </head>
 
   <body class="template-{{ template.name }} gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -526,9 +530,6 @@ button.cart__checkout-button.button {
     right: -65px!important;
     top: 88px !important;
     width:100% !important;
-}
-.customer form {
-  margin-top: 70px !important;
 }
 a.backlogin {
   font-size: 16px !important;

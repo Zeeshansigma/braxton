@@ -411,7 +411,6 @@ margin-right: auto !important;
 .na_privacy--content--links{
 gap: 0 !important;
 justify-content: space-between !important;
-padding-top: 2rem !important
 }
 .custom-page{
 max-width: 100% !important;
@@ -1739,7 +1738,7 @@ ul.list-menu.list-menu--inline li span{
 .collection{
   padding-left: 158px;
   padding-right: 158px;
-  padding-bottom: 78px;
+  padding-bottom: 73px;
 }
 .mobile-facets__open span{
   font-size: 16px;

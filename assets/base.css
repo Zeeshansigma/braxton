@@ -557,8 +557,6 @@ h6:empty {
 }
 .logouttext{
   text-decoration: none !important;
-  position: relative;
-  top:2px;
 }
 .logouttext:hover{
   text-decoration: underline !important;

@@ -261,7 +261,7 @@ td#RowOrder a {
 {%- endstyle -%}
 
 <div class="customer account section-{{ section.id }}-padding na_account--{{ section.id }}">
-  <div class="toplinkk">
+  <div class="toplinkk toplinkk-wrap">
     <h1 class="customer__title">{{ 'customer.account.title' | t }}</h1>
      <a class="logouttext" href="{{ routes.account_logout_url }}">
           {{ 'customer.log_out' | t }}
@@ -448,9 +448,7 @@ td#RowOrder a {
                     </div>
                        {% endif %}
       {%- endfor -%}
-      <br>
-      <br>
-      <a href="/account/addresses" class="arAddBtn_cba">Edit Address</a>
+      <a href="/account/addresses" class="arAddBtn_cba edit-add-btn">Edit Address</a>
       </div>
           
     </div>
