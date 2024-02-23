@@ -1958,3 +1958,24 @@ section.custom-page, section .contact{
   position: absolute;
   z-index: 2;
 }
+
+.customer ul li a:hover{
+  color:red;
+  text-decoration: none!important;
+}
+
+.flag_ip::placeholder{
+  opacity: 1 !important;
+    position: relative !important;
+    left: 31px;
+    top: -5px !important;
+}
+.iti__flag{
+  display: block !important;
+}
+.iti__arrow {
+  display: block !important;
+}
+.iti.iti--allow-dropdown {
+  width: 100% !important; 
+}
