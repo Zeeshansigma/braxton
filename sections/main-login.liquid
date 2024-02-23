@@ -224,19 +224,19 @@ form.recovery_form {
 // });
 
 //zeshan code
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.recoverylink').forEach(function(element) {
-        element.addEventListener('click', function() {
-            var tar = this.getAttribute('thref');
-            document.querySelectorAll(tar + '-d').forEach(function(resetElement) {
-                resetElement.style.display = 'block';
-            });
-            document.querySelectorAll('.login-d').forEach(function(loginElement) {
-                loginElement.style.display = 'none';
-            });
-        });
-    });
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//     document.querySelectorAll('.recoverylink').forEach(function(element) {
+//         element.addEventListener('click', function() {
+//             var tar = this.getAttribute('thref');
+//             document.querySelectorAll(tar + '-d').forEach(function(resetElement) {
+//                 resetElement.style.display = 'block';
+//             });
+//             document.querySelectorAll('.login-d').forEach(function(loginElement) {
+//                 loginElement.style.display = 'none';
+//             });
+//         });
+//     });
+// });
 //zeshan code
 $('.backlogin').click(function(){
   var tar = $(this).attr('thref');
