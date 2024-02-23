@@ -266,17 +266,22 @@ cart-items.page-width {
 .mobile-facets__wrapper .mobile-facets__footer {
     margin-bottom: 30px;
 }
-.z-cart-draw .drawer__inner{
+/* .z-cart-draw .drawer__inner{
     padding-top: 0px !important;
-}
+    
+} */
 #CartDrawer .drawer__header div p{
     margin-top: 28px !important;
+    font-size: 24px !important;
 }
 .z-cart-draw  button.drawer__close.arDrawFillclose{
     top:20px !important
 }
 .z-cart-draw .shipping-savings-message{
     padding-top: 20px !important;
+}
+#CartDrawer .free_shipping_notice{
+    font-size: 16px !important;
 }
 /*responsive*/
 @media screen and (min-width: 991px){
