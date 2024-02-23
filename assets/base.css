@@ -1383,7 +1383,7 @@ button.shopify-payment-button__button--unbranded {
 .button-label,
 .shopify-challenge__button,
 .customer button {
-  font-size: 1.5rem;
+  font-size: 20px;
   letter-spacing: 0.1rem;
   line-height: calc(1 + 0.2 / var(--font-body-scale));
 }
@@ -4035,7 +4035,7 @@ a#cookie-btn {
 .sizesin, .sizescm {
     display: flex;
     justify-content: center;
-    margin-bottom: 23px;
+    margin-bottom: 18px;
 }
 .size-titless {
     font-size: 10px;
@@ -4050,13 +4050,13 @@ a#cookie-btn {
     line-height: 1.2;
     width: 70px;
     height: 70px;
-    border: 0.5px solid #A9A9A9;
+    border: 1px solid #A9A9A9;
     border-left: 0;
         cursor: pointer;
         color: #A9A9A9;
 }
 .sizesin span, .sizescm span:nth-child(1){
-  border-left: 0.5px solid #A9A9A9;
+  border-left: 1px solid #A9A9A9;
 }
 .sizes,
 span.result{
@@ -4438,8 +4438,8 @@ body.password hr {
 }
 .password .email-signup-banner__box .newsletter__subheading p {
     font-size: 16px;
-    margin-top: 120px;
     font-weight: 900;
+    
 }
 .ns-social li {
     list-style: none;
@@ -4766,6 +4766,7 @@ border-bottom: thin solid rgba(0,0,0,.3) !important;
 }
   button#BIS_trigger{
     width: 413px !important;
+    margin-top: 30px !important;
   }
   button.product-form__submit.button.button--full-width.button--primary{
     font-size: 20px;

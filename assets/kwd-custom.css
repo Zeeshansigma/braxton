@@ -9,7 +9,8 @@ h3.form__message {
 }
 
 .template-reset_password .reset-pass-p {
-  margin-top: 70px !important;
+  margin-top: 55px !important;
+  margin-bottom: 20px !important;
 }
 .template-reset_password .customer h2.form__message {
   display: none !important;
@@ -332,7 +333,7 @@ button.arAccordBtn:hover .arAccordTxt {
 
 /*** SIZE GUIDE ***/
 .drawer__closec {
-  margin: 45px 45px 0 0 !important;
+  margin: 25px 45px 0 0 !important;
 }
 h4.sgPrTitle {
   font-size: 32px !important;
@@ -347,8 +348,8 @@ h4.sgPrTitle {
   display: none;
 }
 .size-img {
-  margin-top: 103px !important;
-  margin-bottom: 96px !important;
+  margin-top: 92px !important;
+  margin-bottom: 85px !important;
 }
 .sizesinfo .size-selector span,
 .sizesin span {
@@ -540,12 +541,6 @@ small.tax-note.caption-large.rte {
 }
 footer .newsletter-form__field-wrapper .field__input::placeholder {
   font-weight: unset;
-}
-footer .newsletter-form__field-wrapper .field__input {
-  font-weight: 500 !important;
-}
-footer .newsletter-form__field-wrapper .field__input::placeholder {
-  font-weight: 500 !important;
 }
 
 /*** CONTENT ***/
@@ -873,10 +868,16 @@ a.button.arContinueShopBtnCart {
 
 }
 .customer.order .arTabNav button {
-  width: 200px !important;
+  width: 200px!important;
+  min-height: inherit!important;
+  height: inherit!important;
+  margin: 0 0 60px!important;
+  line-height: 14px!important;
+  box-shadow: none !important;
+  filter: none !important;
 }
 .customer table.order-history tbody tr[role=row] {
-  border-bottom: 1px solid #000 !important;
+  border-bottom: 0.5px solid #000 !important;
 }
 #Paris.arOrdersTab table {
   border-bottom: 0px !important;
@@ -903,6 +904,9 @@ a.button.arContinueShopBtnCart {
   text-transform: capitalize !important;
   text-decoration: none !important;
 }
+#Paris.arOrdersTab td a{
+  font-size: 20px !important;
+}
 .order .orderrTab .arMobOnly.pricingMob {
   margin-bottom: 65px !important;
 }
@@ -916,20 +920,17 @@ a.button.arContinueShopBtnCart {
 }
 .csOrderBlock.csOrderContentBlock {
   padding-bottom: 45px;
-  border-bottom: 1px solid #000;
+  border-bottom: 0.5px solid #000;
 }
 .customer.order .arTabNav {
   padding-left: 0px !important;
   padding-right: 0px !important;
 }
 .orderAddresses {
-  margin: 65px auto !important;
+  margin: 100px auto 79px auto !important;
 }
 .order .orderrTab .orderAddresses .orderAddresss {
   margin-bottom: 0px !important;
-}
-.order .orderrTab .orderAddresses .orderAddresss p {
-  line-height: 16.6px !important;
 }
 .order-history-p {
   margin-top: 79px !important;
@@ -1080,7 +1081,7 @@ input:focus, textarea:focus, select:focus{
 
 .toggle-password{
   position: absolute;
-    right: 10px;
+    right: 16px;
     top: 14px;
     cursor: pointer;
 }
@@ -1166,7 +1167,7 @@ template-page .accordion__content li, .template-page .accordion .accordion__cont
   width: 100%;
 }
 .drawer__closec{
-  margin-top: 47px !important;
+  margin-top: 10px !important;
 }
 .drawer__headerc{
   padding: 0px !important;
