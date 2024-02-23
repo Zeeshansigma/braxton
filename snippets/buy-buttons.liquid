@@ -97,7 +97,7 @@ legend[data-name="Size"] {
           {% endif%} {% endcomment %}
           <!-- BUTTON -->
           <div id="add-to-cart-container">
-           <button
+           <button onclick="reloadCartDrawer()"
               id="ProductSubmitButton-{{ section_id }}"
             {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%} style="visibility: hidden; min-height: 0;height:0;" {% endif %}
               type="submit"

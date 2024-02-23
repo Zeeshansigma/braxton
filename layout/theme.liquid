@@ -241,6 +241,7 @@
     {% endstyle %}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     {{ 'base.css' | asset_url | stylesheet_tag }}
 {% render 'fonts' %}
     {%- unless settings.type_body_font.system? -%}
@@ -263,7 +264,20 @@
         onload="this.media='all'"
       >
     {%- endif -%}
+    <script>
+        $(document).ready(function(){
+            $(".product-form__submit").click(function(){
+             let cartDrawer = document.querySelector('.cartDraweeer');
+             cartDrawer.style.display = "none"
+             setTimeout(() => {
+              
+             location.reload();
 
+
+             }, 500); 
+            });
+        });
+    </script>
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
       if (Shopify.designMode) {
