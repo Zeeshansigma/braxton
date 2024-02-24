@@ -283,6 +283,14 @@ cart-items.page-width {
 #CartDrawer .free_shipping_notice{
     font-size: 16px !important;
 }
+cart-remove-button {
+    margin: auto;
+    text-align: center !important;
+}
+cart-remove-button .button{
+    margin: auto !important;
+    text-align: center !important;
+}
 /*responsive*/
 @media screen and (min-width: 991px){
     h1#login, h1#recover,.customer .toplinkk .customer__title, a.logouttext,.na_title h1, h2.title, h2.h1, .add-title{
