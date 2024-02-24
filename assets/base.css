@@ -5512,7 +5512,7 @@ form#customer_login {
 .mobile-facets__inner.gradient {
   width: 400px !important;
   /* margin-left: 83px; */
-  margin-top: 84px;
+  /* margin-top: 84px; */
 }
 span.mobile-facets__open-label.button-label.small-hide {
   font-size: 16px;
